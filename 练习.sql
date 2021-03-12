@@ -1,3 +1,6 @@
+******************
+
+
 -- 部门表
 CREATE TABLE dept (
   id INT PRIMARY KEY PRIMARY KEY, -- 部门id
