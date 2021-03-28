@@ -1,9 +1,134 @@
 ***************
 
-1  子查询
 
-2 自连接
 
-3 case语句 then end
+No1     子查询
 
-3/12
+
+
+
+No2 	 自连接
+
+
+
+
+No3	case语句 then end
+
+
+
+
+
+No4	mysql怎么查询数据库每个表有多少条记录
+	select table_name,table_rows from information_schema.tables where TABLE_SCHEMA = '数据库名称' order by table_rows desc;  
+
+
+
+No5	sql 查询一个表中有多少条数据?
+
+	select count(1) from table
+
+
+No6	ACCESS  查询表及名称
+	
+	SELECT name FROM MSYSOBJECTS where type=1 and flags=0
+或者	SELECT name FROM MSYSOBJECTS WHERE TYPE=1 AND NAME NOT LIKE 'Msys*'
+
+或者    SELECT Name ,CLng(DCount("*",Name)) As Count
+		FROM MsysObjects
+		WHERE Left([Name],4) <> "Msys" AND Type = 1
+		ORDER BY Name;
+----------------------------------------------
+	Mysql  查询表及名称
+	show tables from sakila(db名);
+
+
+No7	连结 UNION
+
+	SELECT '入出庫情報' AS [テーブル名], Count(入出庫情報.[商品ID]) AS [件数]
+		FROM 入出庫情報;
+		UNION
+	SELECT '商品' AS [テーブル名], Count(商品.[ID]) AS [件数]
+		FROM 商品;
+
+
+
+No8
+
+
+
+
+No9
+
+
+
+
+No10
+
+
+
+
+No11
+
+
+
+
+No12
+
+
+
+
+No13
+
+
+
+
+No14
+
+
+
+
+No15
+
+
+
+
+No16
+
+
+
+
+No17
+
+
+
+
+No18
+
+
+
+
+No19
+
+
+
+
+No20
+
+
+
+
+No21
+
+
+
+
+No22
+
+
+
+
+No23
+
+
+
+
