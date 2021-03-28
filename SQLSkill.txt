@@ -25,17 +25,30 @@ No4	mysql怎么查询数据库每个表有多少条记录
 
 No5	sql 查询一个表中有多少条数据?
 
-
 	select count(1) from table
 
 
-No6
+No6	ACCESS  查询表及名称
+	
+	SELECT name FROM MSYSOBJECTS where type=1 and flags=0
+或者	SELECT name FROM MSYSOBJECTS WHERE TYPE=1 AND NAME NOT LIKE 'Msys*'
+
+或者    SELECT Name ,CLng(DCount("*",Name)) As Count
+		FROM MsysObjects
+		WHERE Left([Name],4) <> "Msys" AND Type = 1
+		ORDER BY Name;
+----------------------------------------------
+	Mysql  查询表及名称
+	show tables from sakila(db名);
 
 
+No7	连结 UNION
 
-
-No7
-
+	SELECT '入出庫情報' AS [テーブル名], Count(入出庫情報.[商品ID]) AS [件数]
+		FROM 入出庫情報;
+		UNION
+	SELECT '商品' AS [テーブル名], Count(商品.[ID]) AS [件数]
+		FROM 商品;
 
 
 
