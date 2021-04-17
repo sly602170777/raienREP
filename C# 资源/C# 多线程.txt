@@ -1,0 +1,71 @@
+    public async Task<string> B001C001Three()
+        {
+            var sb = new StringBuilder();
+            //list是主集。子集PB00100 等于 主集的B001ID
+            var list =(await B001C001Repository.Instance.FindAsync(m => m.PB00100 == 1 && m.IsDel == 0)).ToList();
+
+            var listss =await B001C001Repository.Instance.FindAsync(m => m.IsDel == 0);
+            if (list.Count <= 0) return sb.ToString();
+
+            sb.Append("[");
+            var p = 0;
+            foreach (var a in list)
+            {
+                p++;
+                var id = a.B001ID;
+                var name = a.B0105;
+
+                sb.Append("{ value:'" + id + "',label:'" + name + "'");
+
+                var lists = listss.Where(item => item.PB00100 == id).ToList();
+                if (lists.Count > 0)
+                {
+                    sb.Append(",");
+                    sb.Append(B001C001Fore(id));
+                };
+            if (p == list.Count)
+                {
+                    sb.Append("}");
+                }
+                else
+                {
+                    sb.Append("},");
+                }
+            }
+            sb.Append("]");
+            return sb.ToString();
+        }
+        public async Task<string> B001C001Fore(int id)
+        {
+            var sb = new StringBuilder();
+
+            var list =(await B001C001Repository.Instance.FindAsync(m => m.PB00100 == id && m.IsDel == 0)).ToList();
+            if (list.Count <= 0) return sb.ToString();
+
+            var listtwo =(await B001C001Repository.Instance.FindAsync(m =>  m.IsDel == 0 && m.PB00100!=1)).ToList();
+            sb.Append("children:[");
+            var p = 0;
+            foreach (var a in list)
+            {
+                p++;
+                var ids = a.B001ID;
+                var name = a.B0105;
+                sb.Append("{ value:'" + ids + "',label:'" + name + "'");
+                var lists = listtwo.Where(item => item.PB00100 == ids).ToList();
+                if (lists.Count > 0)
+                {
+                    sb.Append(",");
+                    sb.Append(B001C001Fore(ids));
+                }
+                if (p == list.Count)
+                {
+                    sb.Append("}");
+                }
+                else
+                {
+                    sb.Append("},");
+                }
+            }
+            sb.Append("]");
+            return sb.ToString();
+        }
