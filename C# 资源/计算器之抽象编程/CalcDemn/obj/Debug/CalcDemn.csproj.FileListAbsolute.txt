@@ -1,0 +1,13 @@
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\bin\Debug\CalcDemn.exe.config
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\bin\Debug\CalcDemn.exe
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\bin\Debug\CalcDemn.pdb
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\obj\Debug\CalcDemn.csprojResolveAssemblyReference.cache
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\obj\Debug\CalcDemn.csproj.CoreCompileInputs.cache
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\obj\Debug\CalcDemn.exe
+C:\Users\SCscHero\source\repos\CalcDemn\CalcDemn\obj\Debug\CalcDemn.pdb
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\bin\Debug\CalcDemn.exe.config
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\bin\Debug\CalcDemn.exe
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\bin\Debug\CalcDemn.pdb
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\obj\Debug\CalcDemn.csprojAssemblyReference.cache
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\obj\Debug\CalcDemn.exe
+D:\Data Code Userd\代码备份【2019-12-12】\CalcDemn\CalcDemn\obj\Debug\CalcDemn.pdb
