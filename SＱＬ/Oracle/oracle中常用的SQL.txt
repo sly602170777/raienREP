@@ -1,0 +1,13 @@
+--Oracle中的instr()函数 详解及应用  
+
+select instr('helloworld','l',2,2) from dual;  
+--返回结果：4    也就是说：在"helloworld"的第2(e)号位置开始，查找第二次出现的“l”的位置
+
+格式一：instr( string1, string2 )    /   instr(源字符串, 目标字符串)
+select * from aaa  where instr(film_text,"ZO"); 
+--返回结果：4    也就是说：在"字段"film_text" 中 含有""ZO"的数据
+
+
+
+ SELECT * FROM aaa  WHERE LENGTH(film_text) > LENGTH(rtrim(film_text))
+ --末尾带有空格的字段直接检索出来
