@@ -75,13 +75,14 @@ SEQUENCE_NAME  LAST_NUMBER
 TEST_SEQ1                1
  
 
+--「順番にやって」　シーケンスは現在値の設定してから、現在値の取得できるようになった
 SELECT test_seq1.NEXTVAL a FROM DUAL;
     A
 -----
     1
 
 
-シーケンス名.CURRVAL
+--シーケンス名.CURRVAL 現在値の取得
 
  
 SELECT test_seq1.CURRVAL a FROM DUAL;
