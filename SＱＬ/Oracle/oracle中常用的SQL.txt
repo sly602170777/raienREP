@@ -11,3 +11,47 @@ select * from aaa  where instr(film_text,"ZO");
 
  SELECT * FROM aaa  WHERE LENGTH(film_text) > LENGTH(rtrim(film_text))
  --末尾带有空格的字段直接检索出来
+ 
+ 
+ 
+ --RONUMで連番を取得！Oracleで連番を取得する方法
+ --レコードの取得順に ROWNUM擬似列に連番が振られています
+SELECT  ROWNUM , Name, Age  FROM users
+
+
+--ROWNUMで2レコード目だけを抽出する場合は
+
+SELECT *
+FROM (
+  SELECT ROWNUM AS num
+       , users.* 
+  FROM users
+)
+WHERE num = 2
+
+
+--查询正序的第一条和倒序的第一条
+
+select * from(
+       select t.name,
+              t.sex,
+              t.time,
+              row_number() over(order by t.time) rowss1,
+              row_number() over(order by t.time desc) rowss2 from TABLE1 t)
+	where rowss1='1' or rowss2='1';
+	
+	
+-- MySQL 升序排序后查询字段的第一条数据
+SELECT  aaa.* FROM aaa order by submitted_user_id  desc limit 1	
+
+--Oracle 查询出来的数据取第一条
+select * from (select * from <table> order by <key>) where rownum=1;
+
+select * from (select * from <table> order by <key> desc) where rownum=1;
+
+
+
+
+
+
+
