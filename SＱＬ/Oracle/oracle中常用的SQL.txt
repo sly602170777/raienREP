@@ -50,7 +50,9 @@ select * from (select * from <table> order by <key>) where rownum=1;
 
 select * from (select * from <table> order by <key> desc) where rownum=1;
 
-
+20:38 2021/04/24
+--MYSQL  自動採番　　テーブル構造を確認する
+desc aaa or  DESCRIBE aaa
 
 .LOG  ORACLEのシーケンス（順序）の現在値または次に採番される値の確認方法
 
