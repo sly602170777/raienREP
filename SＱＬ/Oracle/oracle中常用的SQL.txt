@@ -1,3 +1,4 @@
+20:17 2021/04/24
 --Oracle中的instr()函数 详解及应用  
 
 select instr('helloworld','l',2,2) from dual;  
@@ -51,7 +52,37 @@ select * from (select * from <table> order by <key> desc) where rownum=1;
 
 
 
+.LOG  ORACLEのシーケンス（順序）の現在値または次に採番される値の確認方法
+
+.20:31 2021/04/24  静的データディクショナリビューを参照---查看静态数据字典视图
+
+SELECT SEQUENCE_NAME,LAST_NUMBER FROM USER_SEQUENCES;
+ 
+SEQUENCE_NAME  LAST_NUMBER
+-------------- -----------
+TEST_SEQ1                1
 
 
+20:21 2021/04/24
+
+ORACLEのシーケンス（順序） LAST_NUMBER項目を参照
+SELECT SEQUENCE_NAME,LAST_NUMBER FROM USER_SEQUENCES;
+ 
+SEQUENCE_NAME  LAST_NUMBER
+-------------- -----------
+TEST_SEQ1                1
+ 
+
+SELECT test_seq1.NEXTVAL a FROM DUAL;
+    A
+-----
+    1
 
 
+シーケンス名.CURRVAL
+
+ 
+SELECT test_seq1.CURRVAL a FROM DUAL;
+    A
+-----
+    1
