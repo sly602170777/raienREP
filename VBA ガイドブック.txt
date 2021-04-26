@@ -123,4 +123,26 @@ MyPos = Instr(SearchString, SearchChar)         ' Returns 9.  从 1 开始计数
  
 MyPos = Instr(1, SearchString, "W")    ' Returns 0.
 
+**************************************************************************************************************************
+22:33 2021/04/26
+------------------------
+Replace関数  Replace(expression, find, replace[, start[, count[, compare]]])
+
+Replace("123aAbBcC","A","Z") → "123aZbBcC"
+
+------------------------
+
+InStr関数   InStr([start, ]string1, string2[, compare])
+
+InStr("123aAbBcC","A") → 5
+------------------------
+
+StrConv関数  StrConv(string, conversion, LCID)
+
+StrConv("123aAbBcC",vbUpperCase) → "123AABBCC"
+StrConv("123aAbBcC",vbLowerCase) → "123aabbcc"
+StrConv("123aAbBcC",vbWide) → "１２３ａＡｂＢｃＣ"
+StrConv(StrConv("ｱｲｳｴｵ",vbWide),vbHiragana) → "あいうえお"
+
+------------------------
 
