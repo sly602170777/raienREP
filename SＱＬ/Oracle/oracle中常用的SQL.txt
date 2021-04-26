@@ -89,3 +89,87 @@ SELECT test_seq1.CURRVAL a FROM DUAL;
     A
 -----
     1
+
+
+------------------------------------------- order by
+21:16 2021/04/26
+	ASC - 昇順（省略時）
+	DESC - 降順（逆順）
+
+ ''''' MySQL Limit 
+ SELECT  aaa.* FROM aaa order by submitted_user_id asc limit 1
+ 
+ SELECT record_id.NEXTVAL FROM aaa;
+ ''' ORacle Rownum
+ select
+    TBL.*
+from
+    ( 
+        select
+           *
+        from
+            T_SAMPLE 
+        order by
+            SEQ_ID desc
+    ) TBL 
+where
+    rownum = 1
+
+
+---------------------逆引き SQL 関数 （数値、文字列関数）
+*****************
+https://www.shift-the-oracle.com/sql/functions/function-base-reference-1.html
+*****************
+
+文字列の編集・変換に関する関数
+Question 文字列を文字単位に置換するには	translate ( e, f, t )
+Question 文字列を単語レベルで置換するには	replace ( s1, s2, r )
+Question 文末の空白を取り除くには	rtrim ( e, s )
+Question 文字列の長さを一定に揃えるには	rpad ( s1, n, s2)
+Question 英文字の全てを小文字（大文字）に変換するには	lower ( s )
+Question NULL を別の値に置換するには	nvl ( e1, e2 )
+Question文字列同士を結合するには	concat ( s1, s2 )
+ 
+日本語に関する文字列関数
+Question SJIS、 EUC、UNICODE などに文字コード変換するには	convert ( e, d, s )
+Question 辞書順、五十音順に並び替えるには	[ order by ] nlssort ( e , s )
+Question 半角カナを全角かなに変換するには	to_full_kana ( s, t ) 
+Question 全角空白と半角スペースを取り除くには	trim_multi ( s, r ) 
+ 
+正規表現に関する文字列関数 Oracle 10g Oracle 11g
+Question正規表現でマッチするか調べるには	regexp_like ( s, p )
+Question正規表現でマッチする文字の位置を調べるには	regexp_instr ( s, p )
+Question正規表現でマッチする文字を切り出すには	regexp_substr ( s, p )
+Question正規表現でマッチする文字を置換するには	regexp_replace ( s, p )
+Question正規表現でマッチする文字の検知回数を調べるには Oracle 11g	regexp_count ( s, p )
+ 
+文字列の取得に関する関数
+Question 文字からコードポイントを求めるには	ascii ( n )
+Question文字コードから文字を取得するには	chr ( s )
+Question 部分文字列の位置を求めるには	instr ( s1, s2, p, o )
+Question 部分文字列を切り出すには	substr ( s1, p, l )
+Question 文字列の長さを求めるには	length ( s )
+Question システムで一意なバイト文字列を生成するには	sys_guid
+ 
+数値に関する関数
+Question 小数点を切り捨てるには	trunc ( m, n )
+Question 小数点の四捨五入をするには	round ( m, n )
+Question ある数値以上で最小の整数を求めるには	ceil ( n )
+Question 小数点の切り上げをするには	roundup ( m, n ) 
+Question 絶対値を求めるには	abs ( n )
+Question 最大値を求めるには	greatest ( m, n, ... )
+Question 正の値か負の値かを調べるには	sign ( n )
+Question 累乗、べき乗を求めるには	power ( m, n )
+Question 平方根を求めるには	sqrt ( n )
+Question 数値を文字列に変換して整形するには	to_char ( n, f, s )
+Question 文字列を ORACLE 独自のハッシュ値に変換するには	ora_hash ( e, b, s )
+Question 文字列を標準化されているハッシュ値に変換するには	standard_hash ( e , s )
+Question 16進数から10進数を求めるには	hextodec ( h ) 
+Question 数値文字列の先頭の 0 を取り除くには	ltrim ( s, '0' )
+Question ビット列から数値を求めるには	bin_to_num ( 1, 0, 1, ... )
+Question 数値同士のビット演算処理を行なうには	bitand ( m, n )
+Question JAN コードのチェックデジットを計算するには	cd_mod10_weight3( c ) 
+Question 割り算の余りを求めるには	mod ( m, n )
+Question 非数値を 0 に置換するには	nanvl ( m, n )
+Question 三角関数、逆三角関数、双曲線関数を計算するには	sin ( θ )
+Question 指数関数、自然対数を計算するには	exp ( n )
