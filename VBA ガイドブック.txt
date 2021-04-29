@@ -1,3 +1,9 @@
+
+--------実行時にトラップ可能なエラー番号一覧
+https://excel-ubara.com/excelvba4/EXCEL242.html
+
+
+
 Sub IsThisArray()
     'declare a dynamic array  创建动态数组
     Dim sheetNames() As String
