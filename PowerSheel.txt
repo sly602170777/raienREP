@@ -1,0 +1,20 @@
+--PowerShell ??用法
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content?view=powershell-7.1
+
+1.1 用??的方法取出文件下的所有子文件
+Get-ChildItem -Path C:\Test\*.txt -Recurse -Force /Get-ChildItem -Path C:\Parent -Depth 2
+
+1.2 用??的方法取出文件下的所有子文件的名字
+Get-ChildItem -Path C:\Test\*.txt -Recurse -Force
+
+1.3 ?看?个文档的前五行内容
+Get-Content -Path .\LineNumbers.txt -TotalCount 5
+
+1.4?找此路径下的文件包含的字符串
+Select-String -Path .\*.txt -Pattern 'html'
+
+Select-String -Path .\*.* -Pattern 'login'  
+
+1.5?找此路径下的文件包含的多个的字符串
+Select-String -Path .\*.* -Pattern 'Get', 'Set' 
+-------------------------------------------
