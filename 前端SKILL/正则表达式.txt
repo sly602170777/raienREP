@@ -1,3 +1,8 @@
+13:49 2021/08/07
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+
+
+
 10:16 2021/07/25
 
 正则表达式可以让用户通过使用一系列的特殊字符构建匹配模式，然后把匹配模式与数据文件、程序输入以及WEB页面的表单输入等目标对象进行比较，根据比较对象中是否包含匹配模式，执行相应的程序。 
