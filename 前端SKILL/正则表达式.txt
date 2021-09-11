@@ -18,6 +18,8 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/St
 在对如何使用正则表达式有了初步了解之后，我们来看一下其它几个重要的元字符的使用方式。 
 
 
+(?<=<(\w+)>).*(?=<\/\1>)  --匹配不包含属性的简单HTML标签内里的内容
+
 
 　　\s：用于匹配单个空格符，包括tab键和换行符； 
 
