@@ -1,7 +1,7 @@
 13:49 2021/08/07
 https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace
 
-22:28 2021/09/11
+22:28 2021/09/11  aa
 
 10:16 2021/07/25
 
