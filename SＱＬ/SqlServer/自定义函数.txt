@@ -1,0 +1,53 @@
+
+21:46 2021/10/04
+常用的系统存储过程
+
+exec sp_databases    --查看所有数据库
+exec sp_tables        --查看所有数据表
+exec sp_columns student --查看student表的所有列
+exec sp_helpIndex student --查看student表的索引
+exec sp_helpconstraint student --查看student表的约束
+exec sp_helptext 'sp_databases' --查看定于语句
+exec sp_rename oldName,newName --修改表、索引、列的名称
+exec sp_renamedb webDB,newDB --修改数据库名称
+exec sp_helpdb  webDB --查看数据库信息
+
+
+--创建函数
+use tempdb
+go
+--select * from dbo.Stu_Tab
+create function dbo.Fun_name()
+returns varchar(6) 
+as
+begin
+	declare @result_name varchar(6)
+	select  @result_name = studnetName from dbo.Stu_Tab  
+ 	 return  @result_name
+end
+
+--调用函数
+select  dbo.Fun_name();
+
+
+
+--创建带参数的函数
+use tempdb
+go
+--select * from dbo.Stu_Tab
+create function dbo.Fun_nameById(@sname int)
+returns varchar(6) 
+as
+begin
+	declare @result_name varchar(6)
+	select  @result_name = studnetName from dbo.Stu_Tab where  Stu_Tab.studentID=@sname
+ 	 return  @result_name
+end
+
+--调用函数
+select dbo.Fun_nameById(1);
+
+
+
+
+
