@@ -1,6 +1,6 @@
 
 21:46 2021/10/04
-常用的系统存储过程
+★常用的系统存储过程
 
 exec sp_databases    --查看所有数据库
 exec sp_tables        --查看所有数据表
@@ -13,7 +13,7 @@ exec sp_renamedb webDB,newDB --修改数据库名称
 exec sp_helpdb  webDB --查看数据库信息
 
 
---创建函数
+★--创建函数
 use tempdb
 go
 --select * from dbo.Stu_Tab
@@ -31,26 +31,62 @@ select  dbo.Fun_name();
 
 
 
---创建带参数的函数
+★--创建带参数的函数
 use tempdb
 go
 --select * from dbo.Stu_Tab
 create function dbo.Fun_nameById(@sname int)
-returns varchar(6) 
+returns varchar(6)  --申明返回,并初始化
 as
 begin
 	declare @result_name varchar(6)
-	select  @result_name = studnetName from dbo.Stu_Tab where  Stu_Tab.studentID=@sname
+	select  @result_name = studnetName from dbo.Stu_Tab where  Stu_Tab.studentID=@sname  ---写好sql
  	 return  @result_name
 end
 
 --调用函数
-select dbo.Fun_nameById(1);
+select dbo.Fun_nameById(1) as [名字] ;  //使用as 定义别名
 
 
 7:30 2021/10/05
 
+★--创建表值函数  返回table
+use tempdb
+go
+create  function F_GetTablea(@keyid int)
+returns table  --返回table
+as
+return ( select * from dbo.Stu_Tab where  Stu_Tab.studentID=@keyid)    --括弧里面返回一个数据表的查询
+
+select * from dbo.F_GetTablea(1)  --调用
 
 
 
+
+★--创建多表值函数  返回table指定的字段
+use tempdb
+go
+create function F_gettest(@cuseID int)
+returns  @cuestable table   --字段需要和原表字段名称类型都相同，
+(
+[studentName] nchar(10),
+[studentID] int
+)
+as
+begin
+    
+  if (@cuseID%2 =0)
+  begin
+    insert  into @cuestable select [studnetName] ,[studentID] from [dbo].Stu_Tab where  [studentID]  =2       
+  end
+  else
+  begin
+    insert  into @cuestable select [studnetName] ,[studentID] from [dbo].Stu_Tab where  [studentID]  =3
+  end 
+  
+ return  --这个不能删除，一种语法结构
+end
+
+
+select * from dbo.F_gettest(3)  --调用
 
