@@ -1,0 +1,107 @@
+--drop function MyRound
+create   function   MyRound(@num   numeric(20,10),@i   int) 
+--@i保留的小数位 
+--@num传入的数据 
+returns   varchar(20) 
+as 
+begin 
+declare   @numtemp   numeric(20,10)
+declare   @result   varchar(20) 
+set   @numtemp=abs(@num)*power(10,@i+1) 
+select   @numtemp=(case   when   floor(@numtemp)-floor(@numtemp/10)*10=5 
+                                            then   (case   when   @numtemp-floor(@numtemp)=0 
+                                                                  then   (case   when   cast(floor(@numtemp/10)   as   int)%2=0 
+                                                                                        then   floor(@numtemp/10)/power(10,@i) --有效数字后一位为5，前一位为偶，后面没有非零
+                                                                                        else   round(@numtemp/power(10,@i+1),@i)-- 有效数字后一位为5，前一位为奇，后面没有非零
+                                                                                          end) 
+                                                                  else   round(@numtemp/power(10,@i+1),@i) --有效数字后一位为5,后面有非零数值
+                                                                  end) 
+                                              else   round(@numtemp/power(10,@i+1),@i) --有效数字后一位不是5
+                                              end) 
+set   @result=(case   when   @num> 0   then   str(@numtemp,20,@i)   else   str(0-@numtemp,20,@i)   end) 
+return   @result 
+end
+
+
+
+
+
+
+
+
+
+*************************************
+
+USE [Customers]
+GO
+/****** Object:  UserDefinedFunction [dbo].[MyRound]    Script Date: 2021/10/31 19:35:45 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--drop function MyRound
+ALTER function [dbo].[MyRound](@num numeric (20, 10), @i int) --@i保留的小数位
+--@num传入的数据
+returns varchar (20) as begin declare @numtemp numeric (20, 10) declare @result varchar (20) 
+set
+  @numtemp = abs(@num) * power(10, @i + 1) 
+select
+  @numtemp = ( 
+    case 
+      when floor(@numtemp) - floor(@numtemp / 10) * 10 = 5 
+      then ( 
+        case 
+          when @numtemp - floor(@numtemp) = 0 
+          then ( 
+            case 
+              when cast (floor(@numtemp / 10) as int) % 2 = 0 
+              then floor(@numtemp / 10) / power(10, @i) --有效数字后一位为5，前一位为偶，后面没有非零
+              else round(@numtemp / power(10, @i + 1), @i) -- 有效数字后一位为5，前一位为奇，后面没有非零
+              end
+          ) 
+          else round(@numtemp / power(10, @i + 1), @i) --有效数字后一位为5,后面有非零数值
+          end
+      ) 
+      else round(@numtemp / power(10, @i + 1), @i) --有效数字后一位不是5
+      end
+  ) 
+set
+  @result = ( 
+    case 
+      when @num > 0 
+      then str(@numtemp, 20, @i) 
+      else str(0 - @numtemp, 20, @i) 
+      end
+  ) return @result end
+
+
+
+
+**********************************************
+
+	 select  dbo.fnRound(2.15545,4)  --2.1555
+	  select  dbo.fnRound(2.15555,4)  --2.1555
+	   select  dbo.fnRound(2.15565,4)  --2.1557
+   select  dbo.fnRound(2.15,4)  --2.1557
+   
+   select  dbo.MyRound(2.15465,4)  --2.1546
+
+   select  dbo.MyRound(2.1546,4)  --2.1546
+
+
+   select  dbo.MyRound(2.15505,4)  --2.1550
+
+
+   select  dbo.MyRound(2.317456,4)  -- 2.3175
+
+   select  dbo.MyRound(2.155005,4)  --2.1550
+
+	select  dbo.MyRound(2.3744510,4)  --2.3745  
+
+	select  dbo.MyRound(23.15535,4)-- 23.1554  
+
+	select  dbo.MyRound(2.514546,4)  --¥2.5145
+
+      select  dbo.MyRound(1.21445,4)  -- 1.2144
+
+	  select  dbo.MyRound(1.21,4)  -- 1.2144
