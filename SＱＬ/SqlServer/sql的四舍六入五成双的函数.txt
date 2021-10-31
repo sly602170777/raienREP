@@ -1,7 +1,7 @@
 --drop function MyRound
 create   function   MyRound(@num   numeric(20,10),@i   int) 
---@i保留的小数位 
---@num传入的数据 
+--@i保留的小数位 //
+--@num传入的数据 //入力値
 returns   varchar(20) 
 as 
 begin 
@@ -11,12 +11,12 @@ set   @numtemp=abs(@num)*power(10,@i+1)
 select   @numtemp=(case   when   floor(@numtemp)-floor(@numtemp/10)*10=5 
                                             then   (case   when   @numtemp-floor(@numtemp)=0 
                                                                   then   (case   when   cast(floor(@numtemp/10)   as   int)%2=0 
-                                                                                        then   floor(@numtemp/10)/power(10,@i) --有效数字后一位为5，前一位为偶，后面没有非零
-                                                                                        else   round(@numtemp/power(10,@i+1),@i)-- 有效数字后一位为5，前一位为奇，后面没有非零
+                                                                                        then   floor(@numtemp/10)/power(10,@i) --有效数字后一位为5，前一位为偶，后面没有非零，有効数字の最後は偶数場合、有効数字の次の桁は5，
+                                                                                        else   round(@numtemp/power(10,@i+1),@i)-- 有效数字后一位为5，前一位为奇，后面没有非零、　有効数字の最後は奇数場合、有効数字の次の桁は5，
                                                                                           end) 
-                                                                  else   round(@numtemp/power(10,@i+1),@i) --有效数字后一位为5,后面有非零数值
+                                                                  else   round(@numtemp/power(10,@i+1),@i) --有効数字の次の桁は5,次の値ゼロ以外、后面有非零数值
                                                                   end) 
-                                              else   round(@numtemp/power(10,@i+1),@i) --有效数字后一位不是5
+                                              else   round(@numtemp/power(10,@i+1),@i) --有效数字后一位不是5　、有効数字の次の桁は5ではない
                                               end) 
 set   @result=(case   when   @num> 0   then   str(@numtemp,20,@i)   else   str(0-@numtemp,20,@i)   end) 
 return   @result 
