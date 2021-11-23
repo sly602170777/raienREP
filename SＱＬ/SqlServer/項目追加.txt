@@ -1,0 +1,164 @@
+1*******************  ***************************
+
+  
+USE [Customers]
+GO
+/****** Object:  StoredProcedure [dbo].[Getdate_In]    Script Date: 2021/11/24 7:48:24 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[Getdate_In] 
+@key int  --设置默认值
+
+--,@result_date varchar(100) output
+as begin 
+declare　@i int
+declare　@count int
+declare　@targetDate varchar(100) 
+set
+  @targetDate ='' 
+    select
+     @targetDate = iif( 
+        (@key in (select ID as [key1] from Family2 as [t1]))
+        , CONVERT(varchar(100), birthday, 120)
+		, CONVERT(varchar(100), GETDATE(), 120)
+      ) 
+from
+ Family2  
+  set @count=(select count(*) from [dbo].[AAA] where DATEDIFF(second,[AAA].[CreateDate], @targetDate)>0)
+  print 100+@count 
+  if @count=0 
+	select top 1 [CreateDate],@targetDate from [AAA] where DATEDIFF(second,[AAA].[CreateDate],@targetDate)<0 order by [CreateDate]
+if @count>0  
+	select  [CreateDate] ,@targetDate from [AAA] where DATEDIFF(second,[AAA].[CreateDate],@targetDate)>0 
+  end
+
+
+
+2*************************************************
+
+USE [Customers]
+GO
+/****** Object:  StoredProcedure [dbo].[Getdate_result]    Script Date: 2021/11/24 7:48:54 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER procedure [dbo].[Getdate_result] 
+@key int,  --设置默认值
+@targetDate varchar(100) output
+--,@result_date varchar(100) output
+as begin 
+declare　@i int
+declare　@count int
+--declare　@targetDate varchar(100) 
+set
+  @targetDate ='' 
+    select
+     @targetDate = iif( 
+        (@key in (select ID as [key1] from Family2 as [t1]))
+        , CONVERT(varchar(100), birthday, 120)
+		, CONVERT(varchar(100), GETDATE(), 120)
+      ) 
+from
+ Family2 
+ print @targetDate
+ end
+
+
+
+3*****************************************************
+USE [Customers]
+GO
+/****** Object:  StoredProcedure [dbo].[GetStus]    Script Date: 2021/11/24 7:49:12 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+--创建名为 GetStuCou_In 的有输入参数的存储过程
+ALTER procedure [dbo].[GetStus] @key int     --设置默认值
+--,@result_date varchar(100) output
+as begin 
+	declare　@i int 
+	declare　@count int 
+	declare　@targetDate varchar (100) 
+set
+    @targetDate = '' 
+select
+    @targetDate = iif( 
+        ( 
+            @key in (select ID as [key1] from Family2 as [t1])
+        ) 
+        , CONVERT(varchar (100), birthday, 120)
+        , CONVERT(varchar (100), GETDATE(), 120)
+    ) 
+from
+    Family2 
+set
+    @count = ( 
+        select
+            count(*) 
+        from
+            [dbo].[AAA] 
+        where
+            DATEDIFF(second, [AAA].[CreateDate], @targetDate) > 0
+    ) 
+	 print @count
+select
+    top 10 [CreateDate] ,@targetDate,
+    DATEDIFF(second, [CreateDate], '2021/03/01 18:15:12.713')
+from
+    [AAA] 
+where
+    DATEDIFF(second, [AAA].[CreateDate], '2021/03/01 18:15:12.713')< 0 
+order by
+    [CreateDate]
+	
+	end
+
+
+5***********************************************
+
+
+USE [Customers]
+GO
+/****** Object:  StoredProcedure [dbo].[Getdate_In]    Script Date: 2021/11/23 18:15:09 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+--创建名为 GetStuCou_In 的有输入参数的存储过程
+ALTER procedure [dbo].[Getdate_In] 
+@key int  --设置默认值
+
+--,@result_date varchar(100) output
+as begin 
+declare　@i int
+declare　@count int
+declare　@targetDate varchar(100) 
+set
+  @targetDate ='' 
+    select
+     @targetDate = iif( 
+        (@key in (select ID as [key1] from Family2 as [t1]))
+        , CONVERT(varchar(100), birthday, 120)
+		, CONVERT(varchar(100), GETDATE(), 120)
+      ) 
+from
+ [Family2]  
+  set @count=(select count(*) from [dbo].[AAA] where DATEDIFF(second,[AAA].[CreateDate], @targetDate)>0)
+  print 100+@count 
+  if @count<=0 
+	select top 1 [CreateDate] from [AAA] where DATEDIFF(second,[AAA].[CreateDate],@targetＤate)<=0 order by [CreateDate]
+if @count>0  
+	select  [CreateDate] from [AAA] where DATEDIFF(second,[AAA].[CreateDate],@targetＤate)>0 
+  end
+
+************************************************
+
+
+
+
+
