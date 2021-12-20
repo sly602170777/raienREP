@@ -1,15 +1,364 @@
-json的返回格式  470page 
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using WindowsForm增删改查.Model;//
+
+namespace WindowsForm增删改查
+{
+    public partial class MainForm : Form
+    {
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
+        //变量设置
+        ComboBox comboBox = new ComboBox();
+        int colIndex = 0, rowIndex = 0;
+        private DataTable table;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.Controls.Add(comboBox);
+            comboBox.TextChanged += new EventHandler(combo_TextChange);
 
 
-数?与数列格式??  
-	数?的??元素的添加与?除 需要把数???成List即ToList()方法
-	然后将元素表示出来需要??成ToArray()来展示数据
-	
-	
-	
-	PG181  取list 方法
-	
-	
-	
-	******************
-	3/12
+            InfoGetForm infoGetForm = new InfoGetForm();
+            infoGetForm.Show();
+            List<Model.StudentInfoModel> studentInfos = new List<Model.StudentInfoModel>();
+            InfoData infoData = new InfoData();
+            //去掉查询自带的多余列
+            this.InfoView.AutoGenerateColumns = false;
+            studentInfos=infoData.Select();
+            table = infoData.SelectTable();
+            InfoView.DataSource = table;
+            //this.InfoView.DataSource =studentInfos;
+
+            //table = ListTotable.ListToTable<Model.StudentInfoModel>(studentInfos);
+            //DataRow[] dRows = table;
+
+            InfoView.AllowUserToAddRows = true;
+            List<Model.StudentInfoModel> dataList = new List<Model.StudentInfoModel>();
+            Model.StudentInfoModel data = new Model.StudentInfoModel();
+            data.Code = "1245";
+            data.Name = "sd";
+            data.Sex = "2";
+            data.Birthday = Convert.ToDateTime("1990/01/01");
+            data.NationName = "XXX";
+            dataList.Add(data);
+            DataTable table1 = ListTotable.ListToTable<Model.StudentInfoModel>(dataList);
+            //this.table.NewRow(table1);
+            this.InfoView.DataSource = data;
+
+            table.Columns.Add("123");
+            table.Columns.Add("sd");
+            table.Columns.Add("2");
+            table.Columns.Add("1990/01/01");
+            table.Columns.Add("XXX");
+            this.InfoView.DataSource = table;
+
+            table.Select();
+            //InfoView.Rows.Add("123", "sd", "2", "1990/01/01", "XXX");
+
+
+
+        }
+
+        private void combo_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                if (InfoView.Rows[rowIndex].Cells[colIndex].Value.ToString()!=comboBox.Text)
+                {
+                    InfoView.Rows[rowIndex].Cells[colIndex].Value = comboBox.SelectedItem;
+                    comboBox.Visible = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //table.Columns.Add("123");
+            //table.Columns.Add("sd");
+            //table.Columns.Add("2");
+            //table.Columns.Add("1990/01/01");
+            //table.Columns.Add("XXX");
+            InfoData info = new InfoData();
+            info.Insert("123", "sd", "2", "aa", "1990/01/01");
+
+            List<Model.StudentInfoModel> studentInfos = new List<Model.StudentInfoModel>();
+            InfoData infoData = new InfoData();
+            //去掉查询自带的多余列
+            this.InfoView.AutoGenerateColumns = false;
+            studentInfos = infoData.Select();
+            InfoView.DataSource = studentInfos;
+
+        }
+
+        private void InfoSex_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void checkedSexList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i <checkedSexList.Items.Count; i++)
+            {
+                if (checkedSexList.GetItemChecked(i))
+                {
+                    checkedSexList.SetItemChecked(i,false);
+                }
+                else
+                {
+                    checkedSexList.SetItemChecked(i, true);
+                }
+            }
+        }
+
+        private void InfoView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (InfoView.Columns[e.ColumnIndex].HeaderText=="性别")
+            {
+                colIndex = e.ColumnIndex;
+                rowIndex = e.RowIndex+1;
+                SetComBoxItem(colIndex,rowIndex);
+            }
+            
+
+            //获取当前选中的行
+            int rowInd = e.RowIndex;
+            InfoView.AllowUserToAddRows = true;
+            if (InfoView.Rows[6].IsNewRow)
+            {
+                //InfoView.Rows[6].Cells[0].Value = "1245";
+                //InfoView.Rows[6].Cells[1].Value = "sd";
+                //InfoView.Rows[6].Cells[2].Value = "2";
+                //InfoView.Rows[6].Cells[3].Value = "1990/01/01";
+                //InfoView.Rows[6].Cells[4].Value = "XXX";
+                //int inde5x = InfoView.Rows.Add();
+            }
+           // int index = InfoView.Rows.Add();
+            //var  idx = InfoView.Rows.Count - 1;
+            //InfoView.Rows[index].Cells[0].Value = "1245";
+            //InfoView.Rows[index].Cells[1].Value = "sd";
+            //InfoView.Rows[index].Cells[2].Value = "2";
+            //InfoView.Rows[index].Cells[3].Value = "1990/01/01";
+            //InfoView.Rows[index].Cells[4].Value = "XXX";
+            try
+            {
+                string value0 = "";
+                string value1 = "";
+                string value2 = "";
+                //获得当前行的第0列的值
+                value0 = InfoView.Rows[rowInd].Cells[0].Value.ToString();
+                //获得当前行的第一列的值
+                value1 = InfoView.Rows[rowInd].Cells[1].Value.ToString();
+                //获得当前行的第二列的值
+                value2 = InfoView.Rows[rowInd].Cells[2].Value.ToString().Trim();
+
+
+
+               // MessageBox.Show("当前行" + (Convert.ToInt32(rowInd) + 1) + "--第0列的值+" + value0 + "+;第一列的值" + value1 + ";第二列的值" + value2);
+                //添加一行
+                int rows = InfoView.Rows.Count;//等到总行数
+                int cells = InfoView.Rows[1].Cells.Count;//等到总列数
+
+
+
+
+                string code = "1245";
+                string name = "sd";
+                string sex = "2";
+                DateTime birthday = Convert.ToDateTime("1999-02-26 00:00:00.000");
+                //int age = 12;
+                string nation = "XXX";
+                int flag = 0;
+                object[] row = { code, name, sex, birthday, nation, flag };
+                DataGridViewRow data = new DataGridViewRow();
+                //table.Rows.Add(row);
+                //table.Columns.Add(row);
+               // table.CurrentCell = table.Rows[rowIndex].Cells["drug_code"];
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cells; j++)
+                    {
+                        if (rowInd == i)
+                        {
+                            DataRow dr = table.NewRow();
+                            table.Rows.InsertAt(dr, i + 1);
+                            dr[0] = table.Rows[i]["code"].ToString();
+                            dr[1] = table.Rows[i]["name"].ToString();
+                            dr[2] = table.Rows[i]["sex"].ToString();
+                            dr[3] = table.Rows[i]["birthday"].ToString();
+                            dr[4] = table.Rows[i]["NationName"].ToString();
+                           // object[] row2 = { code2, name2, sex2, birthday2, nation2 };
+                            //dr[0].ToString();
+                            
+
+                            //DataTable dtNew = new DataTable();
+
+                            //dtNew = table.Copy();
+                            //dtNew.Rows.Clear();
+                            //dtNew.ImportRow(table.Rows[rowInd]);
+                            //MessageBox.Show(code2.ToString());
+                            //table.Rows.Add(dtNew.Rows[0]);
+                            InfoView.DataSource = table;
+                            break;
+                            //object index = this.InfoView.Rows[rowInd].Clone();
+                            //InfoView.Rows.Insert(rowInd+1, data.SharedRow(rowInd));
+                            //((DataTable)InfoView.DataSource).Rows.Add(index);
+
+                            
+                            //((DataTable)InfoView.DataSource).Rows[rowInd].Add(row);
+
+                            //   InfoView.SelectedRows.CopyTo(row, 1);
+                          //var a=  InfoView.SelectedRows[i].ToString();
+                          //  MessageBox.Show(a);
+                           this.InfoView.SelectionMode= DataGridViewSelectionMode.FullRowSelect;
+
+
+                            //var dtSource = (DataTable)InfoView.DataSource;
+                            ////InfoView.Rows.Insert((Convert.ToInt32(rowInd) + 1), new DataGridViewRow());
+                            //if (dtSource == null)
+                            //{
+                            //    MessageBox.Show("No datasource in datagrid");
+                            //    return;
+                            //}
+                            //int index = this.InfoView.Rows.Add();
+                            //this.InfoView.Rows[index].Cells[0].Value = "XXX";
+                            //this.InfoView.Rows[index].Cells[1].Value = "XXX";
+                            //this.InfoView.Rows[index].Cells[2].Value = "XXX";
+
+                            //DataRow newDr = dtSource.NewRow();
+                            //newDr("Field1") = "AAAAAAAAAAAA";
+                            //dtSource.Rows.Add(newDr);
+
+                        }
+                    }
+                }
+                //}
+                Count count = new Count();
+                //List<Count> jsonResult =new List < Count >();
+                //count.code = "XXX";
+                //count.name = "XXX";
+                //count.gender = "XXX";
+                //count.nation = "XXX";
+                //count.birthday = "XXX";
+                //jsonResult.Add(count);
+                //InfoView.DataSource = null;
+                //InfoView.DataSource = jsonResult;
+                //InfoView.Show();
+                //DataGridViewRow row = new DataGridViewRow();
+                //DataGridViewTextBoxCell textboxcell = new DataGridViewTextBoxCell();
+                //textboxcell.Value = jsonResult;
+                //row.Cells.Add(textboxcell);
+                //DataGridViewComboBoxCell comboxcell = new DataGridViewComboBoxCell();
+                //row.Cells.Add(comboxcell);
+                //InfoView.Rows.Add(jsonResult);
+
+                //InfoView.DataSource.Add(jsonResult, Type.GetType("System.Decimal"));
+                //var dtSource = InfoView.DataSource;
+                //dtSource.Rows.Add(jsonResult);
+                //InfoView.AllowUserToAddRows = true;
+                //List<Model.StudentInfoModel> dataList = new List<Model.StudentInfoModel>();
+                //Model.StudentInfoModel data = new Model.StudentInfoModel();
+                //data.Code = "1245";
+                //data.Name = "sd";
+                //data.Sex = "2";
+                //data.Birthday = Convert.ToDateTime("1990/01/01");
+                //data.NationName = "XXX";
+                //dataList.Add(data);
+                //DataTable table1 = ListTotable.ListToTable<Model.StudentInfoModel>(dataList);
+                ////this.table.NewRow(table1);
+                //this.InfoView.DataSource = data;
+
+                //data.Code = "1245";
+                //data.Name = "sd";
+                //data.Sex = "2";
+                //data.Birthday = Convert.ToDateTime("1990/01/01");
+                //data.NationName = "XXX";
+
+
+                //string code= "1245";
+                //string name = "sd";
+                //string sex= "2";
+                //DateTime birthday =Convert.ToDateTime("1999-02-26 00:00:00.000");
+                ////int age = 12;
+                //string nation = "XXX";
+                //int flag = 0;
+                //object[] row = { code, name , sex , birthday, nation , flag };
+               // ((DataTable)InfoView.DataSource).Rows.Add(row);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            int rows = InfoView.Rows.Count;//计算总行数
+            int cells = InfoView.Rows[1].Cells.Count;//计算总列数
+
+            //int rowInd = e.RowIndex();
+           
+            MessageBox.Show(rows.ToString() );
+            MessageBox.Show(cells.ToString());
+
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    for (int j = 0; j < cells; j++)
+            //    {
+            //        if (rowInd == i)
+            //        {
+                    
+            //        }
+            //    }
+            //}
+        }
+
+        //InfoView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //定义一个delegate委托  
+        public delegate void ClickHandler(object sender, DataGridViewCellEventArgs e);
+        //定义事件，类型为上面定义的ClickHandler委托  
+        public event ClickHandler OnClick;
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SetComBoxItem(int colIndex, int rowIndex)
+        {
+            Rectangle rectangle = InfoView.GetCellDisplayRectangle(colIndex,rowIndex,false);
+            comboBox.Left = rectangle.Left + InfoView.Left;
+            comboBox.Top = rectangle.Top + InfoView.Top;
+            comboBox.Width = rectangle.Width;
+            comboBox.Height = rectangle.Height;
+
+            comboBox.Items.Clear();
+            comboBox.Items.Add("0");
+            comboBox.Items.Add("1");
+
+            comboBox.Visible = true;
+            comboBox.BringToFront();
+            comboBox.Text = InfoView.Rows[rowIndex].Cells[colIndex].Value.ToString();
+        }
+    }
+}
