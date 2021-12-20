@@ -1,0 +1,323 @@
+//  Please use the following namespace
+//  using System.Windows.Forms;
+//  using System.Drawing;
+//  using GrapeCity.Win.Editors;
+
+public void SetListColumns()
+{
+    // Creates the GcComboBox 
+    GcComboBox gcComboBox1 = new GcComboBox();
+    // Sets the DefaultListItem settings.
+    gcComboBox1.ListDefaultColumn.AutoWidth = true;
+    gcComboBox1.ListDefaultColumn.Header.ContentAlignment = ContentAlignment.MiddleCenter;
+    // Creates a GradientEffect object.
+    GradientEffect gradienteffect = new GradientEffect();
+    gradienteffect.Direction = GradientDirection.Side;
+    gradienteffect.EndColor = Color.FromArgb(224, 224, 224);
+    gcComboBox1.ListDefaultColumn.Header.GradientEffect = gradienteffect;
+    gcComboBox1.ListDefaultColumn.Header.TextEffect = TextEffect.RaisedLite;
+    gcComboBox1.ListDefaultColumn.DefaultSubItem.ContentAlignment = ContentAlignment.MiddleCenter;
+    gcComboBox1.ListDefaultColumn.DefaultSubItem.Padding = new Padding(2, 2, 2, 2);
+    gcComboBox1.ListDefaultColumn.DefaultSubItem.WordWrap = false;
+
+    // column1 和 column2 继承了 DefaultListColumn 的设置
+    ListColumn column1 = new ListColumn();
+    ListColumn column2 = new ListColumn();
+    // 	column3 会覆盖高级设置的一些属性。
+    ListColumn column3 = new ListColumn();
+    column3.AutoWidth = false;
+    column3.DataDisplayType = DataDisplayType.Image;
+    column3.Header.AllowResize = true;
+    column3.Header.Clickable = true;
+    column3.Header.Image = new Bitmap(@"C:\ColumnHeader.jpg");
+    column3.Header.TextAttachAlignment = AttachAlignment.RightMiddle;
+
+    gcComboBox1.ListColumns.AddRange(new ListColumn[] { column1, column2, column3 });
+    
+    
+    
+using GrapeCity.Web.Input.Core.ListBox;
+
+// カラムを作成します。
+ListColumn lc1 = new ListColumn();
+ListColumn lc2 = new ListColumn();
+ListColumn lc3 = new ListColumn();
+
+// コンボコントロールにカラムを追加します。
+GcComboBox1.ListBox.Columns.Add(lc1);
+GcComboBox1.ListBox.Columns.Add(lc2);
+GcComboBox1.ListBox.Columns.Add(lc3);
+}
+
+
+
+
+using GrapeCity.Win.Editors;
+// リストボックスにカラムを追加
+gcComboBox1.ListColumns.AddRange(new ListColumn[] {new ListColumn("カラム1"), new ListColumn("カラム２")});
+
+// リストボックスに項目を追加
+gcComboBox1.Items.AddRange(new ListItem[] {
+        new ListItem(new SubItem[]{new SubItem("BBB"), new SubItem("ううう")}),
+        new ListItem(new SubItem[]{new SubItem("CCC"), new SubItem("あああ")}),
+        new ListItem(new SubItem[]{new SubItem("AAA"), new SubItem("いいい")})
+});
+//在第 1 列中指定排序标准并按升序设置排序方法。
+gcComboBox1.ListSortColumnIndex = 0;
+gcComboBox1.ListColumns[0].SortOrder = SortOrder.Ascending;
+
+//▼显示结果时
+カラム1　　カラム２
+
+BBB　　　　ううう
+CCC　　　　あああ
+AAA　　　　いいい
+
+// リストボックスにカラムを追加
+gcComboBox1.ListColumns.AddRange(new ListColumn[] {new ListColumn("カラム1"), new ListColumn("カラム２")});
+
+// リストボックスに項目を追加
+gcComboBox1.Items.AddRange(new ListItem[] {
+        new ListItem(new SubItem[]{new SubItem("BBB"), new SubItem("ううう")}),
+        new ListItem(new SubItem[]{new SubItem("CCC"), new SubItem("あああ")}),
+        new ListItem(new SubItem[]{new SubItem("AAA"), new SubItem("いいい")})
+});
+
+// ヘッダをクリックできるように設定
+gcComboBox1.ListColumns[0].Header.Clickable = true;
+gcComboBox1.ListColumns[1].Header.Clickable = true;
+
+
+
+//按钮的几种类型
+DropDownButton （ドロップダウンボタン）
+SpinButton （スピンボタン）
+SideButton （サイドボタン）
+
+
+
+
+//一个设置列表框样式的例子
+using GrapeCity.Web.Input.Core.ListBox;
+
+// 奇数列の項目テンプレートを設定します。
+ItemTemplate template1 = new ItemTemplate();
+template1.BackColor = Color.Blue;
+template1.ForeColor = Color.White;
+template1.Font.Bold = true;
+
+// 偶数列の項目テンプレートを設定します。
+ItemTemplate template2 = new ItemTemplate();
+template2.BackColor = Color.LightBlue;
+template2.ForeColor = Color.DarkBlue;
+template1.Font.Italic = true;
+
+// コントロールに項目テンプレートを追加します。
+GcComboBox1.ListBox.ItemTemplates.Add(template1);
+GcComboBox1.ListBox.ItemTemplates.Add(template2);
+
+// 水平線を設定します。
+GcComboBox1.ListBox.HorizontalLine.LineColor = Color.Cyan;
+GcComboBox1.ListBox.HorizontalLine.LineStyle = BorderStyle.Dotted;
+
+// 垂直線を設定します。
+GcComboBox1.ListBox.VerticalLine.LineColor = Color.DarkCyan;
+GcComboBox1.ListBox.VerticalLine.LineStyle = BorderStyle.Solid;
+
+
+
+
+//获取列と行の位置索引
+int z = gcMultiRow4.CurrentCellPosition.RowIndex;//
+int w = gcMultiRow4.CurrentCellPosition.CellIndex;
+
+//获取列と行の数
+int z =gcMultiRow4.Columns.Count
+int w =gcMultiRow4.RowCount
+
+
+
+//获取マウス押下セルの値
+int z = gcMultiRow4.CurrentCellPosition.RowIndex;//
+int w = gcMultiRow4.CurrentCellPosition.CellIndex;
+string s = gcMultiRow4.GetValue(z, w).ToString();
+noby.Message(s);
+
+
+//为字段设值カラムヘッダーセルに値を入れる
+gcMultiRow1.ColumnHeaders[0].Cells[“textBoxCell3”].Value = “Hello”;
+
+
+▼セルの値が変更されたときの処理を直接コーディングする
+//GcMultiRow.CellEditedFormattedValueChanged イベントを使用します。
+//現在のセルの値を取得するには、GcMultiRow.CurrentCell.EditedFormattedValue プロパティを使用します。
+
+using GrapeCity.Win.MultiRow;
+private void gcMultiRow1_CellEditedFormattedValueChanged(object sender, CellEditedFormattedValueChangedEventArgs e)
+{
+  GcMultiRow gcMultiRow = sender as GcMultiRow;
+
+	if (e.Scope == CellScope.Row)
+	{
+		Console.WriteLine(gcMultiRow.GetEditedFormattedValue(e.RowIndex, e.CellIndex).ToString());
+	}
+}
+
+
+◆当控件失去焦点时隐藏单元格选择
+▼GcMultiRow コントロールがフォーカスを失ったとき、セルの選択状態を非表示にするには
+gcMultiRow1.HideSelection = true;
+
+
+
+▼
+//編集した内容をデータソースに更新するには
+gcMultiRow1.EndEdit()
+// 編集した行のコミット処理
+GrapeCity.Win.MultiRow.EditingActions.CommitRow.Execute(gcMultiRow1);
+
+
+
+
+▼表示されているセルの値の合計を取得するには
+
+  int sum = 0;
+  for (int i = 0; i < this.gcMultiRow1.RowCount; i++)
+  {
+      //Visible 可见的指定行状态
+      if ((this.gcMultiRow1.Rows.GetRowState(i) & MultiRowElementStates.Visible) == MultiRowElementStates.Visible)
+      {
+          sum += (int)this.gcMultiRow1.GetValue(i, 0); 
+      }
+  }
+  Console.WriteLine("合計: {0}", sum); 
+  //可见的行的集合
+  var visibleRows = this.gcMultiRow1.Rows.Where(row => row.Visible);
+  Console.WriteLine("表示されている行数: {0}", visibleRows.Count());
+  var cellValues = visibleRows.Select(row => (int)row.Cells[0].Value);
+  var sum = cellValues.Sum();
+  Console.WriteLine("合計: {0}", sum);
+
+
+
+
+
+■■セルの値を設定または取得する
+
+現在のセルの値
+noby.Message(gcMultiRow1.CurrentCell.Value.ToString());
+
+セルの値は GcMultiRow.SetValue メソッドで設定します。次のコードは、１行目の２番目のセルに値を設定します。
+
+
+
+gcMultiRow1.SetValue(0, 1, "ABC");
+
+object cellValue = gcMultiRow1.GetValue(0, 1); Console.WriteLine(cellValue);
+
+s = gcMultiRow1.GetValue(x, "auctionTitleCell").ToString();
+
+//セルの値を取得するには、GcMultiRow.GetValue メソッドを使用します。次のコードは、１行目の２番目のセルの値を取得し、コンソールに出力します。
+
+gcMultiRow1.Rows[0].Cells[1].Value = "DEF"; gcMultiRow1[0, 2].Value = "GHI"; Console.WriteLine(gcMultiRow1[0, 2].Value);
+
+これでも良いはず。
+
+target.CurrentRow.Cells["checkBoxCell1"].Value = true;
+target.CurrentRow.Visible = false;
+
+
+◆
+//セルの数を取得する
+// 行の場合 
+gcMultiRow1.Template.Row.Cells.Count; 
+// 列ヘッダセクションの場合 
+gcMultiRow1.ColumnHeaders[0].Cells.Count;
+
+上記の処理では行のセルにHeaderCellやRowHeaderCellが含まれます。これらを除外する場合は、ループやLINQでヘッダ型セルを除外します。
+int count = gcMultiRow1.Template.Row.Cells.Where(cell => !(cell is HeaderCell)).Count();
+
+
+
+▼行の交互で色を変更各セルのStyleでノーマルを設定
+テンプレートでAlternatingRowsDefaultCellStyleを設定
+
+
+▼((TextBox)(GridView1.Rows[e.RowIndex].Cells[1].Controls[0])).Text.ToString().Trim()
+这里是一个类型强制转换，把(GridView1.Rows[e.RowIndex].Cells[1].Controls[0])这个控件转换当做一个TextBox类型的控件，然后取“这个TextBox   ”的text属性，接着把Text属性的值通过ToString()方法转成string,再通过Trim（）方法去文本掉开头结尾的空格
+(GridView1.Rows[e.RowIndex].Cells[1].Controls[0])
+这是指获取GridView1控件的第“e.RowIndex+1”行的第2列单元格内的第一个控件
+e.RowIndex是指当前鼠标选中的行的序号，+1是因为数组的下标从0开始，0表示第1，1实际表示第2了
+
+
+
+▼
+gcMultiRow1に値を設定
+gcMultiRow1.Rows[i].Cells[”gcDateTimeCell1”].Value =””
+
+
+▼标记当前行
+this.gcMultiRow1.CurrentRowBorderLine = new Line(GrapeCity.Win.MultiRow.LineStyle
+
+
+
+▼コラムヘッダーに値を設定
+gcMultiRow1.Template.ColumnHeaders[0].Cells[”columnHeaderCell3”].Value=”CCCCCCC”;
+this.gcMultiRow1.Template = this.template1;
+
+
+▼セルインデックスを得る
+gcMultiRow1.Template.ColumnHeaders[0].Cells[”filteringComboBoxCell1”].CellIndex
+gcMultiRow1.Template.Row.Cells[”summaryCell5”].CellIndex
+
+
+
+▼セルの値が変更されたときに処理を行うには
+GcMultiRow.CellEditedFormattedValueChanged イベントを使用します。現在のセルの値を取得するには、GcMultiRow.CurrentCell.EditedFormattedValue プロパティを使用します。
+using GrapeCity.Win.MultiRow;
+private void gcMultiRow1_CellEditedFormattedValueChanged(object sender, CellEditedFormattedValueChangedEventArgs e)
+
+{
+GcMultiRow gcMultiRow = sender as GcMultiRow;
+
+if (e.Scope == CellScope.Row)
+
+{
+
+Console.WriteLine(gcMultiRow.GetEditedFormattedValue(e.RowIndex, e.CellIndex).ToString());
+
+}
+
+}
+
+
+▼固定行
+GcMultiRow.FreezeRightCellName プロパティ
+GcMultiRow.FreezeLeftCellName プロパティ
+
+▼Scope　范围  SectionIndex部分索引 CellIndex单元格索引
+gcMultiRow1.CurrentCellPosition = new CellPosition(e.Scope, e.SectionIndex, e.CellIndex);
+現在のセルの位置を指定するには、、
+GcMultiRow.CurrentCellPosition プロパティを使用します。
+
+▼
+セル名からセルのインデックスを取得する
+操作対象のセルの名前（Cell.Name）が判明している状態でセルのインデックス（Cell.Index）を取得するには、次のようにコーディングします。
+
+string cellName = "textBoxCell1";
+int cellIndex = gcMultiRow1.Template.Row.Cells[cellName].CellIndex;
+
+▼
+列ヘッダセクションや列フッタセクションに配置したセルの編集を許可するには、次の設定を行います。
+1.Section.ReadOnly プロパティを False にする。
+2.Section.Selectable プロパティを True にする。
+加えて、もし特定のセルで選択や入力ができない場合は次のプロパティを確認します。
+?Cell.ReadOnly プロパティを False にする。
+?Cell.Selectable プロパティを True にする。
+
+▼グリッド背景色を交互に表示する
+// 1行おきにセルの背景色を変更する 
+if (context.CellScope == CellScope.Row &&
+ (context.RowIndex % 2) == 0) { cellStyle1.BackColor = Color.LightCyan; } 
+ else { cellStyle1.BackColor = Color.LightSalmon; } return cellStyle1; }
+ 

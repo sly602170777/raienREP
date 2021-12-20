@@ -1,0 +1,31 @@
+▼複数セルの計算
+
+using GrapeCity.Win.MultiRow; 
+//数字 UpDown 单元格1
+NumericUpDownCell numericUpDownCell1 = new NumericUpDownCell();
+numericUpDownCell1.Name = "numericUpDownCell1";
+//数字 UpDown 单元格2
+NumericUpDownCell numericUpDownCell2 = new NumericUpDownCell();
+numericUpDownCell2.Name = "numericUpDownCell2";
+
+//创建汇总单元格
+SummaryCell summaryCell1 = new SummaryCell();
+// セルの値の表示書式を設定する 
+summaryCell1.Style.Format = "###,###";
+
+// "numericUpDownCell1"と"numericUpDownCell2"の合計の平均値を表示する 
+MathStatistics mathStatistics1 = new MathStatistics();
+mathStatistics1.ExpressionString = "numericUpDownCell1 + numericUpDownCell2";
+mathStatistics1.StatisticsType = StatisticsType.Average;
+summaryCell1.Calculation = mathStatistics1;
+
+Cell[] cells = { numericUpDownCell1, numericUpDownCell2 };
+Template template1 = Template.CreateGridTemplate(cells);
+//为汇总单元格 创建列页脚部分
+ColumnFooterSection columnFooterSection = new ColumnFooterSection();
+summaryCell1.Location = template1.Row.Cells["numericUpDownCell1"].Location;
+//将汇总的单元格添加到页脚部分
+columnFooterSection.Cells.Add(summaryCell1);
+//将页脚部分添加到模板中
+template1.ColumnFooters.Add(columnFooterSection);
+gcMultiRow1.Template = template1;
