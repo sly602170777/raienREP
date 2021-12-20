@@ -1,0 +1,109 @@
+using GrapeCity.Win.MultiRow;
+
+
+
+this.gcMultiRow1.RowCount = 6;
+
+this.gcMultiRow1.ViewMode = ViewMode.Row;
+
+
+
+this.gcMultiRow1.Rows[0].Selected = true;
+
+this.gcMultiRow1.Rows[4].Selected = true;
+
+this.gcMultiRow1.Rows[2].Selected = true;
+
+
+
+Console.WriteLine("SelectedRows プロパティで取得:");
+
+foreach (Row selectedRow in this.gcMultiRow1.SelectedRows)
+
+{
+
+Console.WriteLine(selectedRow.Index);
+
+}
+
+// 結果は 0,4,2
+
+
+
+Console.WriteLine("Selected プロパティで取得:");
+
+foreach (Row row in this.gcMultiRow1.Rows)
+
+{
+
+if (row.Selected)
+
+Console.WriteLine(row.Index);
+
+}
+
+// 結果は 0,2,4
+
+
+
+
+
+GcMultiRow.SelectedRows プロパティの結果は選択順ですが、Row.Selected プロパティの結果は行番号順になる違いに注意してください。
+
+
+
+次のコードは Enumerable.OrderBy メソッドを使用した選択されている行の並び替えと、LINQ による選択されている行の取得を行います。ラムダ式とLINQ を使用するには Visual Studio 2008 と .NET Framework 3.5 が必要です。
+
+
+
+using System.Linq;
+
+using GrapeCity.Win.MultiRow;
+
+
+
+this.gcMultiRow1.RowCount = 6;
+
+this.gcMultiRow1.ViewMode = ViewMode.Row;
+
+
+
+this.gcMultiRow1.Rows[0].Selected = true;
+
+this.gcMultiRow1.Rows[4].Selected = true;
+
+this.gcMultiRow1.Rows[2].Selected = true;
+
+
+
+Console.WriteLine("SelectedRows プロパティの結果を並び替え:");
+
+SelectedRowCollection rows = this.gcMultiRow1.SelectedRows;
+
+IEnumerable<Row> query = rows.OrderBy(row => row.Index);
+
+foreach (Row selectedRow in query)
+
+{
+
+Console.WriteLine(selectedRow.Index);
+
+}
+
+// 結果は 0,2,4
+
+
+
+Console.WriteLine("Selected プロパティで取得:");
+
+var selectedRows = from Row row in this.gcMultiRow1.Rows where row.Selected == true select row;
+
+foreach (Row selectedRow in selectedRows)
+
+{
+
+Console.WriteLine(selectedRow.Index);
+
+}
+
+// 結果は 0,2,4

@@ -1,0 +1,68 @@
+▼非表示行を合計値から除外
+
+using GrapeCity.Win.MultiRow; 
+
+public class SumCalculation : ICalculation
+{
+    public object Calculate(CalculationContext context)
+    {
+        // 合計の算出
+        decimal sumValue = 0;
+        int count = context.GcMultiRow.RowCount;
+        for (int i = 0; i < count; i++)
+        {
+            if (context.GcMultiRow.Rows[i].Visible)
+            {
+                decimal temp = 0;
+                decimal.TryParse(string.Concat(context.GcMultiRow[i, 0].Value), out temp);
+                sumValue += temp;
+            }
+        }
+        // 戻り値の設定
+        return sumValue;
+    }
+
+    public object Clone()
+    {
+        return new SumCalculation();
+    }
+}
+
+
+using GrapeCity.Win.MultiRow; 
+▼
+// テンプレートの作成
+Template template1 = Template.CreateGridTemplate(2);
+▼
+// 集計用セルの作成
+SummaryCell summaryCell1 = new SummaryCell();
+summaryCell1.Name = "summaryCell1";
+summaryCell1.Location = template1.Row.Cells[0].Location;
+summaryCell1.Style.Format = "###,###";
+summaryCell1.Calculation = new SumCalculation();
+▼
+// フッタの設定
+ColumnFooterSection columnFooterSection1 = new ColumnFooterSection();
+columnFooterSection1.Cells.Add(summaryCell1);
+columnFooterSection1.Height = summaryCell1.Height;
+template1.ColumnFooters.Add(columnFooterSection1);
+▼
+// MultiRowの設定
+gcMultiRow1.Template = template1;
+gcMultiRow1.AllowUserToAddRows = false;
+gcMultiRow1.RestoreValue = true; //恢复值 为true
+gcMultiRow1.RowCount = 10;
+▼
+//public void SetValue( int rowIndex,int cellIndex,object value)
+//パラメータ
+//rowIndex   セルのオーナー行の0から始まるインデックスを指定するSystem.Int32。
+//cellIndex  セルのセルコレクション内での0から始まるインデックスを指定するSystem.Int32。
+//value      セルに設定する新しい値を指定するSystem.Object。
+for(int i = 0; i < gcMultiRow1.RowCount; i++)
+{
+    gcMultiRow1.SetValue(i, 0, i + 1);
+}
+▼
+// １行目と3行目を非表示に設定
+gcMultiRow1.Rows[0].Visible = false;
+gcMultiRow1.Rows[2].Visible = false;
