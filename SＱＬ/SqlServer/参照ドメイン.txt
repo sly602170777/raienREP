@@ -1,1 +1,43 @@
 https://www.jb51.net/article/70684.htm
+
+
+******************************************
+--创建シノニムプロジェクト
+
+USE Company;  
+GO  
+CREATE SYNONYM S001_USRT  
+FOR JooWMS.dbo.CusAddress;  
+GO  
+
+--查询表中的索引
+use JBCC;
+GO
+Sp_helpindex "S001_USRT"
+
+--查看表领域内存使用
+Exec sp_spaceused ;
+Go
+
+--添加行数列
+select ROW_NUMBER() over (order by CSTCD) as rows from S004_CSTT
+
+
+select * from S001_USRT
+select * into AAA from S001_USRT
+
+--判断表是否存在
+drop table  if exists AAA
+
+
+--数据做物理读取和逻辑读取
+--删除缓存
+DBCC Dropcleanbuffers ;
+--统计数据
+set statistics IO on;
+select * from S001_USRT
+
+
+--分析语句调优方向，执行计划返回每一步行数统计
+Set statistics profile on
+select * from S001_USRT
