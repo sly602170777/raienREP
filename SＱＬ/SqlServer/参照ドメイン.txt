@@ -41,3 +41,47 @@ select * from S001_USRT
 --分析语句调优方向，执行计划返回每一步行数统计
 Set statistics profile on
 select * from S001_USRT
+
+
+--根据字段查找表
+select
+  a.Name as tableName 
+from
+  JBCC.sys.sysobjects a 
+  inner join JBCC.sys.syscolumns b 
+    on a.ID = b.ID 
+where
+  b.Name ='VODQNT'
+  
+--****检索特定 表名
+select name from sysobjects where type = 'U'
+
+
+--******************************************检索特定 表名+字段名
+select
+  * 
+from
+  INFORMATION_SCHEMA.COLUMNS 
+where
+  TABLE_NAME in (select name from sysobjects where type = 'U')
+  
+--根据字段查找表 或者根据表查找字段
+select
+  * 
+from
+  INFORMATION_SCHEMA.COLUMNS 
+where
+  TABLE_NAME in (select name from sysobjects where type = 'U') 
+  and column_name = 'VODBCD' 
+ -- and table_name = 'S009_VODT'
+ 
+ --查找DB 所有的表
+ select
+  top 1000 ROW_NUMBER() OVER (ORDER BY a.name) AS No
+  , a.name AS 表名
+  , CONVERT(NVARCHAR(100), isnull(g.[value], '-')) AS 説明
+from
+  sys.tables a 
+  left join sys.extended_properties g 
+    on (a.object_id = g.major_id AND g.minor_id = 0)
+	
