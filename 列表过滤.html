@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Vue的列表过滤</title>
+    <script src="../SRC/VUE/vue.js"></script>
+  </head>
+  <body>
+    <hr style="border: 1px double #ca9292" />
+    过滤实战 watch 方法一
+    <!-- 准备好一个容器 内部包含一个id -->
+    <h3 id="app">
+      {{ keyWord }}
+      <div>
+        <h3>名人榜--对象过滤</h3>
+        <!-- 获取并绑定数据 -->
+        <input type="text" placeholder="请输入人名..." v-model="keyWord" />
+        <ul>
+          <li v-for="p in fillPersons" :key="p.id">
+            {{p.name}}--{{p.age}}--{{p.id}}
+          </li>
+        </ul>
+      </div>
+      <hr style="border: 1px double #ca9292" />
+      过滤实战 计算属性的方法 computed
+      
+      <!-- 准备好一个容器 内部包含一个id -->
+      <div>
+         <h3>名人榜--对象过滤</h3>
+         <!-- 获取并绑定数据 -->
+         <input type="text" placeholder="请输入人名..." v-model="keyWordByhero" />
+         <ul>
+           <li v-for="p in fillHeros" :key="p.id">
+             {{p.name}}--{{p.age}}--{{p.id}}
+           </li>
+         </ul>
+       </div>
+    </h3>
+
+    <script>
+      //vue 容器与实例是一一对应的  #app
+      Vue.config.productionTip = false;
+      const vm = new Vue({
+        el: "#app", //el 第一种方法连接容器
+        data: {
+          keyWord: "",
+          keyWordByhero: "",
+          persons: [
+            { name: "张三丰", age: 15, id: "552" },
+            { name: "张杰", age: 25, id: "352" },
+            { name: "乔峰", age: 19, id: "502" },
+            { name: "李易峰", age: 39, id: "032" },
+            { name: "郭靖", age: 25, id: "550" },
+            { name: "任我行", age: 65, id: "252" },
+            { name: "任盈盈", age: 65, id: "052" },
+          ],
+          heros: [
+            { name: "张三丰", age: 15, id: "552" },
+            { name: "张杰", age: 25, id: "352" },
+            { name: "乔峰", age: 19, id: "502" },
+            { name: "李易峰", age: 39, id: "032" },
+            { name: "郭靖", age: 25, id: "550" },
+            { name: "任我行", age: 65, id: "252" },
+            { name: "任盈盈", age: 65, id: "052" },
+          ],
+          
+        },
+        //通过计算属性进行过滤
+        computed:{
+            fillHeros(){
+               return this.heros.filter((h)=>{
+                  return h.name.indexOf(this.keyWordByhero)!==-1;
+               })
+            }
+
+        },
+ //#region  通过用watch的属性 
+        
+        /* 
+            通过用watch的属性 进行跟踪关键字 keyWord的变化 
+            当变化的时候 就会重新过滤一下数据
+          */
+        watch: {
+          //参数 是新输入的值(keyWord) 直接以keyWord 为函数名
+          keyWord: {
+            immediate: true, //初始化时让 handler进行初始化
+            handler(word) {
+               console.log("****被修改了****" + word);
+               //过滤核心步骤
+              this.fillPersons = this.persons.filter((p) => {
+                return p.name.indexOf(word) !== -1;  //
+              });
+            },
+          },
+        },
+//#endregion
+        methods: {},
+      });
+
+      //vm.$mount("#app"); //el 第二种方法连接容器
+    </script>
+  </body>
+</html>

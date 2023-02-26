@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <title>VueJs 数据代理</title>
+      <script src="../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      
+      <script >
+         //定义一个年龄的变量
+         let bum=11;
+
+         let person= {
+            sex:"男"
+         }
+         //为一个对象添加属性 并且对这个属性进行修改 赋值
+         Object.defineProperty(person,"age",{
+           //value:45,  //设置age 属性值
+         /*    enumerable:true,//控制属性是否可以被枚举
+            writable:true,//属性 是否可以被修改
+            configurable:true,//属性是否可以被删除 */
+            //设置age 的属性值 直接和bum 绑定在一起
+            get:function(){
+               return bum;
+            },
+            //可以通过person的值 进行修改bum的值 达到两个数据的绑定
+            set:function(value){
+               bum=value
+            }
+         })
+       
+         
+
+
+      </script>
+   </body>
+</html>

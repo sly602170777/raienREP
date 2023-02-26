@@ -1,0 +1,43 @@
+<html>
+   <head>
+      <title>Vue 计算属性2</title>
+      <script src="../../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      <div id="app">
+          姓:<input type="text" v-model="firstName" >
+      <br/>
+      <br/>
+          名:<input type="text" v-model="lastName" >
+          <br/><br/>
+
+          姓名2:<span> {{fullName}}</span>
+          <br/><br/>
+
+      </div>
+      <script >
+         //阻止vue 在生产的时候产生提示信息
+         Vue.config.productionTip = false;
+         //获取容器
+          //let event="88";
+          let vm=new Vue({
+             el:'#app',
+             data: {
+                  firstName:"seki",
+                  lastName:"raien",
+               },
+               //添加计算属性 computed
+               computed:{
+                  fullName:{
+                  get(){
+                     return this.firstName+"--"+this.lastName
+                  }
+               }
+               }
+
+            })
+           
+      </script>
+   </body>
+</html>

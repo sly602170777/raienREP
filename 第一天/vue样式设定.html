@@ -1,0 +1,101 @@
+<html>
+   <head>
+      <title>vue样式设定</title>
+      <script src="../../SRC/VUE/vue.js"></script>
+      <style>
+         .blue {
+            background-color: wheat;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 40px;
+            color:red;
+         }
+
+         .blue {
+            background-color: wheat;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 40px;
+            color:red;
+         }
+
+         .yellow {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 40px;
+            color:rgb(24, 21, 21);
+            border: 10px;
+            border-style: solid;
+         }
+         .blueviolet {
+            background-color: blueviolet;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            font-size: 40px;
+            color:red;
+         }
+      </style>
+   </head>
+
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      <div id="app">
+         <div class="blue" :class="mode" @click="changeMode"> {{name}}</div>  <br/><br/>
+
+         <div class="yellow" :class="" :style="classObj[1]" @click=""> {{name}}</div>  <br/><br/>
+         <!-- 动态生产样式 都是以冒号开头的语法 :class :style -->
+         <div class="blueviolet" :class="classArr" @click=""> </div>  <br/><br/>
+<!-- 条件渲染 表达  v-show="true/false /条件表达式" -->
+         <h2 v-show="false"> 我的名字</h2><br/><br/>
+         <h2 v-show="na"> 我的名字</h2><br/><br/>
+      </div>
+      <script >
+         //阻止vue 在生产的时候产生提示信息
+         Vue.config.productionTip = false;
+         //获取容器
+          //let event="88";
+          let vm=new Vue({
+             el:'#app',
+             data: {
+                 name:"seki ", 
+                 na:true,
+                 mode:"yellow",   
+                 classArr:['blue','yellow','blueviolet'], 
+                  classObj:[
+                     {
+                        fontSize:"40px",
+                        color:"white",
+                     },
+                     {
+                        backgroundColor:"red"
+                     },
+                  ]
+               },
+               //添加计算属性 computed
+               computed:{
+                 
+      
+               },
+               methods:{
+                  changeMode(){
+                     const arr=['blue','yellow','blueviolet'];
+                     const index=Math.floor(Math.random()*3);
+                     this.mode=arr[index];
+                  }
+                  
+               }
+
+            })
+           
+      </script>
+   </body>
+</html>

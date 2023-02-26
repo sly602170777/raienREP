@@ -1,0 +1,47 @@
+<html>
+   <head>
+      <title>VueJs Demo Example</title>
+      <script src="../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      <h1 id="app">{{ message }}
+         <br>
+         <!-- v-bind:href ="url"  有v-bind: 后 引号里的值作为 vue表达式 -->
+         <a v-bind:href ="url" v-bind:k="say"> {{school.name}} </a>
+         <br>
+         <!--单向数据绑定 v-bind 简写绑定方法  用直接冒号标识： -->
+         <a :href ="url" v="say"> 写单向的绑定 </a>
+         <br>
+         <!--双向数据绑定 v-model  -->
+         <input  v-model:a="name">v-model 原始方法</input>
+         <br>
+         <!--双向数据绑定 v-model  -->
+         <input class="inp" v-model="name">  v-model 简写的方法</input>
+      </h1>
+     
+
+      
+      <script>
+         //vue 容器与实例是一一对应的  #app
+         Vue.config.productionTip=false;
+          const vm = new Vue({
+            //el:"#app",//el 第一种方法连接容器
+            data:{
+              message:"hello wwworld55",
+              url:"https://www.baidu.com/",
+              say:"hello",
+              name:"seki",
+              //在数据结构中 设置多个层级
+              school:{
+                 name:"洛阳理工学院"
+              }
+            },
+            methods:{
+            }
+          })
+
+         vm.$mount("#app");//el 第二种方法连接容器
+      </script>
+   </body>
+</html>

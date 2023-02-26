@@ -1,0 +1,50 @@
+<html>
+   <head>
+      <title>VueJs Demo Example</title>
+      <script src="../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      <h1 id="app">{{ message }}
+         <br>
+         <!-- v-bind:href ="url"  有v-bind: 后 引号里的值作为 vue表达式 -->
+         <a v-bind:href ="url" v-bind:k="say"> {{name}} </a>
+         <br>
+         <!--返回 -->
+         <a > {{school.name}} </a>
+         <a > {{school.item}} </a>
+         <br>
+         <!--双向数据绑定 v-model  -->
+         <input  v-model:a="name">v-model 原始方法</input>
+         <br>
+         <!--双向数据绑定 v-model  -->
+         <input class="inp" v-model="name">v-model 简写的方法</input>
+      </h1>
+     
+
+      
+      <script>
+         //vue 配置项 不产生提示
+         Vue.config.productionTip=false;
+         //vue 容器与实例是一一对应的  #app
+          const vm = new Vue({
+            //data 的函数公式
+            //el:"#app",
+            data: function () {
+              return {
+                 name:"洛阳龙门石窟",  //返回一个对象
+                 url:"",
+                 message:"",
+                 say:"",
+                 school:{
+                    name:"洛阳大学",
+                    item:"外语系"
+                 }
+               }
+            }
+          })
+
+         vm.$mount("#app");//el 第二种方法连接容器
+      </script>
+   </body>
+</html>

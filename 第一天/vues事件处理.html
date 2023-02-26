@@ -1,0 +1,52 @@
+<html>
+   <head>
+      <title>Vue 事件处理</title>
+      <script src="../../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <!-- 准备好一个容器 内部包含一个id -->
+      <div id="app">
+          <h2>欢迎光临 </h2>
+          <br>
+
+          <button v-on:click="showInfo">提示信息</button>  
+         <br>
+         <br>
+      <!-- 事件处理 的简写方法  并且添加一个参数 -->
+          <button id="abc" @click="showInfo2($event,33)">提示信息+{{num}}</button>  
+      </div>
+      <script >
+         //阻止vue 在生产的时候产生提示信息
+         Vue.config.productionTip=false;
+         //获取容器
+          //let event="88";
+          let vm=new Vue({
+            
+             el:'#app',
+             data: function (){
+               return {
+                  num:"88",
+                  Items:{
+                     showInfo(){
+                        console.log("123");
+                     },
+                     showInfo2(event,num){
+                        console.log(event+"---"+num);
+                     }
+                  }
+               }
+             },
+             methods:{
+               showInfo(){
+                        console.log("123");
+               },
+               showInfo2(event,num){
+                  console.log(event.target.innerText+"---"+num);
+               }
+             }
+            })  
+
+         //实例化vue
+      </script>
+   </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Vue 监视属性</title>
+    <script src="../../SRC/VUE/vue.js"></script>
+  </head>
+  <body>
+    <!-- 准备好一个容器 内部包含一个id -->
+    <div id="app">
+      <h2>天天预报---{{info}}</h2>
+      <button @click="changeWheather">点击</button>
+      <br />
+    </div>
+    <script>
+      //阻止vue 在生产的时候产生提示信息
+      Vue.config.productionTip = false;
+      //获取容器
+      //let event="88";
+      let vm = new Vue({
+        el: "#app",
+        data: function () {
+          return {
+             weather:{
+               isHot: true,
+             },
+            firstName: "seki",
+            lastName: "raien",
+            showNewName() {
+              return this.firstName + "-" + this.lastName;
+            },
+          };
+        },
+        //添加计算属性 computed
+        computed: {
+          info() {
+            return this.weather.isHot ? "热000" : "凉的666";
+          },
+        },
+        //添加方法属性 methods
+        methods: {
+         changeWheather: function () {
+            this.weather.isHot = !this.weather.isHot;
+          },
+        },
+        //方法一 监听的方法
+        /* watch: {
+          isHot: {
+            immediate: true,//初始化时让 handler进行初始化
+            handler: (befor, after) =>
+              console.log("call watch...", befor + "---" + after),
+          },
+        }, */
+      });
+      //方法二 监听的方法 在创建vm实例对象后进行监听 多级结构 key 值
+      vm.$watch('weather.isHot',{
+         immediate: true,//初始化时让 handler进行初始化
+         handler: (befor, after) =>
+            console.log("call watch...", befor + "---" + after),
+      })
+
+    </script>
+  </body>
+</html>

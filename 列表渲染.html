@@ -1,0 +1,83 @@
+<html>
+   <head>
+      <title>Vue的列表渲染</title>
+      <script src="../SRC/VUE/vue.js"></script>
+   </head>
+   <body>
+      <hr style="border:1px double #ca9292"/>v-if的使用
+      <!-- 准备好一个容器 内部包含一个id -->
+      <h3 id="app">{{ message }}
+         <button @click="count++">洛阳学校切换{{count}}</button>
+<!-- 条件渲染语句  v-if  -->
+         <div v-if='count === 3'>洛阳理工</div>
+         <div v-else-if="count === 1">洛阳师范学院</div>
+         <div v-else-if="count==2">河南大学</div>
+<!-- v-else 不需要加条件 属于默认值使用 -->
+         <div v-else>河南--大学</div>
+          <br/>
+          <hr style="border:1px double #ca9292"/> template使用
+ <!-- 不影响结构变化 使用 template 与 v-if 配合使用  -->
+         <template v-if="count===1">
+            <p>语文</p>
+            <p>化学</p>
+            <p>数学</p>
+         </template>
+         <hr style="border:1px double #ca9292"/>
+
+         <hr style="border:1px double #ca9292" color="red"/> 列表渲染数据开始
+         <div>
+            <h3>英雄榜--数组遍历</h3>
+            <ul >
+               <li v-for="p in person" :key="p.id">
+                  {{p.name}}--{{p.age}}--{{p.id}}
+               </li>
+            </ul>
+         </div>
+         <hr style="border:1px double #ca9292" color="red"/> 
+         <div>
+            <h3>品牌榜--对象遍历</h3>
+            <ul >
+               <li v-for="(v,k) in company" :key="k">
+                  {{k}}--{{v}}
+               </li>
+            </ul>
+         </div>
+
+
+      </h3>
+     
+
+      
+      <script>
+         //vue 容器与实例是一一对应的  #app
+         Vue.config.productionTip=false;
+          const vm = new Vue({
+            //el:"#app",//el 第一种方法连接容器
+            data:{
+              message:"洛阳学校",
+              count : -1,
+              //在数据结构中 设置多个层级
+              school:{
+                 name:"洛阳理工学院"
+              },
+              person:[ 
+               {name:"张三丰",age:15 ,id:'552'},
+               {name:"乔峰",age:19 ,id:'502'},
+               {name:"郭靖",age:25 ,id:'550'},
+               {name:"任我行",age:65 ,id:'252'},
+               ],
+               company:{
+                  name:"谷歌",
+                  age:"20",
+                  money:"1120M",
+               }
+            },
+
+            methods:{
+            }
+          })
+
+         vm.$mount("#app");//el 第二种方法连接容器
+      </script>
+   </body>
+</html>
