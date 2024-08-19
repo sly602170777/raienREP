@@ -1,5 +1,9 @@
 # 优化CS速度
 
+``` url  
+https://learn.microsoft.com/ja-jp/visualstudio/ide/optimize-visual-studio-performance?view=vs-2022
+```
+
 ```
 ★　 自動ファイル復元を無効にする
 [ツール]>[オプション] >[プロジェクトおよびソリューション]>[全般] > [ソリューションの読み込み時にドキュメントを再度開く] の選択を解除します。
@@ -25,6 +29,18 @@
 
 ```
 ★　ガベージ コレクションを強制する
-
 キーボード ショートカット Ctrl+Alt+Shift+F12 キー、Ctrl+Alt+Shift+F12 キー (2 回押します) を使います。
+
+★ ツール ウィンドウの設定を変更して起動時間を向上させるには
+help > [パフォーマンス マネージャー] ダイアログ ボックスの [ツール ウィンドウ]>[スタートアップ] にそのツール ウィンドウが表示されます。
 ```
+
+``` 快捷键
+https://shortcutworld.com/Visual-Studio
+
+VisualStudioコード整形ショートカット
+ファイル全体：Ctrl+K, Ctrl+D
+選択範囲：Ctrl+K, Ctrl+F
+
+代码自动补全功能
+Tool-> intelliCode-> C#引数补全
