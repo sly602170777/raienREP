@@ -25,7 +25,7 @@ https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/St
 
 　　\S：用于匹配除单个空格符之外的所有字符； 
 
-　　\d：用于匹配从0到9的数字； 
+　　\d：用于匹配从0到9的数字；   \d+$ //以数字结尾的
 
 　　\w：用于匹配字母，数字或下划线字符； 
 
