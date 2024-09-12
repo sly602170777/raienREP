@@ -7,7 +7,7 @@ Private Sub Worksheet Change Byval Target As Range)
     IRow = ws.Cells(Rows.count, "B").End(xIUp).Row
     '別列の最終行を取得します。
     For J = 3 To IRow
-        'B列の3行目からB列の最終行まで繰り返します。
+        'B列の3行目からB列の最終行まで繰り返します
         If count > 1 Then
             count = WorksheetFunction.CountIf(ws.Range("B:B"),ws.Cells(J, 2))
             '件数が1を超える場合は重複として判定します。
