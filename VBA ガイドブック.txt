@@ -152,3 +152,42 @@ StrConv(StrConv("ｱｲｳｴｵ",vbWide),vbHiragana) → "あいうえお"
 
 ------------------------
 
+
+
+**************************************************************************************************************************
+22:33 2024/08/05
+------------------------
+
+-エクセルブックの全シートからCSV(テキスト)ファイルを一括出力する
+
+Sub ファイル一括作成()
+
+    Application.ScreenUpdating = False
+        
+    '対象ブックをダイアログで指定する
+    Dim FName As String
+    FName = Application.GetOpenFilename _
+        (FileFilter:="Microsoft Excelブック,*.xls*")
+    
+    If FName <> "False" Then
+        Workbooks.Open FileName:=FName
+    Else
+        Exit Sub 'ファイルが選択されていない場合は終了
+    End If
+    
+    Dim ws As Worksheet
+    For Each ws In Worksheets '各シートに対して処理を繰り返す
+    
+        ws.Activate
+        '元のブックと同じ階層に出力
+        ActiveWorkbook.SaveAs _
+        FileName:=ActiveWorkbook.Path & "\" & ws.Name & ".csv", _
+        FileFormat:=xlCSV
+    
+    Next ws
+ 
+    ActiveWorkbook.Close SaveChanges:=False
+ 
+    MsgBox "ファイル作成が完了しました。"
+ 
+End Sub

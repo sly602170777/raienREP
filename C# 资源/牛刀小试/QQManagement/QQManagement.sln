@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35130.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QQManagement", "QQManagement\QQManagement.csproj", "{AF7CC529-4C3E-4E7F-B3C3-A6FDEE6BE79B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF7CC529-4C3E-4E7F-B3C3-A6FDEE6BE79B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF7CC529-4C3E-4E7F-B3C3-A6FDEE6BE79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF7CC529-4C3E-4E7F-B3C3-A6FDEE6BE79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF7CC529-4C3E-4E7F-B3C3-A6FDEE6BE79B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D9DC9D-0749-4268-ACC8-21C70F3865B3}
+	EndGlobalSection
+EndGlobal
