@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <section>
+    <select name="" id="province" onchange="province()">
+      <!-- <option value="">请选择省份</option> -->
+    </select>
+    <select name="" id="city" onchange="city()">
+ <!--      <option value="">请选择城市</option> -->
+    </select>
+    <select name="" id="area">
+<!--       <option value="">请选择区域</option> -->
+    </select>
+  </section>
+  </section>
+</body>
+</html>
+<script>
+  // 省市区数据
+  const data = [
+      {
+        province: "河南省",
+        city: [
+          {
+            name: "新乡市",
+            area: ["卫滨区", "红旗区", "高新区", "牧野区"],
+          },
+          {
+            name: "郑州市",
+            area: ["中原区", "二七区", "金水区", "新密区"],
+          },
+          {
+            name: "洛阳市",
+            area: ["老城区", "洛龙区", "孟津区"],
+          },
+        ],
+      },
+      {
+        province: "山东省",
+        city: [
+          {
+            name: "临沂市",
+            area: ["兰山区", "河东区", "沂水区", "费县"],
+          },
+          {
+            name: "青岛市",
+            area: ["市北区", "市南区", "黄岛区", "城阳区"],
+          },
+          {
+            name: "淄博市",
+            area: ["淄川区", "博山区", "周村区", "张店区"],
+          },
+        ],
+      },
+      // ...
+    ];
+    
+    // 初始化省份选择
+    function initProvince() {
+      const provinceSelect = document.getElementById("province");
+      provinceSelect.innerHTML = "<option value=''>请选择市</option>";
+      for (const province of data) {
+        const option = document.createElement("option");
+        option.value = province.province;
+        option.textContent = province.province;
+        provinceSelect.appendChild(option);
+      }
+
+      //province();
+      
+      
+    }
+    
+    // 省份选择改变时触发
+    function province() {
+      const provinceSelect = document.getElementById("province");
+      const citySelect = document.getElementById("city");
+      const areaSelect = document.getElementById("area");
+    
+      // 清空城市和区县选择
+      citySelect.innerHTML = "<option value=''>请选择市</option>";
+      areaSelect.innerHTML = "<option value=''>请选择区县</option>";
+    
+      const selectedProvince = provinceSelect.value;
+      if (!selectedProvince) {
+        return;
+      }
+    
+      // 根据选择的省份，显示对应的城市
+      const cities = data.find((item) => item.province === selectedProvince).city;
+      for (const city of cities) {
+        const option = document.createElement("option");
+        option.value = city.name;
+        option.textContent = city.name;
+        citySelect.appendChild(option);
+      }
+
+      //city();
+
+    }
+    
+    // 城市选择改变时触发
+    function city() {
+      const provinceSelect = document.getElementById("province");
+      const citySelect = document.getElementById("city");
+      const areaSelect = document.getElementById("area");
+    
+      // 清空区县选择
+      areaSelect.innerHTML = "<option value=''>请选择区县</option>";
+    
+      const selectedCity = citySelect.value;
+      if (!selectedCity) {
+        return;
+      }
+    
+      // 根据选择的城市，显示对应的区县
+      const areas = data
+        .find((item) => item.province === provinceSelect.value)
+        .city.find((item) => item.name === selectedCity).area;
+      for (const area of areas) {
+        const option = document.createElement("option");
+        option.value = area;
+        option.textContent = area;
+        areaSelect.appendChild(option);
+      }
+    }
+    
+    // 初始化
+    initProvince();
+    
+      </script>
