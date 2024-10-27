@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .outer {
+        height: 100%;      /*  父元素高度设置为100% */
+        padding: 100px 0 0; /*  上边距100px，左右边距0，下边距0 */
+        box-sizing: border-box; /*  盒子模型设置为border-box */
+        position: relative; /*  父元素相对定位 */
+        
+      }
+      .A {
+        height: 100px;
+        background: #bbe8f2;
+        position: absolute; /*  子元素绝对定位 */
+        top: 0;
+        left: 0;
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .B {
+        height: 100%;
+        background: #d9c666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="A">头部DIV</div>
+      <div class="B">下部DIV</div>
+    </div>
+  </body>
+</html>

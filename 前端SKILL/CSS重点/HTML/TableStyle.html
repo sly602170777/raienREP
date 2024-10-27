@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="..\..\CSS重点\JSFire\common.js"></script>
+    <title>Table练习</title>
+
+</head>
+
+<body>
+    <table border="1" id="myTable" width="450px" align="center">
+        <div id="text-button">
+            <p id="text">クリック</p>
+        </div>
+        <tr>
+            <th width="200px">
+                编号
+            </th>
+            <td width="100px">
+                123
+            </td>
+            <th width="200px">
+                姓名
+            </th>
+            <td>
+                222
+            </td>
+            <th width="100px" colspan="2" >
+                名称
+            </th>
+            <td>
+                333
+            </td>
+        </tr>
+        <tr align="center" >
+            <td colspan="2" width="400px">100</td>
+            <td colspan="5">200</td>
+        <!-- <td>800</td> -->
+        </tr>
+        <tr>
+            <td >300</td>
+            <td colspan="2">400</td>
+            <td colspan="4" >500</td>
+        </tr>
+    </table>
+    <br />
+    <!-- onclick="changeBorder()"  -->
+    <input type="button" id="myBtn" value="改变边框">　
+    <br>
+    <input type="button" id="getCellFirst" value="获取第一行第一个格子内容">　
+    <br>
+    <input type="checkbox" id="getCellFirst" value="获取checkbox">　
+    <br>
+    <input type="password" id="password" value="密码">　
+
+    <form action="submitpage.htm" onsubmit="return validate_form(this);" method="post">
+        Email: <input type="text" name="email" size="30">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        //邮箱的验证
+        function validate_email(field, alerttxt) {
+            with (field) {
+                apos = value.indexOf("@")
+                dotpos = value.lastIndexOf(".")
+                if (apos < 1 || dotpos - apos < 2) {
+                     alert(alerttxt); 
+                     return false 
+                    }
+                else {
+                        return true
+                     }
+            }
+        }
+
+        function validate_form(thisform) {
+            with (thisform) {
+                if (validate_email(email, "Not a valid e-mail address!") == false) { 
+                    email.focus(); 
+                    return false 
+                }
+            }
+        }
+
+        //        alert('Hello, world');
+        var a = git.changeBorder;
+        console.log(a);
+
+        //获取第一行第一个格子内容
+        console.log(git.getCellFirst);
+        document.getElementById('getCellFirst').onclick = git.getCellFirst;
+
+        document.getElementById('myBtn').onclick = function () {
+            console.log("aa");
+            document.getElementById('myTable').border = "10"
+        };
+        document.getElementById("text-button").onclick = function () {
+            document.getElementById("text").innerHTML = "クリックされた！";
+        };
+
+    </script>
+</body>
+
+</html>
