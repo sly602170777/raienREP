@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Index2";
+    var message = "";
+    if (ViewBag.Flag == true)
+    {
+        message = "コントローラーで true を設定";
+    }
+    else
+    {
+        message = "コントローラーで false を設定";
+    }
+}
+
+<h1>View 内でコードを記述する</h1>
+<div>@message</div>
+

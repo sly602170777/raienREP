@@ -1,0 +1,19 @@
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.exe.config
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.pdb
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.csprojAssemblyReference.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.Form1.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.Properties.Resources.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.csproj.GenerateResource.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.csproj.CoreCompileInputs.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.exe.config
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\bin\Debug\pg131.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.Form1.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.Properties.Resources.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.csproj.GenerateResource.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.csproj.CoreCompileInputs.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-1 基礎 121-135\pg131\pg131\obj\Debug\pg131.pdb

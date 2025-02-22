@@ -1,0 +1,5 @@
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter3 ユーザーインターフェイスの極意\3-1 ユーザーインターフェイス 037-101\ui075\ui075\obj\Debug\ui075.csproj.AssemblyReference.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter3 ユーザーインターフェイスの極意\3-1 ユーザーインターフェイス 037-101\ui075\ui075\obj\Debug\ui075.Form1.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter3 ユーザーインターフェイスの極意\3-1 ユーザーインターフェイス 037-101\ui075\ui075\obj\Debug\ui075.Properties.Resources.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter3 ユーザーインターフェイスの極意\3-1 ユーザーインターフェイス 037-101\ui075\ui075\obj\Debug\ui075.csproj.GenerateResource.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter3 ユーザーインターフェイスの極意\3-1 ユーザーインターフェイス 037-101\ui075\ui075\obj\Debug\ui075.csproj.CoreCompileInputs.cache

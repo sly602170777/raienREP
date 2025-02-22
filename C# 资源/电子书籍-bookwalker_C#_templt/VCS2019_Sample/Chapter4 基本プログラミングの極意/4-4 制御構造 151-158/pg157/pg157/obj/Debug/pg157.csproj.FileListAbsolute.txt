@@ -1,0 +1,10 @@
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\bin\Debug\pg157.exe.config
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\bin\Debug\pg157.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\bin\Debug\pg157.pdb
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.csprojAssemblyReference.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.Form1.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.Properties.Resources.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.csproj.GenerateResource.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.csproj.CoreCompileInputs.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-4 制御構造 151-158\pg157\pg157\obj\Debug\pg157.pdb
