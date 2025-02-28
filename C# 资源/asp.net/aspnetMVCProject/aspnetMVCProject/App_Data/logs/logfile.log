@@ -1,0 +1,551 @@
+2025-02-25 21:06:02,232 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-25 21:07:05,528 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-25 21:22:31,813 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-25 21:22:36,188 [4] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-25 21:22:36,217 [4] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-25 21:23:14,068 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-25 21:23:16,079 [10] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-25 22:40:14,233 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-25 22:41:21,136 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-25 22:41:21,172 [10] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 19:01:05,189 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 19:01:11,207 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 19:01:11,258 [5] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:42:03,098 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 22:42:04,004 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:42:04,048 [5] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:44:49,760 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 22:44:50,343 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:44:50,376 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:44:57,390 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:44:57,415 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:00,544 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:00,568 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,744 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,775 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,775 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,799 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,799 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,825 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,826 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,850 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,850 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,874 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,874 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,900 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,900 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,928 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,928 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,955 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:45:02,955 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:45:02,978 [6] ERROR aspnetMVCProject.Models.MyLogger - An error occurred in Page_Load.
+System.Exception: Simulated error.
+   場所 aspnetMVCProject.Models.MyLogger.Page_Load(Object sender, EventArgs e) 場所 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\Models\MyLogger.cs:行 28
+2025-02-26 22:49:17,736 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 22:49:44,936 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:03,022 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aaa       , id: 1
+2025-02-26 22:50:04,272 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,868 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: a         , id: 2
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aab       , id: 3
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: ab        , id: 4
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aa        , id: 5
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 1         , id: 6
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 5         , id: 7
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 2         , id: 8
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 6         , id: 9
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC:           , id: 9
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 8         , id: 7
+2025-02-26 22:50:12,869 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:04:11,823 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 23:04:54,805 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 23:05:17,636 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 23:05:52,987 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aaa       , id: 1
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: a         , id: 2
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aab       , id: 3
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: ab        , id: 4
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: aa        , id: 5
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 1         , id: 6
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 5         , id: 7
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 2         , id: 8
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 6         , id: 9
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC:           , id: 9
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - ABC: 8         , id: 7
+2025-02-26 23:05:57,356 [6] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-26 23:21:23,011 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-26 23:21:23,931 [5] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:43:13,212 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:43:23,330 [5] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:45:52,266 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:45:53,706 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:46:50,296 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:47:10,133 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:49:46,678 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:50:00,502 [8] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:53:07,901 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:53:11,872 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 08:54:36,055 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:55:59,903 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 08:56:01,002 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 16:00:50,381 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 16:01:09,080 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 16:01:21,567 [9] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 16:07:29,669 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 16:10:39,359 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 16:15:07,273 [13] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 16:16:04,137 [35] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 17:06:52,038 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 17:07:28,388 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:28,388 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:32,695 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:32,695 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:42,323 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:42,323 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:42,857 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:42,857 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:07:47,777 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:23,749 [32] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:08:24,615 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:11,036 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:38,676 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 17:10:43,974 [38] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:20,241 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:37:21,263 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:07,021 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,089 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,090 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,090 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:38:10,090 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:38:10,090 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,185 [31] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:27,613 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,906 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:41,907 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,346 [10] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,578 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:46:43,818 [5] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 20:48:07,412 [21] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 20:59:55,982 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 20:59:56,460 [29] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-02-27 21:31:14,774 [49] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 21:31:15,551 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:15,552 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:36,806 [57] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:37,285 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:40,956 [29] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - aspnetMVCProject.Models.user
+2025-02-27 21:31:41,455 [33] INFO  aspnetMVCProject.Models.MyLogger - Page_Load called for the first time.

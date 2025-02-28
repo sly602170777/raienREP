@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "GetProducts";
+}
+
+<main>
+    <h2>GetProducts</h2>
+    <h2>@DateTime.Now.ToString()</h2>
+    <div id="productList"></div>
+
+
+    @section Scripts {
+        <script>
+            $(document).ready(function () {
+                $.ajax({
+                    url: '@Url.Action("GetProducts", "Product")',
+                    type: 'GET',
+                    success: function (data) {
+                        let html = '<ul>';
+                        $.each(data, function (index, product) {
+                            //html += `<li>${product.Name} - $${product.Id}</li>`;
+                              html += `<li>${product.Name} - $${product.Id}</li>`; // 使用反引号（`）
+                        });
+                        html += '</ul>';
+                        $('#productList').html(html);
+                });
+            });
+        </script>
+    }
+</main>
+
+
