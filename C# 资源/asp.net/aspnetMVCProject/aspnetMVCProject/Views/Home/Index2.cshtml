@@ -4,9 +4,25 @@
 <p></p>
 <main>
 
+    @{
+        var message = "Hello from Razor code block!";
+        var currentTime = DateTime.Now;
+    }
+    @*使用 @{ ... } 符号定义 Razor 代码块，可以在其中编写多行 C# 代码。代码块中的代码会在服务器端执行。*@
+    <p>@message</p>
+    <p>Current time: @currentTime</p>
 
+    @*@if, @else if, @else: 条件判断语句。*@
+    @if (Model.Name != null)
+    {
+        <p>Welcome, authenticated user!</p>
+    }
+    else
+    {
+        <p>Please log in to access more features.</p>
+    }
+    
     <div class="row">
-
         <p>this is idex 2 </p>
         <table>
             <tr>
@@ -17,8 +33,11 @@
                     ID
                 </th>
             </tr>
-            <tr>@ViewData.Model.Name</tr>
-            <tr>@ViewData.Model.Id</tr>
+            <tr>
+                <th>@ViewData.Model.Name</th>
+                <th>@ViewData.Model.Id</th>
+            </tr>
+
         </table>
     </div>
 </main>

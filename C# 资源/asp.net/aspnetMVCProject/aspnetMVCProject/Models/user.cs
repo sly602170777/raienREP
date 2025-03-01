@@ -9,6 +9,7 @@ namespace aspnetMVCProject.Models
     {
         public string Name { get; set; }
         public string Id { get; set; }
+        //public int MyProperty { get; set; }
 
         public user()
         {

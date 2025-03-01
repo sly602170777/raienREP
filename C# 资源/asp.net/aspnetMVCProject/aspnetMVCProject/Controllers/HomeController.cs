@@ -19,7 +19,7 @@ namespace aspnetMVCProject.Controllers
             MyLogger logger = new MyLogger ();
             
             logger.Page_Load (null, EventArgs.Empty);
-
+            // TODO
             DbHelper dbHelper = new DbHelper (connectionString);
             //dbHelper.ExecuteQuery ('select [ABC], [id] from AAA',);
             string sql = "select [ABC], [id] from AAA";
@@ -35,6 +35,12 @@ namespace aspnetMVCProject.Controllers
                 //users.Add (new user (row ["ABC"].ToString (), row ["id"].ToString ()));
 
                 //log.Info ();
+                int x = 5;
+                while (x < 20)
+                {
+                    x++;
+                }
+
             }
             ViewData.Model = user1;
 
@@ -59,6 +65,7 @@ namespace aspnetMVCProject.Controllers
             {
                 if (row ["ABC"].ToString ().Replace (" ", "") == "sly")
                 {
+                    // TODO
                     user1 = new user (row ["ABC"].ToString (), row ["id"].ToString ());
                 }
             }

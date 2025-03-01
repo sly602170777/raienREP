@@ -14,20 +14,20 @@ namespace aspnetMVCProject.Controllers
     {
         MyLogger logger = new MyLogger ();
         string connectionString = ConfigurationManager.ConnectionStrings ["DefaultConnection"].ConnectionString;
-        
+
         public JsonResult GetProducts ()
         {
-            
+
             DbHelper dbHelper = new DbHelper (connectionString);
             string sql = "select [ABC], [id] from AAA";
             DataTable dt = dbHelper.ExecuteQuery (sql);
 
-            List<user> users = new List<user>{ };
-            
+            List<user> users = new List<user> { };
+            // TODO:
             foreach (DataRow row in dt.Rows)
             {
                 logger.Page_Load (new user (row ["ABC"].ToString (), row ["id"].ToString ()), EventArgs.Empty);
-                users.Add(new user (row ["ABC"].ToString (), row ["id"].ToString ()));
+                users.Add (new user (row ["ABC"].ToString (), row ["id"].ToString ()));
             }
             return Json (users, JsonRequestBehavior.AllowGet);
 
@@ -43,5 +43,4 @@ namespace aspnetMVCProject.Controllers
 
 };
 
-        
-       
+
