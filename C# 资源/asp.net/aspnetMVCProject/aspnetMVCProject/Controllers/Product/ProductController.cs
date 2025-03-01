@@ -35,7 +35,6 @@ namespace aspnetMVCProject.Controllers
         public ActionResult EditProdect ()
         {
             ViewBag.Message = "Your application description page.";
-
             return View ();
         }
 

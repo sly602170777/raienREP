@@ -14,8 +14,9 @@ namespace aspnetMVCProject.Models
         public user()
         {
         }
-        public user (string name, string id)
+        public user (string id, string name)
         {
+
             Name = name;
             Id = id;
         }

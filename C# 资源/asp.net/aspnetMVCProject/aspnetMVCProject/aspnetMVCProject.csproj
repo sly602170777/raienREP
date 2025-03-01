@@ -124,8 +124,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\JsonResultDemoController.cs" />
     <Compile Include="Controllers\Product\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\User\UserController.cs" />
     <Compile Include="DbHelper.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -196,6 +198,8 @@
     <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\Home\GetUserInfo.cshtml" />
     <Content Include="Views\Product\GetProducts.cshtml" />
+    <Content Include="Views\User\UserView.cshtml" />
+    <Content Include="Views\JsonResultDemo\SampleView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="logs\" />
