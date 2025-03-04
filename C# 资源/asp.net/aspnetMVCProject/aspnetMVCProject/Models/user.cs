@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace aspnetMVCProject.Models
+﻿namespace aspnetMVCProject.Models
 {
     public class user
     {
+        #region 定义属性
         public string Name { get; set; }
         public string Id { get; set; }
         //public int MyProperty { get; set; }
 
-        public user()
+        #endregion
+
+        public user ()
         {
         }
         public user (string id, string name)
@@ -20,6 +18,7 @@ namespace aspnetMVCProject.Models
             Name = name;
             Id = id;
         }
-         
+
+
     }
 }
