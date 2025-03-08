@@ -24,23 +24,11 @@ namespace aspnetMVCProject.Controllers
             DataTable dt = dbHelper.ExecuteQuery(sql);
 
             List<user> users = new List<user> { };
-            // TODO:
-            List<user> users2 = new List<user>
-            {
-                new user("1", "2"),
-                new user("1", "2"),
-                new user("1", "2"),
-                new user("1", "2"),
-                new user("1", "2"),
-                new user("1", "2"),
-            };
+
             foreach (DataRow row in dt.Rows)
             {
-                logger.Page_Load(
-                    new user(row["ABC"].ToString(), row["id"].ToString()),
-                    EventArgs.Empty
-                );
-                users.Add(new user(row["ABC"].ToString(), row["id"].ToString()));
+                //logger.Page_Load (new user (row ["ABC"].ToString (), row ["id"].ToString ()), EventArgs.Empty);
+                //users.Add(new user (row ["ABC"].ToString (), row ["id"].ToString ()));
             }
             return Json(users, JsonRequestBehavior.AllowGet);
         }
@@ -48,6 +36,7 @@ namespace aspnetMVCProject.Controllers
         public ActionResult EditProdect()
         {
             ViewBag.Message = "Your application description page.";
+
             return View();
         }
     }

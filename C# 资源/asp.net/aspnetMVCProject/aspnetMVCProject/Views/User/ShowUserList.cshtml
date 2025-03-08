@@ -1,0 +1,72 @@
+﻿@model IEnumerable<aspnetMVCProject.Models.user>
+@{
+	ViewBag.Title = "ShowUserList";
+}
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<h2>ユーザ一覧表</h2>
+
+<div>
+	<table>
+
+		<tr>
+			<td>
+				ユーザ番号
+			</td>
+			<td>
+				ユーザ名
+			</td>
+			<td>
+				ユーザ年齢
+			</td>
+			<td>
+				削除
+			</td>
+			<td>
+				更新
+			</td>
+		</tr>
+		@foreach(var user in Model)
+		{
+			<tr>
+				<td>
+					@user.Id
+				</td>
+				<td>
+					@user.Name
+				</td>
+				<td>
+					@user.Age
+				</td>
+				<td>
+					@Html.ActionLink("削除", "DeleteUser", "User", new { Id = user.Id }, new { })
+				</td>
+				<td>
+					@Html.ActionLink("更新", "ShowUserDetail", "User", new { Id = user.Id }, new { })
+				</td>
+			</tr>
+		}
+
+
+
+
+	</table>
+	<br />
+	@*ラジオボタンの使い方*@
+	男性
+	@Html.RadioButton("性别", "1", false)
+	女性
+	@Html.RadioButton("性别", "2", true)
+</div>
+@section Scripts
+{
+	<script type="text/javascript">
+		$(function () {
+			$("a:contains('削除')").click(function () {
+				if (!confirm("削除しますか？")) {
+					return false;
+				}
+            });
+		});
+	</script>
+
+}

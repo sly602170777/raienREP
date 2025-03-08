@@ -1,0 +1,66 @@
+﻿@model aspnetMVCProject.Models.user
+
+@{
+	ViewBag.Title = "ShowUserDetail";
+}
+
+<h2>ShowUserDetail</h2>
+
+<div>
+	<h4>user</h4>
+	<hr />
+	<table class="dl-horizontal">
+		<tr>
+			<td style="width: 100px ">
+				@Html.DisplayNameFor(model => model.Id)
+			</td>
+			<td style="width: 100px ">
+				@Html.DisplayNameFor(model => model.Name)
+			</td>
+			<td style="width: 100px ">
+				@Html.DisplayNameFor(model => model.Age)
+			</td>
+		<tr />
+		<tr>
+			<td>
+				@Html.DisplayFor(model => model.Id)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Name)
+			</td>
+			<td>
+				@Html.DisplayFor(model => model.Age)
+			</td>
+		<tr />
+
+	</table>
+	<br />
+	@*强类型的textBox*@
+	@Html.DisplayNameFor(model => model.Id)：
+	@Model.Id
+	<br />
+	@Html.DisplayNameFor(model => model.Name)：
+	@Html.TextBoxFor(a => a.Name, new { id = "NameTextBox" })
+	<br />
+	@Html.DisplayNameFor(model => model.Age)：
+	@Html.TextBoxFor(a => a.Age, new { id = "AgeTextBox" })
+
+
+</div>
+<p>
+	@*href="/User/EditUser/43?age=43&name=23"*@
+	@*@Html.ActionLink("Edit", "EditUser", new { id = Model.Id, age = Model.Age, name = Model.Name }) |*@
+	<a href="#" id="editLink">Edit</a>|
+	@Html.ActionLink("Back to List", "ShowUserList")
+</p>
+@section Scripts {
+	<script type="text/javascript">
+        document.getElementById("editLink").onclick = function () {
+            var id = @Model.Id;
+            var age = document.getElementById("AgeTextBox").value;
+            var name = document.getElementById("NameTextBox").value;
+            var url = '@Url.Action("EditUser", "User")' + '?id=' + id + '&age=' + age + '&name=' + name;
+            window.location.href = url;
+        };
+	</script>
+}

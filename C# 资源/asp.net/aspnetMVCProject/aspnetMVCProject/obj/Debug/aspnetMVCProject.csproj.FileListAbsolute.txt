@@ -90,95 +90,20 @@ C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMV
 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Web.config
 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Web.Debug.config
 C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Web.Release.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Web.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Web.Debug.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Web.Release.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\aspnetMVCProject.dll.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\aspnetMVCProject.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\aspnetMVCProject.pdb
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csc.exe
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csc.exe.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csc.rsp
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csi.exe
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csi.exe.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\csi.rsp
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.Managed.Core.targets
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\Microsoft.Win32.Primitives.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.AppContext.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Collections.Immutable.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Console.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Globalization.Calendars.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.IO.Compression.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.IO.Compression.ZipFile.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.IO.FileSystem.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Net.Http.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Net.Sockets.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Reflection.Metadata.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Threading.Tasks.Extensions.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.ValueTuple.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Xml.XmlDocument.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Xml.XPath.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\vbc.exe
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\vbc.exe.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\vbc.rsp
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\VBCSCompiler.exe
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\roslyn\VBCSCompiler.exe.config
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Antlr3.Runtime.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\log4net.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.Web.Infrastructure.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Newtonsoft.Json.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Helpers.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Mvc.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Optimization.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Razor.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.Deployment.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.Razor.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\WebGrease.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\log4net.pdb
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\log4net.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Helpers.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Mvc.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Optimization.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.Razor.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.Deployment.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\System.Web.WebPages.Razor.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Newtonsoft.Json.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Antlr3.Runtime.pdb
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.Helpers.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.Mvc.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.Optimization.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.Razor.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.WebPages.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.WebPages.Deployment.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\bin\ja\System.Web.WebPages.Razor.resources.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMVCProject.csproj.AssemblyReference.cache
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMVCProject.csproj.CoreCompileInputs.cache
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMV.5C0A172C.Up2Date
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMVCProject.dll
-D:\WorkSpace\GitHub\C# 资源\asp.net\aspnetMVCProject\aspnetMVCProject\obj\Debug\aspnetMVCProject.pdb
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\cs\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\it\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\ja\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\ko\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\pt-BR\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\81702\source\repos\aspnetMVCProject\aspnetMVCProject\bin\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll

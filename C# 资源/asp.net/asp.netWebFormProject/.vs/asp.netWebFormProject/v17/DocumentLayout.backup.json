@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\asp.netwebformproject\\asp.netwebformproject\\views\\home\\aspform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|solutionrelative:asp.netwebformproject\\views\\home\\aspform.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\asp.netwebformproject\\asp.netwebformproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|solutionrelative:asp.netwebformproject\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\asp.netwebformproject\\asp.netwebformproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|solutionrelative:asp.netwebformproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\asp.netwebformproject\\asp.netwebformproject\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{76F761E4-91F1-44FF-9891-C6A832B6E266}|asp.netWebFormProject\\asp.netWebFormProject.csproj|solutionrelative:asp.netwebformproject\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ASPForm.aspx",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\ASPForm.aspx",
+              "RelativeDocumentMoniker": "asp.netWebFormProject\\Views\\Home\\ASPForm.aspx",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\ASPForm.aspx",
+              "RelativeToolTip": "asp.netWebFormProject\\Views\\Home\\ASPForm.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-03-03T03:09:04.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "asp.netWebFormProject\\Views\\Home\\About.cshtml",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "asp.netWebFormProject\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T02:53:07.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "asp.netWebFormProject\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "asp.netWebFormProject\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBIAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T02:39:15.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "asp.netWebFormProject\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\asp.netWebFormProject\\asp.netWebFormProject\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "asp.netWebFormProject\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T00:42:59.243Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
