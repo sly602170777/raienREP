@@ -1,10 +1,10 @@
 import { defineStore } from "pinia";
 import { computed, ref } from "vue";
 //定义状态
-interface State {
+/* interface State {
   count: number;
 
-}
+} 
 //定义类型
 interface Getters {
   doubleCount: number;
@@ -14,7 +14,7 @@ interface Actions {
   increment(): void;
   decrement(): void;    
 
-}
+}*/
 
 //定义store
 export const useCounterStore = defineStore("counter", ()=>{
