@@ -21,8 +21,8 @@ namespace aspnetMVCProject.Controllers.User
         #region 用户一览表
         public ActionResult ShowUserList()
         {
-            testTool testTool = new testTool();
-            testTool.TestGenFileName();
+            //testTool testTool = new testTool();
+            //testTool.TestGenFileName();
             //testTool.TestGenFileName4();
 
             DbHelper dbHelper = new DbHelper(connectionString);
@@ -118,7 +118,7 @@ namespace aspnetMVCProject.Controllers.User
 
         #region 修改用户信息
 
-        public ActionResult EditUser(int Id, int Age, string Name)
+        public ActionResult EditUser(int Id, int Age, string Name, user user)
         {
             DbHelper dbHelper = new DbHelper(connectionString);
             string sql = "update [dbo].[User] set Name=@Name ,Id =@Id ,Age = @Age where Id = @Id";

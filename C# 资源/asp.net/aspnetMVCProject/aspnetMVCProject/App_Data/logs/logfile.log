@@ -610,3 +610,5 @@ System.Exception: Simulated error.
 2025-03-08 14:42:52,895 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
 2025-03-08 14:47:21,356 [31] INFO  aspnetMVCProject.Models.MyLogger - Application started.
 2025-03-08 14:47:21,621 [14] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
+2025-03-08 20:20:54,917 [1] INFO  aspnetMVCProject.Models.MyLogger - Application started.
+2025-03-08 20:20:56,376 [6] DEBUG aspnetMVCProject.Models.MyLogger - Page_Load called on postback.
