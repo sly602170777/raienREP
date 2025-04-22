@@ -1,0 +1,20 @@
+﻿@model web454.Models.MyModel
+<style>
+    .inp {
+        font-size: 20px;
+        background-color: blue;
+        color: white;
+    }
+</style>
+
+<h1>フォーム入力</h1>
+<div style="color:red">@ViewBag.Message</div>
+@using (@Html.BeginForm("Post", "Home"))
+{
+    <table border="0">
+        <tr><td>名前</td><td>@Html.TextBoxFor(x => x.Name, new { @class = "inp" })</td></tr>
+        <tr><td>年齢</td><td>@Html.TextBoxFor(x => x.Age, new { @class = "inp" })</td></tr>
+        <tr><td>電話</td><td>@Html.TextBoxFor(x => x.Telephone, new { @class = "inp" })</td></tr>
+    </table>
+    <input type="submit" value="登録" />
+}

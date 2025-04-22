@@ -1,0 +1,23 @@
+﻿@model List<web451.Models.MyModel>
+
+@{
+    ViewData["Title"] = "Index2";
+}
+
+<h1>foreach でループ表示</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>タイトル</th>
+        <th>価格</th>
+    </tr>
+    @foreach (var item in @Model)
+    {
+        <tr>
+            <td>@item.ID</td>
+            <td>@item.Title</td>
+            <td>@item.Price 円</td>
+        </tr>
+    }
+</table>

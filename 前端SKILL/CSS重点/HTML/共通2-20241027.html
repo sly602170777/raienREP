@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <title>DIV+CSS practice</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="content">Main Content</div>
+      <div id="sidebar">Left Sidebar</div>
+    </div>
+  </body>
+</html>
+<!-- common.css样式文件： -->
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: gray;
+  }
+  .clear {
+    clear: both;
+  }
+  /*head*/
+  #head {
+    background-color: blue;
+    height: 150px;
+  }
+
+  #container {
+    background-color: rgb(217, 255, 0);
+    overflow: hidden;
+    padding-left: 220px; /* 宽度大小等与边栏宽度大小*/
+  }
+  * html #container {
+    height: 20%; /* So IE plays nice */
+  }
+  #content {
+    background-color: rgb(0, 255, 64);
+    width: 100%;
+    border-left: 220px solid #f00; /* 宽度大小等与边栏宽度大小*/
+    margin-left: -220px; /* 宽度大小等与边栏宽度大小*/
+    float: right;
+  }
+  #sidebar {
+    background-color: #f00;
+    width: 220px;
+    float: right;
+    margin-left: -220px; /* 宽度大小等与边栏宽度大小*/
+  }
+  #content,
+  #sidebar {
+    min-height: 200px;
+    height: auto !important;
+    height: 200px;
+  }
+</style>

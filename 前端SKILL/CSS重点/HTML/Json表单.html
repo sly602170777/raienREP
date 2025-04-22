@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json表单</title>
+    <style>
+        table {
+            border: 1px dashed rgb(116, 189, 223);
+            border: solid;
+            color: rgb(130, 223, 226);
+
+        }
+
+        h1 {
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        .auto {
+            table-layout: auto;
+            width: 350px;
+        }
+
+        .fixed {
+            table-layout: fixed;
+            width: 350px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var jsonData = {
+                "total": "4",
+                "students": [{
+                    "name": "zhang",
+                    "age": "12",
+                    "address": "beijing"
+                }, {
+                    "name": "li",
+                    "age": "18",
+                    "address": "hefei"
+                }, {
+                    "name": "wang",
+                    "age": "42",
+                    "address": "tianjing"
+                }, {
+                    "name": "shi",
+                    "age": "19",
+                    "address": "suzhou"
+                }],
+                "status": "ok",
+                "update": {
+                    "loc": "2017-10-26 23:09",
+                    "utc": "2017-10-26 15:09"
+                }
+            }
+            //数组循环 jsonData.students 
+            /*             for (let index = 0; index < jsonData.students.length; index++) {
+                            const element = jsonData.students[index];
+                            //alert("年龄"+element.age+"姓名"+element.name+"地址"+element.address);
+                        } */
+            /*             for (const key in jsonData) {
+                                var str="";
+                                for (let index = 0; index < jsonData[key].length; index++) {
+                                    str = str + jsonData[key][index]+",";
+                                alert(str);
+                                    
+                                }
+
+                        } */
+
+
+            for (var i = 0; i < jsonData.students.length; i++) {
+                //获取数组中的json 对象
+                var p = jsonData.students[i];
+                for (const key in p) {
+                    console.log(key + ":" + p[key]);
+                }
+            }
+
+
+            /* alert(jsonData.status);
+                alert(jsonData.total); */
+            // js 拼接 HTML  并且把JSON数据展示在TABLEz中
+            //获取table ID 
+
+
+            var dispalyBtn = document.getElementById("dispalyBtn");
+            //触发点击事件
+            dispalyBtn.onclick = function () {
+                var html = "";
+
+                for (let i = 0; i < jsonData.students.length; i++) {
+                    var students = jsonData.students[i];
+                    html += "<tr>";
+                    html += "<td>" + students.name + "</td>";
+                    html += "<td>" + students.age + "</td>";
+                    html += "<td>" + students.address + "</td>";
+                    html += "</tr>";
+                }
+                document.getElementById("emptBody").innerHTML = html;
+                document.getElementById("totalSpan").innerHTML = "共有" + jsonData.total +
+                    "人";
+
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" id="dispalyBtn" value="展示" /><br>
+
+    <table class="fixed" id="tabelData">
+        <tr>
+            <th>
+                姓名
+            </th>
+            <th>
+                年龄
+            </th>
+            <th>
+                地址
+            </th>
+        </tr>
+        <tbody id="emptBody">
+
+        </tbody>
+    </table><br>
+    <span id="totalSpan"></span>
+
+
+</body>
+
+</html>

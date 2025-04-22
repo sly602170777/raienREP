@@ -1,0 +1,20 @@
+* {
+    margin:0;   /* 使所有标签的空隙为0*/
+    padding:0;
+} 
+/* Class 样式要用点才行 字体加粗*/
+.smallDiv {
+    background-color: aqua;
+    font-weight: bold;
+    width: 972px;
+    text-align: center;/*如何水平居中*/
+    height: 50px;
+    line-height: 50px; /*div height 需要和行高 line-height 保持一致 垂直居中*/
+    margin-left:  auto;
+    margin-right:  auto; /* 合并在一起的就是  magin : 0 auto */
+}
+
+.BigDiv{
+    background-color: aqua;
+}
+

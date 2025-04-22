@@ -1,0 +1,20 @@
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.exe.config
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.pdb
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csprojAssemblyReference.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.Form1.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.Properties.Resources.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csproj.GenerateResource.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csproj.CoreCompileInputs.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.exe.config
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\bin\Debug\pg139.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csproj.AssemblyReference.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.Form1.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.Properties.Resources.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csproj.GenerateResource.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.csproj.CoreCompileInputs.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-2 演算 136-140\pg139\pg139\obj\Debug\pg139.pdb

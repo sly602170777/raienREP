@@ -1,0 +1,20 @@
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.exe.config
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.pdb
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csprojAssemblyReference.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.Form1.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.Properties.Resources.resources
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csproj.GenerateResource.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csproj.CoreCompileInputs.cache
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.exe
+D:\C#\NewBook_C#_templt\VCS2019_Sample (1)\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.exe.config
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\bin\Debug\pg193.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.Form1.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.Properties.Resources.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csproj.GenerateResource.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csproj.CoreCompileInputs.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-8 クラスの作成 188-198\pg193\pg193\obj\Debug\pg193.csproj.AssemblyReference.cache

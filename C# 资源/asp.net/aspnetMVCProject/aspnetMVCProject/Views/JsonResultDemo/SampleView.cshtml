@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "SampleView";
+}
+
+<h2>SampleView</h2>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Sample JSON Data </title>
+</head>
+<body>
+    <div>
+        <label>Create Sample User JSON Data</label>
+        <br /><br />
+        <input type="button" id="btnUpdateUserDetail"
+               value="Update User Detail"
+               onclick="UpdateUserDetail();" />
+    </div>
+    <h2>User Management</h2>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
+
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<script lang="en" type="text/javascript">
+
+    function UpdateUserDetail() {
+        var usersJson = GetSampleUsersList();
+        alert(usersJson);
+        var getReportColumnsParams = {
+            "usersJson": usersJson
+        };
+        $.ajax({
+            type: "POST",
+            traditional: true,
+            async: false,
+            cache: false,
+            url: '/JsonResultDemo/GetUsersData',
+            context: document.body,
+            data: getReportColumnsParams,
+            success: function (result) {
+                alert("123");
+                result.forEach(function (user) {
+                    $("#usersTable tbody").append(`
+                            <tr>
+                                <td>${user.Id}</td>
+                                <td>${user.Name}</td>
+                            </tr>
+                        `);
+                });
+            },
+            error: function (xhr) {
+                // Debugger;
+                console.log(xhr.responseText);
+                alert("Error has occurred...");
+            }
+        });
+    }
+    function GetSampleUsersList() {
+        var userDetails = {};
+        var usersList = [];
+        for (var i = 1; i <= 3; i++) {
+            userDetails["Id"] = i;
+            userDetails["Name"] = "User- " + i;
+            usersList.push(userDetails);
+        }
+        return JSON.stringify(usersList);
+    }
+</script>

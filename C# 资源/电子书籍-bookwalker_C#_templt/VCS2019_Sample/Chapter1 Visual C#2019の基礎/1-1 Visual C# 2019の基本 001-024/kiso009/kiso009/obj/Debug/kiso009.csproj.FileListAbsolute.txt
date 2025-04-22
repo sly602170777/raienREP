@@ -1,0 +1,11 @@
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\bin\Debug\kiso009.exe.config
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\bin\Debug\kiso009.exe
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\bin\Debug\kiso009.pdb
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.csproj.AssemblyReference.cache
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.Form2.resources
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.Form1.resources
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.Properties.Resources.resources
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.csproj.GenerateResource.cache
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.csproj.CoreCompileInputs.cache
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.exe
+D:\WorkSpace\GitHub\C# 资源\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter1 Visual C#2019の基礎\1-1 Visual C# 2019の基本 001-024\kiso009\kiso009\obj\Debug\kiso009.pdb

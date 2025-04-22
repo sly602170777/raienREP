@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <title>DIV+CSS practice</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
+
+  <body>
+    <!-- 头部 -->
+    <div id="head">
+        <h1> 参考链接</h1>
+        <h1> https://www.jb51.net/css/41945.html</h1>
+    </div>
+    <!--END 头部 -->
+    <!-- 主容器 -->
+    <div id="container">
+      <!-- 左侧主显区 -->
+      <div id="content"></div>
+      <!-- END 左侧主显区 -->
+      <!-- 右侧边栏 -->
+      <div id="side"></div>
+      <!-- END 右侧边栏 -->
+    </div>
+    <!-- END 主容器 -->
+    <div class="clear"></div>
+    <!-- 底部 -->
+    <div id="foot"></div>
+    <!-- END 底部 -->
+  </body>
+</html>
+<!-- common.css样式文件： -->
+<style type="text/css">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: gray;
+  }
+  .clear {
+    clear: both;
+  }
+  /*head*/
+  #head {
+    background-color: blue;
+    height: 150px;
+  }
+  /*container*/
+  #container {
+    background-color: red;
+    width: 960px;
+    height: 800px;
+    margin: 20px auto;
+  }
+  /*content*/
+  #content {
+    background-color: yellow;
+    float: left;
+    width: 685px;
+    height: 100%;
+  }
+  /*side*/
+  #side {
+    background-color: green;
+    float: right;
+    width: 255px;
+    height: 100%;
+  }
+  /*foot*/
+  #foot {
+    background-color: white;
+    height: 150px;
+    width: 960px;
+    margin: 20px auto;
+  }
+</style>

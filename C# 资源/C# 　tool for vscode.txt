@@ -1,0 +1,18 @@
+C# Dev Kit
+
+
+C# Extensions
+
+C# Format Revolve
+
+C# Format Usings
+
+Auto-Using for C#
+
+C# Snippets for Visual Studio Code
+
+C# Namespace Autocompletion
+
+IntelliCode for C# Dev Kit
+
+Auto-Using for C#

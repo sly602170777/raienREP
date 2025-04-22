@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支払証明書 兼 立替金精算書</title>
+    <link rel="stylesheet" href="styles.css"> <!-- CSSファイルをリンク -->
+</head>
+<body>
+    <form>
+        <h1>支払証明書 兼 立替金精算書</h1>
+        <div class="kubun1">
+            <div class="section">
+                <label for="issue-date">発行日:</label>
+                <input type="date" id="issue-date" name="issue-date">
+            </div>
+            <div class="section">
+                <label for="payer-name">所属:</label>
+                <input type="text" id="payer-name" name="payer-name">
+            </div>
+            <div class="section">
+                <label for="payment-details">支払氏名:</label>
+                <input id="payment-details" name="payment-details" rows="4"></input>
+            </div>
+        </div>
+ 
+
+        <!-- <div class="section">
+            <label for="payment-amount">支払額:</label>
+            <input type="text" id="payment-amount" name="payment-amount">
+        </div> -->
+        <div class="checkbox-group">
+            <div>
+                <label><input type="checkbox" name="reason" value="education"> 教育費1</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="reas.on" value="entertainment"> 交際費/会議費</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="reason" value="purchase"> 物品購入</label>
+            </div>
+            <div>
+                <label><input type="checkbox" name="reason" value="other"> その他</label>
+            </div>    
+        </div>
+        <!-- <button type="submit">送信</button> -->
+    </form>
+</body>
+</html>
+
+<style>
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* フォームのスタイル */
+form {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.kubun1{
+    background-color: aquamarine;
+    width:30%;
+    height: 30%;
+    margin: auto;
+    padding: 10px;
+    float:right;
+}
+
+
+/* フォームの各セクション */
+.section {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* ラベルと入力フィールドのスタイル */
+label {
+    /* display: block;
+    margin-bottom: 5px;
+    font-weight: bold; */
+}
+
+/* input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+
+/* チェックボックスのスタイル */
+.checkbox-group {
+    width:100%;
+    /*display: flex;*/
+    flex-direction: column;
+    background-color: bisque;
+    margin-bottom: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.checkbox-group label {
+    margin-bottom: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkbox-group label {
+    margin-right: 20px;
+}
+
+.checkbox-group label {
+    margin-right: 20px;
+}
+
+/* ボタンのスタイル */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery中的ajax基础方法</title>
+	</head>
+	<script type="text/javascript" src="../JSFire/jQuery.mini.js"></script>
+
+	<body>
+		<div style="width:100%;text-align: center;margin-top: 30px;">
+    		<input type="button" value="getScript加载js文件并执行文件中js方法" id="btn">
+    	</div>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+            $(function(){
+                $("#btn").click(function(){
+                    $.getScript("testGetScript.js");
+                    //say()
+                });
+  });
+		});
+	</script>
+</html>
