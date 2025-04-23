@@ -76,3 +76,60 @@
 ---
 
 需要我把这份 Markdown 导出为 `.md` 文件，或者转成 HTML 页面样式也可以，告诉我一声即可～
+
+
+
+
+
+
+以下是将提供的插件整理后的Markdown表格，按功能分类展示：
+
+---
+
+# Visual Studio Code 插件列表
+
+| 分类                | 插件名称                          | 描述                                                                 | 发布者                  | 版本       |
+|---------------------|-----------------------------------|----------------------------------------------------------------------|-------------------------|------------|
+| **书签管理**         | Bookmarks                        | 在代码中标记和快速跳转位置                                           | alefragnani             | 13.5.0     |
+| **代码辅助**         | CodeGeeX                         | AI代码补全与对话（支持多语言）                                       | aminer                  | 2.22.3     |
+|                     | GitHub Copilot                   | AI驱动的代码补全工具                                                 | GitHub                  | 1.303.0    |
+|                     | GitHub Copilot Chat              | 基于Copilot的聊天式代码辅助                                          | GitHub                  | 0.26.6     |
+|                     | TS Error Translator              | 将TypeScript错误翻译为更易懂的描述                                   | mattpocock              | 0.10.1     |
+| **开发工具**         | Browse Lite                      | 轻量级浏览器预览工具                                                 | antfu                   | 0.3.9      |
+|                     | Vite                             | Vite项目快速操作工具                                                 | antfu                   | 0.2.5      |
+|                     | Live Server                      | 实时本地服务器（支持热重载）                                         | ritwickdey              | 5.7.9      |
+|                     | Remote Repositories              | 直接编辑GitHub等远程仓库的代码                                       | GitHub                  | 0.42.0     |
+|                     | Remote Hub                       | 访问和管理Git仓库的远程分支                                          | GitHub                  | 0.64.0     |
+|                     | Dependi                          | 可视化依赖管理工具                                                   | fill-labs               | 0.7.13     |
+| **语言支持**         | Go                               | Go语言开发支持（语法高亮、调试等）                                   | Golang Team             | 0.46.1     |
+|                     | C#                               | C#语言开发支持（含调试和IntelliSense）                               | Microsoft               | 2.72.34    |
+|                     | Volar                            | Vue 3开发工具（替代Vetur）                                           | Vue.js                  | 2.2.0      |
+|                     | Vetur                            | Vue 2开发工具（语法高亮、格式化等）                                  | Pine Wu                 | 0.37.3     |
+|                     | TypeScript Next                  | 最新TypeScript版本支持                                               | Microsoft               | 5.9.20250330|
+| **格式化与Linting**  | Prettier                         | 代码格式化工具                                                       | Prettier                | 11.0.0     |
+|                     | ESLint                           | JavaScript/TypeScript代码静态检查                                    | Microsoft               | 3.0.10     |
+|                     | Markdownlint                     | Markdown语法检查与格式化                                             | David Anson             | 0.59.0     |
+|                     | Code Spell Checker               | 代码拼写检查（英语）                                                 | Street Side Software    | 4.0.47     |
+|                     | Code Spell Checker (Spanish)     | 代码拼写检查（西班牙语）                                             | Street Side Software    | 2.3.5      |
+| **外观与增强**       | Bracket Pair Color DLW           | 为匹配的括号着色                                                     | BracketPairColorDlw     | 0.0.6      |
+|                     | Indent-Rainbow                   | 缩进颜色高亮                                                         | oderwat                 | 8.3.1      |
+|                     | File Icons                       | 文件类型图标美化                                                     | File-Icons Team         | 1.1.0      |
+|                     | vscode-icons                     | 更多文件图标主题                                                     | VSCode Icons Team       | 12.12.0    |
+| **工具集成**         | Draw.io Integration              | 在VSCode中编辑Draw.io图表                                            | Henning Dieterichs      | 1.9.0      |
+|                     | Text Tables                      | 快速创建和编辑文本表格                                               | Roman Peshkov           | 0.1.5      |
+|                     | Zenkaku                          | 全角空格高亮显示                                                     | mosapride               | 0.0.3      |
+|                     | Auto Rename Tag                  | 自动重命名HTML/XML标签                                               | Jun Han                 | 0.1.10     |
+|                     | VersionLens                      | 查看NuGet/npm包版本信息                                              | pflannery               | 1.18.0     |
+|                     | JavaScript Snippets              | JavaScript代码片段库                                                 | Charalampos Karypidis   | 1.8.0      |
+| **企业工具**         | ServiceNow Development           | ServiceNow平台开发工具                                               | ServiceNow              | 1.7.0      |
+| **本地化**           | Japanese Language Pack           | 日语语言包                                                           | Microsoft               | 1.99.2025041609|
+
+---
+
+### 备注
+- **分类说明**：部分插件可能跨多个类别，此处按主要功能归类。
+- **版本号**：插件版本为当前用户使用的版本，更新时建议检查最新版本。
+- **常用推荐**：
+  - **代码辅助**：GitHub Copilot、CodeGeeX
+  - **前端开发**：Volar、Vite、Live Server
+  - **代码质量**：ESLint、Prettier、Markdownlint
