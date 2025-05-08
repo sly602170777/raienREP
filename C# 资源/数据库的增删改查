@@ -1,0 +1,253 @@
+using System;
+using System.Data;
+using Oracle.ManagedDataAccess.Client;
+
+namespace OracleExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 数据库连接字符串
+            string connectionString = "User Id=your_username;Password=your_password;Data Source=your_data_source;";
+
+            // 创建Oracle连接对象
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    // 打开连接
+                    connection.Open();
+                    Console.WriteLine("连接成功！");
+
+                    // 第一步：查询操作
+                    // 定义查询语句
+                    string querySql = "SELECT employee_id, first_name, last_name FROM employees WHERE department_id = :deptId";
+                    int deptId = 50;
+
+                    // 创建OracleDataAdapter对象
+                    using (OracleDataAdapter adapter = new OracleDataAdapter(querySql, connection))
+                    {
+                        // 为查询语句中的参数添加值
+                        adapter.SelectCommand.Parameters.Add(new OracleParameter("deptId", OracleDbType.Int32)).Value = deptId;
+
+                        // 创建DataTable对象
+                        DataTable employeeTable = new DataTable();
+
+                        // 使用DataAdapter填充DataTable
+                        adapter.Fill(employeeTable);
+
+                        Console.WriteLine($"查询到 {employeeTable.Rows.Count} 条记录。");
+
+                        // 第二步：更新操作
+                        // 定义更新语句
+                        string updateSql = "UPDATE employees SET last_name = :lastName WHERE employee_id = :employeeId";
+                        string insertSql = "INSERT INTO employees (employee_id, first_name, last_name) VALUES (:employeeId, :firstName, :lastName)";
+
+                        // 设置DataAdapter的UpdateCommand和InsertCommand
+                        adapter.UpdateCommand = new OracleCommand(updateSql, connection);
+                        adapter.UpdateCommand.Parameters.Add(new OracleParameter("lastName", OracleDbType.Varchar2, ParameterDirection.Input));
+                        adapter.UpdateCommand.Parameters.Add(new OracleParameter("employeeId", OracleDbType.Int32, ParameterDirection.Input));
+
+                        adapter.InsertCommand = new OracleCommand(insertSql, connection);
+                        adapter.InsertCommand.Parameters.Add(new OracleParameter("employeeId", OracleDbType.Int32, ParameterDirection.Input));
+                        adapter.InsertCommand.Parameters.Add(new OracleParameter("firstName", OracleDbType.Varchar2, ParameterDirection.Input));
+                        adapter.InsertCommand.Parameters.Add(new OracleParameter("lastName", OracleDbType.Varchar2, ParameterDirection.Input));
+
+                        // 修改DataTable中的数据
+                        foreach (DataRow row in employeeTable.Rows)
+                        {
+                            // 根据条件修改数据
+                            if (row.Field<int>("employee_id") > 100)
+                            {
+                                row["last_name"] = row["last_name"].ToString() + "_updated";
+                            }
+                            else
+                            {
+                                // 添加新行
+                                DataRow newRow = employeeTable.NewRow();
+                                newRow["employee_id"] = 9999; // 假设9999是新员工ID
+                                newRow["first_name"] = "New";
+                                newRow["last_name"] = "Employee";
+                                employeeTable.Rows.Add(newRow);
+                            }
+                        }
+
+                        // 使用DataAdapter将更改批量提交到数据库
+                        int rowsUpdated = adapter.Update(employeeTable);
+                        Console.WriteLine($"更新了 {rowsUpdated} 条记录。");
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    // 捕获Oracle特定异常
+                    Console.WriteLine("Oracle异常：");
+                    Console.WriteLine($"错误代码：{ex.ErrorCode}");
+                    Console.WriteLine($"错误信息：{ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    // 捕获其他异常
+                    Console.WriteLine("发生异常：");
+                    Console.WriteLine($"异常类型：{ex.GetType().Name}");
+                    Console.WriteLine($"错误信息：{ex.Message}");
+                }
+                finally
+                {
+                    // 关闭连接
+                    connection.Close();
+                }
+            }
+
+            Console.WriteLine("操作完成！");
+        }
+    }
+}
+
+
+
+
+
+
+
+using System;
+using System.Data;
+using Oracle.ManagedDataAccess.Client;
+
+namespace OracleExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // 数据库连接字符串
+            string connectionString = "User Id=your_username;Password=your_password;Data Source=your_data_source;";
+
+            // 创建Oracle连接对象
+            using (OracleConnection connection = new OracleConnection(connectionString))
+            {
+                try
+                {
+                    // 打开连接
+                    connection.Open();
+                    Console.WriteLine("连接成功！");
+
+                    // 启动事务
+                    OracleTransaction transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+
+                    try
+                    {
+                        // 第一步：查询操作
+                        string querySql = "SELECT employee_id, first_name, last_name FROM employees WHERE department_id = :deptId";
+                        int deptId = 50;
+
+                        // 使用OracleDataAdapter和DataTable进行批量查询
+                        using (OracleDataAdapter queryAdapter = new OracleDataAdapter(querySql, connection))
+                        {
+                            queryAdapter.SelectCommand.Parameters.Add(new OracleParameter("deptId", OracleDbType.Int32)).Value = deptId;
+                            DataTable employeeTable = new DataTable();
+                            queryAdapter.Fill(employeeTable);
+
+                            // 第二步：根据查询结果更新或追加到另一张表
+                            string updateSql = "UPDATE audit_log SET last_name = :lastName WHERE employee_id = :employeeId";
+                            string insertSql = "INSERT INTO audit_log (employee_id, first_name, last_name) VALUES (:employeeId, :firstName, :lastName)";
+                            string deleteSql = "DELETE FROM audit_log WHERE employee_id = :employeeId";
+
+                            // 使用OracleDataAdapter进行批量更新和插入
+                            using (OracleDataAdapter updateAdapter = new OracleDataAdapter())
+                            {
+                                OracleCommand updateCommand = new OracleCommand(updateSql, connection);
+                                updateCommand.Parameters.Add(new OracleParameter("lastName", OracleDbType.Varchar2, ParameterDirection.Input));
+                                updateCommand.Parameters.Add(new OracleParameter("employeeId", OracleDbType.Int32, ParameterDirection.Input));
+                                updateAdapter.UpdateCommand = updateCommand;
+
+                                OracleCommand insertCommand = new OracleCommand(insertSql, connection);
+                                insertCommand.Parameters.Add(new OracleParameter("employeeId", OracleDbType.Int32, ParameterDirection.Input));
+                                insertCommand.Parameters.Add(new OracleParameter("firstName", OracleDbType.Varchar2, ParameterDirection.Input));
+                                insertCommand.Parameters.Add(new OracleParameter("lastName", OracleDbType.Varchar2, ParameterDirection.Input));
+                                updateAdapter.InsertCommand = insertCommand;
+
+                                OracleCommand deleteCommand = new OracleCommand(deleteSql, connection);
+                                deleteCommand.Parameters.Add(new OracleParameter("employeeId", OracleDbType.Int32, ParameterDirection.Input));
+
+                                // 遍历查询结果并进行批量更新和插入
+                                foreach (DataRow row in employeeTable.Rows)
+                                {
+                                    updateCommand.Parameters["lastName"].Value = row["last_name"];
+                                    updateCommand.Parameters["employeeId"].Value = row["employee_id"];
+
+                                    // 先尝试更新
+                                    if (updateAdapter.UpdateCommand.ExecuteNonQuery() == 0)
+                                    {
+                                        // 如果没有匹配的记录，则执行插入操作
+                                        insertCommand.Parameters["employeeId"].Value = row["employee_id"];
+                                        insertCommand.Parameters["firstName"].Value = row["first_name"];
+                                        insertCommand.Parameters["lastName"].Value = row["last_name"];
+
+                                        try
+                                        {
+                                            updateAdapter.InsertCommand.ExecuteNonQuery();
+                                        }
+                                        catch (OracleException ex) when ((ex.ErrorCode == -1) || (ex.ErrorCode == -1400) || (ex.ErrorCode == -1438) || (ex.ErrorCode == -1441) || (ex.ErrorCode == -1461) || (ex.ErrorCode == -1722) || (ex.ErrorCode == -2291) || (ex.ErrorCode == -8177))
+                                        {
+                                            // 捕获主键冲突异常
+                                            Console.WriteLine($"主键冲突，回滚操作。错误信息：{ex.Message}");
+
+                                            // 回滚事务
+                                            transaction.Rollback();
+
+                                            // 删除重复的主键数据
+                                            deleteCommand.Parameters["employeeId"].Value = row["employee_id"];
+                                            deleteCommand.ExecuteNonQuery();
+
+                                            // 重新提交事务
+                                            transaction = connection.BeginTransaction(IsolationLevel.ReadCommitted);
+
+                                            // 重新执行插入操作
+                                            updateAdapter.InsertCommand.Transaction = transaction;
+                                            updateAdapter.InsertCommand.ExecuteNonQuery();
+                                        }
+                                    }
+                                }
+                            }
+
+                            // 提交事务
+                            transaction.Commit();
+                            Console.WriteLine("事务提交成功！");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        // 回滚事务
+                        transaction.Rollback();
+                        Console.WriteLine("事务回滚！");
+                        throw;
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    // 捕获Oracle特定异常
+                    Console.WriteLine("Oracle异常：");
+                    Console.WriteLine($"错误代码：{ex.ErrorCode}");
+                    Console.WriteLine($"错误信息：{ex.Message}");
+                }
+                catch (Exception ex)
+                {
+                    // 捕获其他异常
+                    Console.WriteLine("发生异常：");
+                    Console.WriteLine($"异常类型：{ex.GetType().Name}");
+                    Console.WriteLine($"错误信息：{ex.Message}");
+                }
+                finally
+                {
+                    // 关闭连接
+                    connection.Close();
+                }
+            }
+
+            Console.WriteLine("操作完成！");
+        }
+    }
+}
+
+
