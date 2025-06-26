@@ -15,8 +15,8 @@ const routes= [
     name: 'Home',
     //component: () => h("div",'/Home')
     //component:  h("div",'../pages/Home.vue')
-    component: Home// 组件懒加载
-    //component: () => import('../pages/Home.vue')// 组件懒加载
+    //component: Home// 组件懒加载
+    component: () => import('../pages/Home.vue')// 组件懒加载
   },
   {
     path: '/about',
@@ -29,7 +29,7 @@ const routes= [
 //1.5 创建router实例的类型
 const router = createRouter({
   history: createWebHistory(),
-    routes // `routes: routes` 的缩写
+    routes, // `routes: routes` 的缩写
 });
 //2 .导出router 相关逻辑
 export default router;
