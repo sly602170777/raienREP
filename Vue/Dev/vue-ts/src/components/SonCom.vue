@@ -91,8 +91,10 @@ const emit =  defineEmits<{
             :enable-time-picker="false"
         ></VueDatePicker>
         {{ inputDate }}
+参照
+https://vue3datepicker.com/migration/from-v8
 
-
+transitions 过度
          -->
         <VueDatePicker 
             v-model="selectedDate"

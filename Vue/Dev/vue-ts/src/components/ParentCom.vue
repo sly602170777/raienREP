@@ -11,6 +11,8 @@
 */
 import { ref } from 'vue';
 import  SonCom from './SonCom.vue';
+import DatePickCom from './DatePickCom.vue';
+
 
 /**
  * ref 的作用:
@@ -68,7 +70,17 @@ const updateMsg = () => {
   <!-- 新增按钮 -->
   <button @click="updateMsg">更新子组件的 msg 内容</button>
       <SonCom :msg="msg" :price="price" :count="count" v-on:update="handleUpdate"></SonCom>
+      <div>
+    <h1>日历的组件</h1>
+    <date-pick-com></date-pick-com>
+    <div class="date-picker">
+      <h3>选择日期</h3>
+
+        <date-picker-com  />
+      </div>
   </div>
+  </div>
+
   </template>
 
   
