@@ -55,7 +55,7 @@
 ---
 
 ### **動作異常系バグ**
-8. **ホバーちらつき(**  闪烁；隐约可见；飘落)
+8. **ホバーちらつき(*闪烁；隐约可见；飘落)
    - `:hover`時に要素が震える  
    *原因: マージン変更による再レイアウト*  
    *対策: `transform: translate()`でアニメーション*
@@ -97,7 +97,7 @@
 
 ### **効率的なデバッグ手法**
 1. **境界線確認法**  
-   全要素に暫定ボーダーを適用
+   全要素に暫定ボーダー➡️｛border边缘，边沿｝を適用
    ```css
    * { border: 1px solid red !important; }
    ```
@@ -120,4 +120,166 @@
 
 > **注意点**: 最新の`subgrid`や`container queries`では新種のバグが発生する可能性あり。常に[Can I Use](https://caniuse.com/)でブラウザサポートを確認しましょう。
 
-実際の開発現場では「**要素がはみ出す**」「**余白が消える**」など現象ベースの表現も多用されます。バグ再現時は必ず[最小再現例](https://jsfiddle.net/)を作成すると解決が加速します！
+		実際の開発現場では「**要素がはみ出す➡️食み出す➡️溢出；超出范围**」「**余白が消える**」など現象ベースの表現も多用されます。バグ再現時は必ず[最小再現例](https://jsfiddle.net/)を作成すると解決が加速します！
+
+
+画面構成
+➡️ 画像の寸法を縮める(ちぢめる)
+
+以下は、CSS開発で頻繁に使用される専門用語・概念をカテゴリ別に詳細にまとめたリストです。実務で必須の用語から最新技術まで網羅しています。
+
+---
+
+### **1. レイアウト・配置**
+| 用語                 | 英語                     | 説明・使用例 |
+|----------------------|--------------------------|-------------|
+| フレックスボックス   | Flexbox                  | `display: flex;` 親要素に設定<br>主プロパティ: `flex-direction`, `justify-content`, `align-items` |
+| グリッドレイアウト   | CSS Grid                 | `display: grid;` 親要素に設定<br>主プロパティ: `grid-template-columns`, `grid-gap` |
+| ボックスモデル       | Box Model                | 要素構成: コンテンツ → パディング → ボーダー → マージン |
+| ポジショニング       | Positioning              | `position: static/relative/absolute/fixed/sticky` |
+| 重なり順制御         | z-index                  | 要素の重なり順序指定（`position`必須） |
+| フロートレイアウト   | Float                    | 旧式レイアウト（`float: left/right`） |
+| クリアフィックス     | Clearfix                 | フロート崩れ修正ハック |
+| インラインブロック   | Inline-block             | `display: inline-block;` インライン要素のブロック化 |
+| 中央揃え             | Centering                | Flexbox: `justify-content: center; align-items: center;` |
+
+---
+
+### **2. セレクタ・詳細度**
+| 用語               | 英語                     | 使用例・詳細 |
+|--------------------|--------------------------|--------------|
+| クラスセレクタ     | Class Selector           | `.button { }` |
+| IDセレクタ         | ID Selector              | `#header { }` |
+| 属性セレクタ       | Attribute Selector       | `[data-type="primary"] { }` |
+| 子孫セレクタ       | Descendant Combinator    | `nav ul { }` |
+| 直系子セレクタ     | Child Combinator         | `div > p { }` |
+| 隣接兄弟セレクタ   | Adjacent Sibling         | `h1 + p { }` |
+| 一般兄弟セレクタ   | General Sibling          | `h1 ~ p { }` |
+| 疑似クラス         | Pseudo-class             | `:hover`, `:nth-child(2n+1)` |
+| 疑似要素           | Pseudo-element           | `::before`, `::selection` |
+| 詳細度             | Specificity              | 優先順位: ID(100) > Class(10) > Element(1) |
+
+---
+
+### **3. 単位・値**
+| 単位       | タイプ   | 使用例・特徴 |
+|------------|----------|--------------|
+| px         | 絶対単位 | `font-size: 16px;`（解像度依存） |
+| %          | 相対単位 | `width: 50%;`（親要素基準） |
+| em         | 相対単位 | `margin: 2em;`（自身のフォントサイズ基準） |
+| rem        | 相対単位 | `padding: 1rem;`（ルート要素基準） |
+| vw/vh      | ビューポート | `width: 100vw;`（画面幅/高さの1%） |
+| fr         | フラクション | `grid-template-columns: 1fr 2fr;`（余白分配） |
+| ch         | 文字幅   | `max-width: 60ch;`（最適な行長設定） |
+| カラー関数 | Color Functions | `rgb()`, `hsl()`, `rgba(255,0,0,0.5)` |
+
+---
+
+### **4. レスポンシブデザイン**
+| 用語               | 英語                     | 実装例 |
+|--------------------|--------------------------|--------|
+| メディアクエリ     | Media Query              | `@media (max-width: 768px) { ... }` |
+| モバイルファースト | Mobile First             | 基本スタイルをモバイル向けに設計 |
+| ブレイクポイント   | Breakpoint               | レイアウト変更の画面幅閾値 |
+| ビューポート単位   | Viewport Units           | `height: 100vh;`（画面高さ100%） |
+| コンテナクエリ     | Container Queries        | `@container (width > 600px) { ... }`（要素サイズ基準） |
+| アダプティブ画像   | Responsive Images        | `<img srcset="small.jpg 480w, large.jpg 1080w">` |
+| アートディレクション | Art Direction          | `<picture>`による端末別画像切り替え |
+
+---
+
+### **5. スタイリング**
+| 用語               | 英語                     | 説明・使用例 |
+|--------------------|--------------------------|-------------|
+| カスケード         | Cascade                  | 複数スタイルの優先順位決定 |
+| 継承               | Inheritance              | 親→子へ伝播（`font-family`等） |
+| カスタムプロパティ | CSS Variables            | `:root { --color: red; } color: var(--color);` |
+| ベンダープレフィックス | Vendor Prefixes       | `-webkit-box-shadow`, `-moz-appearance` |
+| リセットCSS        | CSS Reset                | ブラウザ差異を解消する初期化 |
+| シャドウDOM        | Shadow DOM               | Webコンポーネントのスタイル隔離 |
+| クリッピングパス   | Clip Path                | `clip-path: circle(50%);` で要素形状制御 |
+| ブレンドモード     | Blend Mode               | `mix-blend-mode: multiply;`（合成効果） |
+
+---
+
+### **6. アニメーション・トランジション**
+| 用語               | 英語                     | 使用例 |
+|--------------------|--------------------------|--------|
+| トランジション     | Transition               | `transition: all 0.3s ease;` |
+| キーフレーム       | Keyframes                | `@keyframes fadeIn { 0% {opacity:0} }` |
+| アニメーション     | Animation                | `animation: fadeIn 2s infinite;` |
+| イージング関数     | Easing Functions         | `cubic-bezier(0.68, -0.55, 0.27, 1.55)` |
+| トランスフォーム   | Transform                | `transform: rotate(45deg) scale(1.2);` |
+| トランスフォーム原点 | Transform Origin       | `transform-origin: top left;` |
+| ウィルチェンジ     | will-change              | `will-change: transform;`（パフォーマンス最適化） |
+
+---
+
+### **7. 設計手法・アーキテクチャ**
+| 用語               | 英語                     | 特徴 |
+|--------------------|--------------------------|------|
+| BEM               | Block Element Modifier   | 命名規則: `.block__element--modifier` |
+| OOCSS             | Object Oriented CSS      | 構造と見た目を分離 |
+| SMACSS            | Scalable Modular CSS     | カテゴリ: Base/Layout/Module/State/Theme |
+| ITCSS             | Inverted Triangle CSS    | 抽象度順にレイヤー化 |
+| CSS-in-JS         | CSS in JavaScript        | コンポーネント単位管理（Styled Components等） |
+| ユーティリティファースト | Utility-First CSS     | Tailwind CSSスタイル |
+| プリプロセッサ     | Preprocessor             | Sass/Less（変数・ネスト・ミックスイン） |
+| ポストプロセッサ   | Postprocessor            | PostCSS（自動ベンダープレフィックス等） |
+
+---
+
+### **8. パフォーマンス・最適化**
+| 用語               | 英語                     | 対策例 |
+|--------------------|--------------------------|--------|
+| クリティカルCSS    | Critical CSS             | 初期表示に必要なCSSをインライン化 |
+| コード分割         | Code Splitting           | ページ別CSS分割 |
+| ツリーシェイキング | Tree Shaking             | 未使用CSSの削除 |
+| レンダリングブロック | Render Blocking        | `<link rel="preload">`で非同期読み込み |
+| GPUアクセラレーション | GPU Acceleration       | `transform: translateZ(0);`でハードウェア加速 |
+| レイアウトシフト   | Layout Shift (CLS)       | 画像に`width/height`明示 |
+| リフロー/リペイント | Reflow/Repaint         | `position: absolute;`で再描画範囲限定化 |
+
+---
+
+### **実践例で理解する重要概念**
+#### カスケーディング例:
+```css
+/* 詳細度: 0-1-1 */
+section p { color: blue; } 
+
+/* 詳細度: 0-1-0 */
+.intro { color: red; } 
+
+/* 詳細度: 0-0-1 */
+p { color: green; }
+```
+→ `.intro`が適用（赤色）: 詳細度「クラス(10) > 要素(1)」
+
+#### レスポンシブグリッド:
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+```
+
+#### カスタムプロパティ:
+```css
+:root {
+  --primary: #3498db;
+  --spacing: 8px;
+}
+
+.button {
+  background: var(--primary);
+  padding: calc(var(--spacing) * 2);
+}
+```
+
+> **プロTip**: Chrome DevToolsで`[css]`フィルタリングすると、CSS関連のコンソールエラーを確認可能。  
+> 最新仕様は[MDN Web Docs](https://developer.mozilla.org/ja/docs/Web/CSS)で随時チェック！
+
+このリストは現場で実際に使用される用語を厳選したものです。CSSの進化に伴い新しい概念（:has() セレクタ、ネスト構文等）も登場しているため、継続的な学習が重要です。
+
