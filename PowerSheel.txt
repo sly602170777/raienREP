@@ -18,3 +18,8 @@ Select-String -Path .\*.* -Pattern 'login'
 1.5?找此路径下的文件包含的多个的字符串
 Select-String -Path .\*.* -Pattern 'Get', 'Set' 
 -------------------------------------------
+
+
+执行CMD命令 一键输出多个table的CSV文件：
+cd D:\SOFT\A5M2cmd_2.20.0_x64
+.\A5M2cmd.exe "/Connect=Oracle:HR/123456@orcl" /Export /FolderName=D:\WorkSpace\SQL\ORCL /TableName=HR.EMPLOYEES /OutFileName="EMPLOYEES.csv"
