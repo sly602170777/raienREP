@@ -1,0 +1,48 @@
+string connStr = "User Id=your_user;Password=your_pass;Data Source=your_db;";
+var oracleKeywords = OracleKeywordHelper.LoadReservedKeywords(connStr);
+
+if (oracleKeywords.Contains("DATE"))
+{
+    Console.WriteLine("\"DATE\" 是 Oracle 保留关键字");
+}
+
+
+
+public static class OracleKeywordHelper
+{
+    /// <summary>
+    /// Oracle データベースから保留キーワード（予約語）を取得し、
+    /// 大文字の文字列セットとして返却する。
+    /// </summary>
+    /// <param name="connectionString">Oracle データベースへの接続文字列</param>
+    /// <returns>保留キーワードの HashSet（大文字、重複なし）</returns>
+    public static HashSet<string> LoadReservedKeywords(string connectionString)
+    {
+        // キーワードを格納するためのセット（大文字・大文字小文字を区別しない比較）
+        var keywords = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        // Oracle データベースへ接続
+        using (var conn = new OracleConnection(connectionString))
+        {
+            conn.Open(); // 接続を開く
+
+            // 保留キーワードを取得する SQL を実行
+            using (var cmd = new OracleCommand("SELECT keyword FROM V$RESERVED_WORDS WHERE reserved = 'Y'", conn))
+            using (var reader = cmd.ExecuteReader())
+            {
+                // 結果セットを1行ずつ読み込み
+                while (reader.Read())
+                {
+                    // キーワードを大文字に変換してセットに追加
+                    string keyword = reader.GetString(0).ToUpperInvariant();
+                    keywords.Add(keyword);
+                }
+            }
+        }
+
+        // キーワードセットを返却
+        return keywords;
+    }
+}
+
+
