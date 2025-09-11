@@ -1,0 +1,17 @@
+﻿MyBatchProcessingProject
+├── Models
+│   └── DataModel.cs
+├── Interfaces
+│   ├── ICsvReader.cs
+│   ├── IOracleRepository.cs
+├── Data
+│   ├── CsvReader.cs
+│   ├── OracleRepository.cs
+├── Business
+│   ├── DataProcessor.cs
+├── Configuration
+│   ├── ConfigurationManager.cs
+├── Tests
+│   ├── DataProcessorTests.cs
+├── App.config
+└── Program.cs
