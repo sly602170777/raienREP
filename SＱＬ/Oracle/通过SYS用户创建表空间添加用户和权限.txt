@@ -1,0 +1,81 @@
+明白了，下面是你可以通过 `SYS` 用户执行的完整 SQL 脚本，用于在 Oracle 中创建一个新的表空间、用户，并授予适当权限。这个流程适用于你已经有一个运行中的数据库实例，并希望添加新的业务用户。
+
+---
+
+## 🧱 Oracle 创建用户与表空间的标准流程（通过 SYS）
+
+### 1️⃣ 创建表空间
+
+创建表空间（查找已有路径）
+SELECT name FROM v$datafile;
+```sql
+CREATE TABLESPACE my_ts DATAFILE 'C:\ORACLE19C\ORADATA\ORCL\MY_TS01.DBF' SIZE 100M AUTOEXTEND ON NEXT 10M MAXSIZE 1G EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+```
+
+> ✅ 说明：
+- `my_ts` 是表空间名称，可自定义。
+- `AUTOEXTEND` 可自动扩展数据文件。
+- `SEGMENT SPACE MANAGEMENT AUTO` 是推荐设置。
+
+---
+
+### 2️⃣ 创建用户并指定默认表空间
+
+```sql
+CREATE USER seki IDENTIFIED BY 123456 DEFAULT TABLESPACE my_ts TEMPORARY TABLESPACE temp QUOTA UNLIMITED ON my_ts;
+```
+
+> ✅ 说明：
+- `myuser` 是用户名，`mypass` 是密码。
+- `QUOTA UNLIMITED` 表示该用户在 `my_ts` 表空间中可以使用任意空间。
+
+---
+
+### 3️⃣ 授予权限
+
+```sql
+GRANT CONNECT, RESOURCE TO seki;
+GRANT CREATE SESSION TO seki;
+GRANT CREATE TABLE TO seki;
+GRANT CREATE VIEW TO seki;
+GRANT CREATE PROCEDURE TO seki;
+GRANT CREATE SEQUENCE TO seki;
+GRANT CREATE SYNONYM TO seki;
+```
+
+> ✅ 说明：
+- `CONNECT` 和 `RESOURCE` 是 Oracle 的角色集合，包含基本权限。
+- 你也可以根据需要单独授予权限，如上所示。
+
+---
+
+### 4️⃣ 可选：验证用户是否可登录
+
+```sql
+CONNECT seki/123456 SELECT * FROM USER_TABLES;
+```
+
+---
+
+如果你希望这个用户具备更高权限（如 DBA 权限、访问其他用户的表、执行调度任务等），可以继续添加：
+
+```sql
+GRANT DBA TO myuser;
+-- 或者更细粒度的权限
+GRANT SELECT ANY TABLE TO myuser;
+GRANT EXECUTE ON DBMS_SCHEDULER TO myuser;
+```
+
+---
+方法一：使用 SQL*Plus 命令行连接并查询
+1️⃣ 打开命令行（CMD 或终端）
+2️⃣ 输入连接命令：
+sqlplus seki/123456@ORCL
+
+
+其中：
+- seki 是用户名
+- 123456 是密码
+- ORCL 是数据库服务名（通常是你的 ORACLE_SID，可在 tnsnames.ora 中确认）
+
+
