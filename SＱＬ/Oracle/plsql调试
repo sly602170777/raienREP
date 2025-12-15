@@ -1,0 +1,65 @@
+using (OracleConnection conn = new OracleConnection(connString))
+{
+    conn.Open();
+
+    using (OracleCommand cmd = new OracleCommand("GET_SQUARE", conn))
+    {
+        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+        // 输入参数
+        OracleParameter inputParam = new OracleParameter(
+            "p_input",
+            OracleDbType.Int32
+        );
+        inputParam.Direction = System.Data.ParameterDirection.Input;
+        inputParam.Value = 5;
+        cmd.Parameters.Add(inputParam);
+
+        // 输出参数
+        OracleParameter outputParam = new OracleParameter(
+            "p_output",
+            OracleDbType.Int32
+        );
+        outputParam.Direction = System.Data.ParameterDirection.Output;
+        cmd.Parameters.Add(outputParam);
+
+        // 执行
+        cmd.ExecuteNonQuery();
+
+        // 获取返回值
+        //int result = Convert.ToInt32(outputParam.Value);
+        int result = (int)((OracleDecimal)outputParam.Value).Value;
+        Console.WriteLine($"结果是: {result}");
+    }
+
+    Console.WriteLine("连接成功！");
+}
+
+
+
+CREATE OR REPLACE PROCEDURE GET_SQUARE(
+    p_input  IN NUMBER,
+    p_output OUT NUMBER
+) AS
+BEGIN
+DBMS_OUTPUT.ENABLE (buffer_size => NULL);
+DBMS_OUTPUT.PUT_LINE('开始执行存储过程');
+
+    p_output := p_input * p_input;
+DBMS_OUTPUT.PUT_LINE('执行完成');
+
+END;
+
+
+
+DECLARE
+    v_result NUMBER;
+BEGIN
+    -- 调用存储过程，传入参数并接收输出
+    GET_SQUARE(p_input => 5, p_output => v_result);
+    -- 输出结果
+    DBMS_OUTPUT.PUT_LINE('返回值: ' || v_result);
+END;
+/
+
+
