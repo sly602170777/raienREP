@@ -7,7 +7,7 @@ BEGIN
 END;
 /
 
--- 希望の設定（10分間隔・7日保持）
+-- 希望の設定（10分間隔・7日保持）  
 BEGIN
     DBMS_WORKLOAD_REPOSITORY.modify_snapshot_settings(10, 10080);
 END;
