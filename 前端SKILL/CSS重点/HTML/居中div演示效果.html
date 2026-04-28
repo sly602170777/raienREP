@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>居中div演示效果</title>
+    <style type="text/css">
+      .align-center {
+        /*margin: 0 auto;  居中 这个是必须的，，其它的属性非必须 */
+        width: 500px; /* 给个宽度 顶到浏览器的两边就看不出居中效果了 */
+        background: red; /* 背景色 */
+        text-align: center; /* 文字等内容居中 */
+
+        /* 右对齐 */
+        margin-left: auto;
+        margin-right: 0;
+      }
+      textarea {
+        width: 100%;
+        height: 100%;
+        width:300px;
+        overflow-y:visible ;  /*  滚动条 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="align-center">居中div演示效果</div>
+    <br><br>
+    <textarea name="textarea">
+      xxxxx
+      </textarea>
+  </body>
+</html>

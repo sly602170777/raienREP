@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsDBViewer", "WinFormsDBViewer\WinFormsDBViewer.csproj", "{4F7519A8-3952-4D07-9443-98736CF0AFA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F7519A8-3952-4D07-9443-98736CF0AFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7519A8-3952-4D07-9443-98736CF0AFA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7519A8-3952-4D07-9443-98736CF0AFA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7519A8-3952-4D07-9443-98736CF0AFA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {551AF4A4-77A6-4EC6-A78C-ECC6B7B92FA8}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿@model web453.Models.MyModel
+@{
+    ViewData["Title"] = "Index2";
+}
+
+<h1>フォーム入力</h1>
+
+@using (@Html.BeginForm("Post", "Home"))
+{
+    <table border="0">
+        <tr><td>ID</td><td>@Html.TextBoxFor(x => x.ID)</td></tr>
+        <tr><td>タイトル</td><td>@Html.TextBoxFor(x => x.Title)</td></tr>
+        <tr><td>価格</td><td>@Html.TextBoxFor(x => x.Price)</td></tr>
+    </table>
+    <input type="submit" value="登録" />
+}
+

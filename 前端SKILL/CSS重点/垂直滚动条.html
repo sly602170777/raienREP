@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂直滚动条</title>
+    <style>
+        body {
+            height: 2000px;
+            /* 设置足够的高度以显示滚动条 */
+            background-color: #f0f0f0;
+        }
+
+        .scrollable {
+            margin-top: 25px;
+            margin-left: 25px;
+            width: 300px;
+            height: 500px;
+            overflow-y: scroll;
+            /* 只允许垂直滚动 */
+            background-color: #fff;
+            border: 1px solid #e01111;
+            position: relative;
+            z-index: 0;
+        }
+
+        .content {
+            width: 1000px;
+            height: 1000px;
+            background: #f3c6c6;
+        }
+
+        .div-1-absolute {
+            position: absolute;
+            z-index: 2;
+            top: 50px;
+            left: 70px;
+            width: 80px;
+            height: 100px;
+            background: red;
+        }
+
+        .div-2-absolute {
+            position: absolute;
+            z-index: 1;
+            top: 100px;
+            left: 30px;
+            width: 100px;
+            height: 100px;
+            background: rgb(73, 202, 138);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="scrollable">
+            <p>这是一个可滚动的容器。</p>
+            <p>内容足够多，以便出现垂直滚动条。</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <p>继续添加内容...</p>
+            <div style="height: 1000px;"></div>
+            <p>这是滚动条的底部。</p>
+            <div class="div-1-absolute" >
+                myDiv-1
+            </div>
+            <div class="div-2-absolute" >
+                box-absolute
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

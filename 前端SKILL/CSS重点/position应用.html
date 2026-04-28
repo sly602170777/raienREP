@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position应用</title>
+    <style>
+        /* 父元素 position: relative 不需要设置 top、left，
+            是因为它的主要作用是建立定位上下文，
+            让子元素的 position: absolute 能以它为参考点进行定位。 
+        */
+
+        #myDiv-1 {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            background-color: red;
+        }
+
+        /*相对定位： */
+        #myDiv-relative {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+            /* 相对定位 */
+            z-index: 2;
+            /* 设置层级 */
+            /* 设置层级 */
+            outline: 2px solid black;
+            /* 设置边框 */
+
+        }
+
+        /*绝对定位： 按最近的定位父元素为参考点定位*/
+        .box-absolute {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            z-index: 3;
+            /* 设置层级 */
+        }
+
+        .box-absolute::before {
+            content: "这是一个box 100*100px的绝对定位元素";
+            color: white;
+        }
+
+        .box-absolute:hover {
+            outline: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv-1">
+        <div id="myDiv-relative" tabindex="0">
+            <p>这是第一个测试relative</p>
+            <box class="box-absolute">子元素</box>
+        </div>
+    </div>
+
+    <div class="outer"
+        style="position: relative;z-index: 9;margin-top: 50px;  width: 180px; height: 300px; background: #758fa7;">
+        outer
+        <div id="myDiv-1"
+            style="position: absolute;z-index: 1; margin-top: 50px; margin-left: 50px;width: 500px; height: 100px; background: red;">
+            myDiv-1
+            <div class="box-absolute"
+                style="position: absolute;z-index: 0;  top: 50px; left: 50px; width: 100px; height: 100px; background: blue;">
+                box-absolute
+            </div>
+        </div>
+    </div>
+
+    <div style="width: 1000px; height: 1000px; background: #eee; position: relative;">
+        <div 
+            style="position: relative; z-index: 1; margin-top: 50px;  width: 180px; height: 600px; background: #758fa7;">
+            outer
+        </div>
+        <div 
+            style="position: absolute; z-index: 2; top: 50px; left: 70px;width: 500px; height: 100px; background: red;">
+            myDiv-1
+        </div>
+        <div style="position: absolute; z-index: 10; top: 100px; left: 30px; width: 100px; height: 100px; background: rgb(73, 202, 138);">
+            box-absolute
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        document.getElementById('myDiv').focus();
+    }
+</script>
+
+</html>

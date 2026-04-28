@@ -1,0 +1,10 @@
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\bin\Debug\pg175.exe.config
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\bin\Debug\pg175.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\bin\Debug\pg175.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.Form1.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.Properties.Resources.resources
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.csproj.GenerateResource.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.csproj.CoreCompileInputs.cache
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.exe
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.pdb
+C:\E\C#\电子书籍-bookwalker_C#_templt\VCS2019_Sample\Chapter4 基本プログラミングの極意\4-6 コレクション167-175\pg175\pg175\obj\Debug\pg175.csproj.AssemblyReference.cache

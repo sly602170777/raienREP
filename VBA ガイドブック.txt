@@ -1,0 +1,193 @@
+
+--------実行時にトラップ可能なエラー番号一覧
+https://excel-ubara.com/excelvba4/EXCEL242.html
+
+
+
+Sub IsThisArray()
+    'declare a dynamic array  创建动态数组
+    Dim sheetNames() As String
+    Dim totalSheets As Integer
+    Dim counter As Integer
+    'count the sheets in the current workbook
+    totalSheets = ActiveWorkbook.Sheets.Count
+    
+    'specify the size of the array 指定数组的大小   判断数组的长度用 　UBound(sheetNames)
+    ReDim sheetNames(1 To totalSheets) 
+    'enter and show the names of sheets
+    
+    For counter = 1 To totalSheets
+        If IsArray(sheetNames) Then
+            sheetNames(counter) = ActiveWorkbook.Sheets(counter).Name
+            MsgBox "The sheetNames is an array."
+            MsgBox sheetNames(counter)
+            
+        End If
+        
+    Next
+    'check if this is indeed an array
+    
+End Sub
+
+
+
+Sub Zoo1()
+'this procedure triggers an error "Subscript out of range" 本过程引发“下标越界”错误
+Dim zoo(3) As String
+Dim i As Integer
+Dim response As String
+i = 0
+Do
+i = i +1
+response = InputBox("Enter a name of animal:")
+zoo(i) = response
+Loop until response = ""
+End Sub
+Sub Zoo2()
+'this procedure avoids the error "Subscript out of range"本过程避免“下标越界”错误
+Dim zoo(3) As String
+Dim i As Integer
+Dim response As String
+i = 1
+Do While i>=LBound(zoo) And i <=UBound(zoo)
+response = InputBox("Enter a name of animal:")
+If response = "" Then Exit Sub
+zoo(i) = response
+i = i + 1
+Loop
+For i = LBound(zoo) To UBound(zoo)
+MsgBox zoo(i)
+Next
+End Sub
+
+
+使用区域的最大行数 列数
+Sub maxRowCol()
+       With ThisWorkbook.Worksheets("sheet1")
+               MsgBox "Max row:" & .UsedRange.Rows.Count
+               MsgBox "Max Column:" & .UsedRange.Columns.Count
+               MsgBox "Max row:" & .Cells(.Rows.Count, 1).End(xlUp).Row 最下边的一行
+               MsgBox "Max Column:" & .Cells(1, .Columns.Count).End(xlToLeft).Column  最右边的一列
+       End With
+End Sub
+
+
+下面的代码表示在Sheet1中激活当前活动单元格向右偏移3列、向下偏移3行处的单元格。
+
+    Worksheets("Sheet1").Activate
+    ActiveCell.Offset(rowOffset:=3, columnOffset:=3).Activate
+    
+    
+    　Union()函数
+    Sub unionArea()
+           Dim mySht As Worksheet
+           Set mySht = ThisWorkbook.Worksheets(1)
+           Dim MyArea1, MyArea2, MyArea3 As Range
+           Set MyArea1 = mySht.Range(mySht.Cells(1, 1), mySht.Cells(3, 3))
+           Set MyArea2 = mySht.Range(mySht.Cells(6, 1), mySht.Cells(9, 3))
+           Set MyArea3 = mySht.Range(mySht.Cells(12,1),mySht.Cells(13, 3))
+           Dim myUnion as Range
+           Set  myUnion=Union(MyArea1, MyArea2, MyArea3)
+           myUnion.Value = "Union!"
+    End Sub
+    
+    
+    Split()和Join()函数
+有时候我们需要对一个有规律的字符串进行拆分、合并，比如把一个句子拆分成一个个单词，或者把一个个单词合并成一个句子等，VBA为我们提供了两个有用的函数，即Split()和Join()。下面我们还是结合例子来熟悉这两个函数吧。
+
+    Sub split_Join()
+           L01: myDateString = "2013.1.23"
+           L02: splitArray = Split(myDateString, ".")
+           L03: MsgBox splitArray(0)&"年"&splitArray(1)&"月"& splitArray(2)&"日"
+           L04: joinString = Join(splitArray, "/")
+           L05: MsgBox joinString
+    End Sub
+
+
+
+
+
+******************************************************************************************************************************************
+
+InStr([ start ], string1, string2, [ compare ])  
+string1	必需。 要搜索的字符串表达式。  string2	必需。 搜索到的字符串表达式。
+
+返回值
+Dim SearchString, SearchChar, MyPos
+
+SearchString ="XXpXXpXXPXXP"    ' String to search in.
+SearchChar = "P"    ' Search for "P".
+ 
+' A textual comparison starting at position 4.    Returns 6.
+MyPos = Instr(4, SearchString, SearchChar, 1)    
+ 
+' A binary comparison starting at position 1.     Returns 9.
+MyPos = Instr(1, SearchString, SearchChar, 0)
+ 
+' Comparison is binary by default (last argument is omitted).
+MyPos = Instr(SearchString, SearchChar)         ' Returns 9.  从 1 开始计数
+ 
+MyPos = Instr(1, SearchString, "W")    ' Returns 0.
+
+**************************************************************************************************************************
+22:33 2021/04/26
+------------------------
+Replace関数  Replace(expression, find, replace[, start[, count[, compare]]])
+
+Replace("123aAbBcC","A","Z") → "123aZbBcC"
+
+------------------------
+
+InStr関数   InStr([start, ]string1, string2[, compare])
+
+InStr("123aAbBcC","A") → 5
+------------------------
+
+StrConv関数  StrConv(string, conversion, LCID)
+
+StrConv("123aAbBcC",vbUpperCase) → "123AABBCC"
+StrConv("123aAbBcC",vbLowerCase) → "123aabbcc"
+StrConv("123aAbBcC",vbWide) → "１２３ａＡｂＢｃＣ"
+StrConv(StrConv("ｱｲｳｴｵ",vbWide),vbHiragana) → "あいうえお"
+
+------------------------
+
+
+
+**************************************************************************************************************************
+22:33 2024/08/05
+------------------------
+
+-エクセルブックの全シートからCSV(テキスト)ファイルを一括出力する
+
+Sub ファイル一括作成()
+
+    Application.ScreenUpdating = False
+        
+    '対象ブックをダイアログで指定する
+    Dim FName As String
+    FName = Application.GetOpenFilename _
+        (FileFilter:="Microsoft Excelブック,*.xls*")
+    
+    If FName <> "False" Then
+        Workbooks.Open FileName:=FName
+    Else
+        Exit Sub 'ファイルが選択されていない場合は終了
+    End If
+    
+    Dim ws As Worksheet
+    For Each ws In Worksheets '各シートに対して処理を繰り返す
+    
+        ws.Activate
+        '元のブックと同じ階層に出力
+        ActiveWorkbook.SaveAs _
+        FileName:=ActiveWorkbook.Path & "\" & ws.Name & ".csv", _
+        FileFormat:=xlCSV
+    
+    Next ws
+ 
+    ActiveWorkbook.Close SaveChanges:=False
+ 
+    MsgBox "ファイル作成が完了しました。"
+ 
+End Sub

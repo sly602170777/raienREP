@@ -1,0 +1,63 @@
+针对不足1分钟的短batch，核心是缩短采集窗口期+抓瞬时状态+用差值对比，以下是适配的脚本和操作方法
+
+一、 核心采集逻辑
+
+1. 基线采集：batch执行前10-30秒完成，只抓核心指标避免耗时
+
+2. 执行中监控：无需定时采集，直接用实时视图抓瞬时资源占用
+
+3. 执行后采集：batch结束立即（5秒内）执行，和基线做差值计算
+
+二、 可直接复制执行的适配脚本
+
+（一） 执行前（前30秒，基线采集，精简核心项）
+-- 内存核心：缓存命中率+SGA核心池
+SELECT ROUND((1 - (phy.value / (log.value + 0.0001))) * 100,2) AS cache_hit_rate
+FROM v$sysstat phy, v$sysstat log
+WHERE phy.name = 'physical reads' AND log.name = 'session logical reads';
+SELECT POOL, NAME, BYTES/1024/1024 AS MB FROM v$sgastat WHERE pool IN ('shared pool','large pool') AND BYTES>0;
+
+-- I/O核心：系统级读写总量
+SELECT NAME, VALUE FROM v$sysstat WHERE NAME IN ('physical reads','physical writes','session logical reads','session logical writes');
+
+-- Undo核心：表空间使用+瞬时undo块
+SELECT TABLESPACE_NAME, SUM(BYTES)/1024/1024 AS USED_MB FROM dba_undo_extents GROUP BY TABLESPACE_NAME;
+SELECT COUNT(*) AS curr_undo_blks FROM v$transaction;
+
+-- Redo核心：redo size+日志状态
+SELECT VALUE AS redo_size FROM v$sysstat WHERE NAME = 'redo size';
+SELECT GROUP#, STATUS FROM v$log;
+（二） 执行中（瞬时监控，batch运行时快速执行1次即可）
+-- 抓当前batch相关会话的资源占用（需替换为实际batch执行SID，或模糊匹配用户名）
+SELECT SID, USERNAME, EVENT, UNDOBLOCKS, LOGICAL_READS, PHYSICAL_READS FROM v$session 
+WHERE USERNAME = '你的batch执行用户' AND STATUS = 'ACTIVE';
+
+-- 实时redo生成+I/O等待
+SELECT VALUE AS curr_redo FROM v$sysstat WHERE NAME='redo size';
+SELECT EVENT, COUNT(*) FROM v$session_wait WHERE EVENT LIKE '%I/O%' GROUP BY EVENT;
+（三） 执行后（5秒内立即执行，与基线差值对比）
+-- 内存：对比命中率变化，看SGA是否有瞬时挤占
+SELECT ROUND((1 - (phy.value / (log.value + 0.0001))) * 100,2) AS cache_hit_rate
+FROM v$sysstat phy, v$sysstat log
+WHERE phy.name = 'physical reads' AND log.name = 'session logical reads';
+SELECT POOL, NAME, BYTES/1024/1024 AS MB FROM v$sgastat WHERE pool IN ('shared pool','large pool') AND BYTES>0;
+
+-- I/O：计算执行前后读写增量（手动减基线值）
+SELECT NAME, VALUE FROM v$sysstat WHERE NAME IN ('physical reads','physical writes','session logical reads','session logical writes');
+
+-- Undo：看表空间使用增量+事务是否已释放
+SELECT TABLESPACE_NAME, SUM(BYTES)/1024/1024 AS USED_MB FROM dba_undo_extents GROUP BY TABLESPACE_NAME;
+SELECT COUNT(*) AS curr_undo_blks FROM v$transaction; -- 正常执行完应无残留
+
+-- Redo：计算总增量，判断是否批量操作过度生成
+SELECT VALUE AS redo_size_after FROM v$sysstat WHERE NAME = 'redo size';
+SELECT COUNT(*) AS log_switch_count FROM v$log_history WHERE FIRST_TIME >= SYSDATE - 1/1440; -- 近1分钟切换次数
+三、 关键注意点
+
+1. 避免复杂查询：短batch耗时短，采集脚本必须精简，不执行大表关联查询，防止影响batch本身
+
+2. 手动记基线值：因时间短，无需存储，执行前把核心指标（redo_size、物理读值等）手动记下来，执行后算差值
+
+3. 重点看增量：短batch无需关注绝对值，核心看执行前后的指标差值，比如redo增量是否过大、物理读是否突增
+
+要不要帮你整理短batch专属的指标差值计算对照表？

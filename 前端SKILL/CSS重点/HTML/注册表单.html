@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册表单</title>
+    <style type="text/css">
+        * {
+            color: #f00;
+        }
+        /*
+            ID 选择器  #+ID
+        */
+        #psd {
+            background-color: rgb(239, 206, 241);   
+        }
+        /*
+            标签 选择器  tr
+        */
+        tr {
+            background-color: antiquewhite;
+        }
+        /*
+            类 选择器  . 类名
+        */
+        .myclass {
+            background-color: rgb(201, 223, 167);
+        }
+        #usp {
+            border: 2px  solid rgb(100, 100, 100);
+            font:12px Simsun,arial,sans-serif;
+        }
+        /*获取每个selector元素中索引为index的子元素。【注意】index从1开始 */
+        .sample  :nth-child(3){
+            background-color: antiquewhite;
+        }
+
+        </style>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+        </script>
+        <script>
+                /*
+                1 用户名不能为空
+                2 用户名必须是6-14位之间
+                3 用户名只能有数字和字母组成 不能有其他符号(用正则表达式)
+                4 密码和确认密码一直  地址合法
+                5 统一失去焦点验证
+                6 错误提示 统一在一个span标签中提示 并且要求设置字体12号 红色字体
+                7 文本框再次获取焦点后 清空错误提示信息 如果文本框中数据不合法 要求清空文本框 的value值
+                */
+                window.onload = function(){
+                    //设置全局error flag
+                    var errFlag = true;
+                    // 获取用户名的节点
+                    var uname = document.getElementById("uname");
+                    var unameValue = uname.value;
+                    // 获取提示栏的节点
+                    var usp = document.getElementById("usp");
+                    //文本框再次获得焦点后，清空错误提示信息，如果文本框中数据不合法要求清空文本框的value 
+                    uname.onfocus= function() {
+                        if (usp.innerHTML != "") {
+                            //alert("eeee");
+                            uname.value ==""
+                        }
+                    }
+                    //失去文本框的焦点
+                    uname.onblur = function() {
+                       if (uname.value =="" ){
+                            usp.innerHTML="用户名不能为空";
+                            return errFlag = true;
+                        }
+                        usp.innerHTML="";
+                        return errFlag = false;
+                    }   
+                    // 获取密码的节点
+                    var upwd = document.getElementById("upwd");
+                    // 获取提示栏的节点
+                    var erroPwd = document.getElementById("erroPwd");
+                    //文本框再次获得焦点后，清空错误提示信息，如果文本框中数据不合法要求清空文本框的value 
+                    upwd.onfocus= function() {
+                        if (erroPwd.innerHTML != "") {
+                            //alert("eeee");
+                            upwd.value = ""
+                        }
+                    }
+                    //失去文本框的焦点
+                    upwd.onblur = function() {
+                       if (upwd.value =="" ){
+                            erroPwd.innerHTML="密码不能为空";
+                            return errFlag = true;
+                        }
+                        erroPwd.innerHTML ="";
+                        return errFlag = false;
+                    }   
+
+                     // 获取邮箱的节点
+                     var userEmail = document.getElementById("userEmail");
+                    // 获取提示栏的节点
+                    var erroEmail = document.getElementById("erroEmail");
+                    // 编写email的正则
+                    var emailRegExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+                    userEmail.onfocus= function() {
+                        if (erroEmail.innerHTML != "") {
+                            //alert("eeee");
+                            userEmail.value = ""
+                        }
+                    }
+                    //失去文本框的焦点
+                    userEmail.onblur = function() {
+                        //获取Email的值
+                        var emailValue =userEmail.value;
+                        // 判断是否合法
+                        var ok = emailRegExp.test(emailValue);
+                        if (emailValue== ""){
+                            erroEmail.innerHTML="邮箱能为空 ";
+                            return errFlag = true;
+                        }
+                        if (!ok){
+                            erroEmail.innerHTML="邮箱不合规范";
+                            return errFlag = true;
+                        }
+                        erroEmail.innerHTML ="";
+                        errFlag = false;
+                    }   
+
+                    //提交按钮处理
+                    var submitBtn= document.getElementById("submitBtn");
+                    submitBtn.onclick = function() {
+                        uname.onfocus();
+                        uname.onblur();
+                        //alert(errFlag);
+                        upwd.onfocus();
+                        upwd.onblur();
+                        //alert(errFlag);
+                        userEmail.onfocus();
+                        userEmail.onblur();
+                        //alert(errFlag);
+                        if (!errFlag) {
+                            alert("可以登录");
+                            submitBtn.disabled = true;
+                        }else{
+                            submitBtn.disabled = false;
+                        }
+                    }
+                   
+                }
+
+
+        </script>
+        <script>
+                $(document).ready(function(){
+                    var pas=$("#upwd").val();
+                    var ageainPsd=$("#ageainPsd").val();
+                        $("#hide").click(
+                            function(){
+                                alert($("#ageainPsd").val());
+                                alert($("#upwd").val());
+                            }
+                        );
+                        $("#show").click(
+                            function () {
+                                if(pas==ageainPsd){
+                                    alert("same")
+                                }else {
+                                    alert("different")
+                                }
+                            }
+                        );
+                        /* $("#show").click(
+                            alert($("#psd").val)
+
+                         function(){
+                                
+                            } 
+                        );*/
+                });
+
+                $(function(){
+                    alert("这是一个匿名函数");
+                });
+                $(function(){
+                    alert("这是二哥个匿名函数");
+                });
+        </script>
+</head>
+<body>
+    <!-- 
+        用户名
+        密码
+        性别
+        兴趣爱好
+        学历
+        简历 
+        http://localhost:8080/jd/register
+        ?username=123&userpwd=123&userSex=0&userHobby=1&grade=1&submit=%E6%8F%90%E4%BA%A4
+    1, HTML 中任何节点有ID属性 也是该节点的唯一标识 所以ID不能重复
+    2， 表单提交的时候 只和name有关系 和ID无关
+    3， ID 的存在是为了获取表单中的dom元素的节点，进行对节点的增删改操作
+    -->
+     <!-- method="post" 地址栏不显示信息   /  get 显示地址栏信息-->
+     <form action="http://localhost:8080/jd/register" method="get">
+         <table align="center" border="0.5">
+             <tr>
+                <!-- style="display:none" 隐藏 
+                    样式能这样写 border: 1px solid beige;"
+                -->
+                 <th align="left" id="uid" style="background-color:rgb(181, 223, 247) ;border: 1px solid beige;">
+                    用户名
+                 </th>
+                 <td>
+                     <input type="text" id="uname" name="username" size="10" value="" title="用户名"/> <span id="usp"></span>
+                </td>
+             </tr>
+             <tr>
+                <th align="left" id="upsd">
+                   密码
+                </th>
+                <td>
+                    <input type="password" name="userpwd" id="upwd" size="10" value="22" title="密码"/><span id="erroPwd"></span>
+                </td>
+            </tr>
+            <tr>
+                <th align="left" id="psd">
+                   确认密码
+                </th>
+                <td>
+                    <input type="password" name="ageainPsd" id="ageainPsd" size="10" value="22" title="确认密码"/>
+                </td>
+            </tr>
+            <tr>
+                <th align="left" class="myclass">
+                    性别
+                </th>
+                <td>
+                    <input type="radio" name="userSex" value="0" checked/>男
+                    <input type="radio" name="userSex" value="1"/>女
+                </td>
+            </tr>
+            <tr>
+                <th align="left" class="myclass">
+                    邮箱
+                </th>
+                <td>
+                   <input type="text" name="userEmail" id="userEmail"/><span id="erroEmail"></span>
+                </td>
+            </tr>
+            <tr>
+                <th align="left" class="myclass">
+                    兴趣爱好
+                </th>
+                <td>
+                   <input type="checkbox" name="userHobby" value="1" checked/>篮球
+                   <input type="checkbox" name="userHobby" value="2"/>跑步
+                   <input type="checkbox" name="userHobby" value="3"/>羽毛球
+                </td>
+            </tr>
+            <tr >
+                <th align="left" >
+                    学历
+                </th>
+                <td >
+                    <!-- multiple="multiple" 支持多选  size="2" 显示条数-->
+                    <select name="grade" multiple="multiple" size="3">
+                        <option value="1" selected>大学</option>
+                        <option value="2">博士</option>
+                        <option value="3">硕士</option>
+                        <option value="4">小学</option>
+                    </select>
+                </td>
+            </tr>
+            <tr >
+                <!-- <input type="file"/>  导入文件格式-->
+                <th align="left">
+                    文件
+                </th>
+                <td>
+                    <input type="file"/>
+                </td>
+            </tr>
+            <tr align="center" rowspan="2">
+                <td rowspan="2">
+                    <input type="button" id="submitBtn" value="提交"/>
+                </td>
+                <td rowspan="2">
+                    <input type="reset" value="清空"/>
+                </td>
+            </tr>
+         </table>
+     </form>
+     <p>这是一个p标签</p>
+     <button id="hide">隐藏</button>
+     <button id="show">显示</button>
+     <br>
+     <br>
+     <div class="sample">
+        <p>段落1</p>
+        <p>段落2</p>
+        <p>段落3</p>
+        <p>段落4</p>
+        <p>段落5</p>
+      </div>
+</body>
+</html>

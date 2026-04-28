@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\WorkSpace\GitHub\C# 资源\asp.net\aspCoreMVC_Projetct\userInfoProjectMVC\userInfoProjectMVC\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\WorkSpace\GitHub\C# 资源\asp.net\aspCoreMVC_Projetct\userInfoProjectMVC\userInfoProjectMVC\.editorconfig" />
+  </ItemGroup>
+
+</Project>

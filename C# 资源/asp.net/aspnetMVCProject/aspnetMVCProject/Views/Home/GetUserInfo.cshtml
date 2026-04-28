@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "GetUserInfo";
+}
+
+<h2>GetUserInfo</h2>
+
+<h2>User Information</h2>
+<div id="userInfo"></div>
+
+<button id="loadData">Load Data</button>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#loadData").click(function () {
+                $.ajax({
+                    url: '@Url.Action("GetUserInfo", "Home")',
+                    type: 'GET',
+                    success: function (data) {
+                        $("#userInfo").html("<p>Name: " + data.Name + "</p><p>Email: " + data.Id + "</p>");
+                    }
+                });
+            });
+        });
+    </script>
+}
+

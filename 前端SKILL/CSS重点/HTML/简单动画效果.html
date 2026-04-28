@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单的动画效果</title>
+    <style type="text/css">
+        * {
+            color: #f00;
+        }
+        /*
+            ID 选择器  #+ID
+        */
+        .p1 {
+            background-color: antiquewhite;
+            display: none;
+        }
+        .select
+        {
+            color: #6CF;
+            border: 3px solid #6CF;
+        }
+        .input2{
+            color: rgb(182, 74, 173);
+            border: 3px solid rgb(169, 35, 202);
+        }
+        </style>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(
+                function() {
+                    //注册事件 把on去掉 是一个方式
+                    $("#show").click(
+                        function() {
+                            $(".p1").show(100);
+                            alert("123");
+                            $(".demo2").text("demo2 显示");
+                        }
+                    );
+                    $("#hide").click(
+                        alert("122223")
+                    );
+                        $(".input1").click(function() {
+                            alert("333");
+                            $("ul li").removeClass("select");
+//移除input标签的class样式
+                            $("input").remove(".input2");
+                            $("div ul li").removeClass(".select");
+                            var no = ($(this).index()-1);
+
+                            $("ul li").eq(no).addClass("select");
+//方法返回指定元素相对于其他指定元素的 index 位置  $(selector).index()
+$p_same=$(".demo4 li").eq(2).text();
+                            alert($p_same);
+                            $msg=$("ul li").eq(no).text();
+
+                            $("#disp").text("「"+$msg+"」が選択されました。");
+                            var cla="<ul><li>PHP</li></ul>";
+                            cla+="<p><strong>要素の追加テストです。</strong></p>";
+                            //$(".disp2").append('<p class="'+cla +'"><strong>要素の追加テストです。</strong></p>');
+                            $(".disp2").append(cla);
+                    });
+                }
+            );
+
+            $(function(){
+                alert("JQuery 入口****");
+                /*var cloth=document.getElementsById("demo3");
+                 cloth.style.backgroudColor = "pink" ; 
+                $("#disp").css('color', 'blue');
+                $("ul li").text("改了内容。。。。");*/
+            });
+
+
+               
+
+                /*  调用函数 */
+                function selectli(no)
+                {
+                    // スタイルシートをクリア
+                    alert(no);
+                    $("ul li").removeClass("select");
+
+                    // 該当のliタグに選択CSSをセット
+                    $("ul li").eq(no).addClass("select");
+
+                    // liの文字を取得
+                    var mes = $("ul li").eq(no).text();
+
+                    // liの文字を画面に表示
+                    $("#disp2").text("「"+mes+"」が選択されました。"); 
+                   
+
+                }
+
+        </script>
+</head>
+<body>
+  
+     <p>这是一个p标签</p>
+     <button id="hide">隐藏</button>
+     <button id="show">显示</button>
+     <br>
+     <br>
+     <div class="demo1">
+        <p class="p-same">段落1</p>
+        <p class="p-same">段落2</p>
+        <p class="p-same">段落3</p>
+        <p class="p-same">段落4</p>
+        <p class="p-same">段落5</p>
+      </div>
+      <div class="demo2"></div>
+      <div class="demo3" id="demo3"></div>
+      <div class="demo4" id="demo4" >
+          <ul >
+              <li>衣服</li>
+              <li style="color: #00f">袜子</li>
+              <li>裤子</li>
+              <li class="select">手表</li>
+          </ul>
+      </div>
+      <input name="" type="button" value="2つめを選択します" onClick="selectli(0)">
+      <div id="disp"></div>
+      <br>
+      <div class="disp2"></div>
+    <div class="disp3">
+        <ul>
+            <li style="background-color:  #00f">1つめの要素</li>
+            <li>2つめの要素</li>
+            <li>3つめの要素</li>
+            <li>4つめの要素</li>
+            <li class="select">5つめの要素</li>
+            </ul>
+            <input class="input1" name="" type="button" value="1つめを選択します">
+            <input class="input2" name="input2" type="button" value="2つめを選択します">
+            <input class="input2" name="input2" type="button" value="3つめを選択します">
+            <input class="input2" name="input2" type="button" value="4つめを選択します">
+            <input class="input2" name="input2" type="button" value="5つめを選択します">
+      </div>
+</body>
+</html>

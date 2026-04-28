@@ -1,0 +1,93 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Sample JSON Data </title>
+</head>
+
+<body>
+    <div>
+        <label>Create Sample User JSON Data</label>
+        <br /><br />
+        <input type="button" id="btnUpdateUserDetail"
+               value="Update User Detail"
+               onclick="UpdateUserDetail();" />
+    </div>
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</body>
+</html>
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<script lang="en" type="text/javascript">
+
+    function UpdateUserDetail() {
+        //$.ajax({
+        //    type: "GET",
+        //    traditional: true,
+        //    async: false,
+        //    cache: false,
+        //    url: '/User/GetUsers',
+        //    context: document.body,
+        //    data: getReportColumnsParams,
+        //    success: function (result) {
+        //        result.forEach(function (user) {
+        //            $("#usersTable tbody").append(`
+        //                <tr>
+        //                    <td>${user.Id}</td>
+        //                    <td>${user.Name}</td>
+        //                </tr>
+        //            `);
+        //        });
+        //    },
+        //    error: function (xhr) {
+        //       Debugger;
+        //        console.log(xhr.responseText);
+        //        alert("Error has occurred...");
+        //    }
+        //});
+        // 调用 AJAX 请求获取 JSON 数据
+        $.getJSON("/User/GetUsers", function (data) {
+            //data = JSON.parse(data);
+            if (data['success']) {
+                // 动态渲染 JSON 数据到表格
+                data['users'].forEach(function (user) {
+                    $("#usersTable tbody").append(`
+                        <tr>
+                            <td>${user.Id}</td>
+                            <td>${user.Name}</td>
+                        </tr>
+                     `);
+                });
+            }
+            
+        });
+    }
+    
+</script>

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* グリッドガイド */
+
+[class^="box"],
+div:not([class]) 
+	{
+	border: solid 8px #faa;
+	color: #faa;
+	background-color: #fee;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	text-align: center;
+	line-height: 200px;
+	font-family: Verdata, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	}
+
+body > div:not([class]) {min-height: 200px}
+
+[class^="box"] > *:not([class^="box"]) {
+	min-height: 0;
+	line-height: 1.5;
+	color: #000000;
+	font-size: 14px;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	font-weight: normal;
+	text-align: left;
+	}
+
+
+/* BOX Aを枠で囲まない設定 */
+.boxA	{border: none;
+	background: none;
+	line-height: normal;
+	text-align: left}
+
+
+
+/* ボックスごとに色を変える設定 */
+.box1	{
+	border-color: #faa;
+	color: #faa;
+	background-color: #fee;
+	}
+
+.box2	{
+	border-color: #e0e03d;
+	color: #e0e03d;
+	background-color: #ffe;
+	}
+
+
+.box3	{
+	border-color: #65c4cf;
+	color: #65c4cf;
+	background-color: #b2eaf1;
+	}
+
+.box4	{
+	border-color: #82d99f;
+	color: #82d99f;
+	background-color: #c4f6d4;
+	}
+
+.boxB	{
+	border-color: #b236ab;
+	color: #b236ab;
+	background-color: #ffccfc;
+	}
+
+
+
+/* ボックスの高さ */
+
+@media (min-width: 768px) {
+
+
+.box2	{line-height: 400px}
+
+.box3	{line-height: 400px}
+
+.box4	{line-height: 400px}
+
+
+.boxB .box2,
+.boxB .box3
+	{line-height: 384px}
+
+}

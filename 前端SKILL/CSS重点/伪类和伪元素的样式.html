@@ -1,0 +1,244 @@
+//伪类和伪元素
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类和伪元素</title>
+    <style>
+        /* 伪类 */
+        a:hover {
+            color: red;
+        }
+
+        /* 伪元素 */
+        p::first-line {
+            font-weight: bold;
+        }
+        p::first-letter {
+            font-size: 2em;
+            color: blue;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+        p:nth-child(even)::first-letter {
+            color: green;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(3)::before {
+            content: "注意：";
+            color: orange;
+            font-weight: bold;
+        }
+        p:nth-child(4)::after {
+            content: "（这是第四个段落）";
+            color: purple;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(5)::before {
+            content: "提示：";
+            color: teal;
+            font-style: italic;
+        }
+        p:nth-child(6)::after {
+            content: "（这是第六个段落）";
+            color: brown;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(7)::before {
+            content: "警告：";
+            color: red;
+            font-weight: bold;
+        }
+        p:nth-child(8)::after {
+            content: "（这是第八个段落）";
+            color: gray;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(9)::before {
+            content: "注意：";
+            color: darkblue;
+            font-weight: bold;
+        }
+        p:nth-child(10)::after {
+            content: "（这是第十个段落）";
+            color: darkgreen;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(11)::before {
+            content: "提示：";
+            color: darkorange;
+            font-style: italic;
+        }
+        p:nth-child(12)::after {
+            content: "（这是第十一个段落）";
+            color: darkred;
+        }
+
+        /* 伪类和伪元素组合 */
+        p:nth-child(13)::before {
+            content: "警告：";
+            color: darkviolet;
+            font-weight: bold;
+        }
+        p:nth-child(14)::after {
+            content: "（这是第十四个段落）";
+            color: darkslategray;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(15)::before {
+            content: "注意：";
+            color: darkcyan;
+            font-weight: bold;
+        }
+        p:nth-child(16)::after {
+            content: "（这是第十六个段落）";
+            color: darkgoldenrod;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(17)::before {
+
+            content: "提示：";
+            color: darkorchid;
+            font-style: italic;
+        }
+        p:nth-child(18)::after {
+            content: "（这是第十八个段落）";
+            color: darkseagreen;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(19)::before {
+            content: "警告：";
+            color: darkslateblue;
+            font-weight: bold;
+        }
+        p:nth-child(20)::after {
+            content: "（这是第二十个段落）";
+            color: darkturquoise;
+        }
+        /* 伪类和伪元素组合 */
+        p:nth-child(21)::before {
+            content: "注意：";
+            color: darkkhaki;
+            font-weight: bold;
+        }
+        p:nth-child(22)::after {
+            content: "（这是第二十二个段落）";
+            color: darkmagenta;
+        }
+        /*focus 使用 */
+        input:focus {
+            border: 2px solid blue;
+            outline: none;
+        }
+        /**--hover 使用 --*/
+        button:hover {
+            background-color: lightblue;
+        }
+        /*div focus 使用 */
+        div:focus {
+            border: 2px solid green;
+            outline: none;
+        }
+
+        /*active 使用 */
+        button:active {
+            background-color: rgb(24, 22, 91);
+        }
+        #myDivActive:active {
+            background-color: rgb(24, 22, 91);
+        }
+#myDiv::before {
+  content: "前缀内容---";
+  /* 其他样式 */
+}
+
+#myDiv::after {
+  content: "后缀内容";
+  /* 其他样式 */
+}
+p::before {
+  content: "【提示】";
+  color: orange;
+  font-weight: bold;
+}
+p::after {
+  content: "（段落结束）";
+  color: gray;
+}
+p:nth-child(3)::before {
+    content: "注意：";
+    color: orange;
+    font-weight: bold;
+}
+p:nth-child(4)::after {
+    content: "（这是第四个段落）";
+    color: purple;
+}
+    </style>
+</head>
+<body>
+    <h1>伪类和伪元素示例</h1>
+    <p>这是一个段落。<a href="#">这是一个链接</a>。</p>
+    <p>这是另一个段落。</p>
+    <p>这是第三个段落。</p>
+    <p>这是第四个段落。</p> 
+    <p>这是第五个段落。</p>
+    <p>这是第六个段落。</p>
+    <p>这是第七个段落。</p>
+    <p>这是第八个段落。</p>
+    <input autofocus tabindex="0" type="text" placeholder="点击这里输入文本" />
+    <button>点击我</button>
+    <p>这是第九个段落。</p>
+    <p>这是第十个段落。</p>
+    <p>这是第十一个段落。</p>
+    <div id="myDiv" autofocus tabindex="0" >这是一个可聚焦的div元素。点击或按Tab键聚焦。</div>
+
+    <div id="myDivActive" tabindex="0" >这是一个可聚焦的div元素。点击或按Tab键聚焦。</div>
+    <p>这是第十二个段落。</p>
+</body>
+<script>
+  window.onload = function() {
+    document.getElementById('myDiv').focus();
+  }
+</script>
+</html>
+
+<!--
+你可以从以下几个角度向我提问 CSS 样式相关问题，以便获得更准确、实用的答案：
+
+1. 描述你想实现的具体效果
+例：如何让第一个段落的文字变红？
+例：如何让鼠标悬停按钮时有阴影？
+2. 说明你遇到的问题或异常
+例：为什么 input 的 :focus 样式没有生效？
+例：hover 样式没有触发，怎么排查？
+3. 提供相关代码片段
+贴出你的 HTML 和 CSS 相关部分，便于我定位问题。
+4. 说明使用的环境或框架
+例：我用的是 Vue3 + Vuetify3，如何自定义按钮样式？
+例：在移动端浏览器下，样式表现不一致怎么办？
+5. 询问实现某种交互或动画的方法
+例：如何实现点击按钮后背景色渐变？
+例：如何让列表项被选中时高亮显示？
+6. 询问伪类、伪元素、选择器等用法
+例：:nth-child 和 :nth-of-type 有什么区别？
+例：::before 和 :before 有什么不同？
+7. 询问样式优化或性能相关问题
+例：如何减少 CSS 选择器对性能的影响？
+例：大批量元素 hover 卡顿怎么优化？
+提问建议：
+
+说明你想要的“目标效果”或“遇到的具体问题”。
+提供相关代码和上下文。
+如果有报错或异常表现，描述清楚。
+举例：
+
+“我想让第3个段落前加一个红色的‘注意：’，应该怎么写 CSS？”
+“为什么我给 input 设置了 :focus 样式，但页面加载后没有生效？”
+“如何让所有偶数段落的首字母变绿色？”
+这样提问，我能更快、更准确地帮你解决 CSS 样式相关问题！
+
+-->

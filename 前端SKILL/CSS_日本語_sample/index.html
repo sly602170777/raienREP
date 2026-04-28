@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>HTML5&amp;CSS3 デザインブック</title>
+<meta name="viewport" content="width=device-width">
+
+<style>
+body	{margin: 0;
+	background-color: #eeeeee;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
+
+.contents	{max-width: 640px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	padding:  30px 80px;}
+
+h1	{margin-bottom: 40px;
+	padding: 20px 10px;
+	border: solid 8px #63a4c2;
+	text-align: center}
+
+h1 span	{display: block;
+	margin-top: 10px;
+	color: #aaaaaa;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px}
+
+h2	{margin-top: 60px;
+	padding-bottom: 5px;
+	border-bottom: solid 4px #63a4c2;}
+
+h2 span	{display: block;
+	margin-bottom: 5px;
+	color: #63a4c2;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px}
+
+ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+li a	{display: block;
+	padding: 5px;
+	padding-left: 10px;
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none}
+
+li a:hover	{background-color: #eeeeee}
+
+
+ul li	{margin-top: 0;
+	margin-bottom: 10px}
+
+ul ul	{margin-top: 15px;
+	margin-bottom: 30px}
+
+ul ul li	{margin-left: 50px;
+	margin-top: 0;
+	border-left: solid 5px #63a4c2;
+	line-height: 1}
+
+.appendix li	{margin-left: 10px}
+
+.num	{margin-right: 10px;
+	color: #63a4c2;
+	font-family: Arial, Helvetica, sans-serif}
+
+.contents > ul > li > span.num,
+.contents > ul > li > a > span.num
+	{margin-right: 10px;
+	font-size: 20px}
+
+.contents > ul > li > a	{padding: 0;
+	font-size: 16px}
+
+
+.copyright p	{margin: 50px 0 0;
+	padding-top: 10px;
+	border-top: solid 2px #cccccc;
+	color: #666666;
+	font-size: 14px}
+
+
+@media (max-width: 720px) {
+
+.contents	{padding: 20px 25px}
+
+}
+
+@media (max-width: 640px) {
+
+.contents	{padding: 10px}
+
+ul ul li	{margin-left: 10px}
+
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="contents">
+<h1>HTML5&amp;CSS3 デザインブック <span>SAMPLE</span></h1>
+
+<h2><span>Chapter 1</span>Webページにおける段組み</h2>
+<ul>
+<li><span class="num">1-2</span><span class="title">ボックスを横に並べる</span></li><li><ul>
+<li><a href="1/step1-2.html"><span>ボックスを横に並べる</span></a></li>
+<li><a href="1/step1-2_pattern1.html"><span>横に並べるボックスを変更する - BOX1&amp;BOX2</span></a></li>
+<li><a href="1/step1-2_pattern2.html"><span>横に並べるボックスを変更する - BOX3&amp;BOX4</span></a></li>
+<li><a href="1/step1-2_pattern3.html"><span>横に並べるボックスを変更する - BOX1～BOX4</span></a></li>
+<li><a href="1/step1-2_pattern4.html"><span>横に並べるボックスの数を変更する - BOX1～BOX3</span></a></li>
+<li><a href="1/step1-2_pattern5.html"><span>横に並べるボックスの数を変更する - BOX1～BOX4</span></a></li>
+<li><a href="1/p30.html"><span class="num">COLUMN</span><span class="title">clearfixの仕組み（テキストの回り込みを解除したときの表示）</span></a></li>
+</ul></li><li><span class="num">1-3</span><span class="title">ボックスを分割する</span></li><li><ul>
+<li><a href="1/step1-3_2.html"><span>ボックスを分割する （２）</span></a></li>
+<li><a href="1/step1-3_3.html"><span>ボックスを分割する （３）</span></a></li>
+<li><a href="1/step1-3_pattern1.html"><span>ボックスの分割数を増やす</span></a></li>
+</ul></li><li><span class="num">1-4</span><span class="title">ボックスの横幅を指定する</span></li><li><ul>
+<li><a href="1/step1-4_pattern1.html"><span>ボックスの横幅の指定 - 2分割</span></a></li>
+<li><a href="1/step1-4_pattern2.html"><span>ボックスの横幅の指定 - 3分割</span></a></li>
+<li><a href="1/step1-4_pattern3.html"><span>ボックスの横幅の指定 - 7:3</span></a></li>
+<li><a href="1/step1-4_pattern4.html"><span>ボックスの横幅の指定 - 2:1:1</span></a></li>
+<li><a href="1/p37.html"><span class="num">COLUMN</span><span class="title">横幅の合計が100%を超えるとどうなるか</span></a></li>
+<li><a href="1/p39-1.html"><span class="num">COLUMN</span><span class="title">カラム落ちの現象を利用するときの注意 - 100%</span></a></li>
+<li><a href="1/p39-2.html"><span class="num">COLUMN</span><span class="title">カラム落ちの現象を利用するときの注意 - clear</span></a></li>
+<li><a href="1/p40.html"><span class="num">COLUMN</span><span class="title">片方のボックスの横幅をピクセルで固定する - BOX2の横幅を固定</span></a></li>
+<li><a href="1/p42.html"><span class="num">COLUMN</span><span class="title">片方のボックスの横幅をピクセルで固定する - BOX3の横幅を固定</span></a></li>
+</ul></li><li><span class="num">1-5</span><span class="title">ボックスの並び順を指定する</span></li><li><ul>
+<li><a href="1/step1-5_1.html"><span>ボックスの並び順の指定 - left</span></a></li>
+<li><a href="1/step1-5_2.html"><span>ボックスの並び順の指定 - right</span></a></li>
+<li><a href="1/step1-5_3.html"><span>ボックスの並び順の指定 - left/right</span></a></li>
+</ul></li><li><span class="num">1-6</span><span class="title">レスポンシブWebデザインを設定する</span></li><li><ul>
+<li><a href="1/step1-6_p46.html"><span>レスポンシブWebデザインの基本</span></a></li>
+<li><a href="1/step1-6_p48.html"><span>レスポンシブWebデザインの応用 - P.48</span></a></li>
+<li><a href="1/step1-6_p52.html"><span>レスポンシブWebデザインの応用 - P.52</span></a></li>
+<li><a href="1/step1-6_p53-box2-box3.html"><span>中間のステップを追加する - BOX2とBOX3の横並びを解除</span></a></li>
+<li><a href="1/step1-6_p53-boxb-box4.html"><span>中間のステップを追加する - BOXBとBOX4の横並びを解除</span></a></li>
+<li><a href="1/step1-6_p56.html"><span class="num">COLUMN</span><span class="title">レスポンシブWebデザインで重複した設定を１つにまとめる</span></a></li>
+<li><a href="1/step1-6_p57.html"><span class="num">COLUMN</span><span class="title">中間のステップをカラム落ちで実現する</span></a></li>
+<li><a href="1/p59.html"><span class="num">COLUMN</span><span class="title">ボックスを重ねてレイアウトする</span></a></li>
+</ul>
+
+
+</ul>
+<h2><span>Chapter 2</span>Webページを作成する準備</h2>
+<ul>
+
+<li><span class="num">2-1</span><span class="title">パーツの準備</span></li><li><ul>
+<li><a href="2/2-1/parts-site.html"><span class="num">2-1-1 </span><span class="title">サイト名</span></a></li>
+<li><a href="2/2-1/parts-kiji.html"><span class="num">2-1-2 </span><span class="title">記事</span></a></li>
+<li><a href="2/2-1/parts-menuv.html"><span class="num">2-1-3 </span><span class="title">メニュー （縦並び）</span></a></li>
+<li><a href="2/2-1/parts-menuh.html"><span class="num">2-1-4 </span><span class="title">メニュー （横並び）</span></a></li>
+<li><a href="2/2-1/parts-copyright.html"><span class="num">2-1-5 </span><span class="title">コピーライト</span></a></li>
+</ul></li><li><span class="num">2-2</span><span class="title">Webページの準備</span></li><li><ul>
+<li><a href="2/2-2/sample.html"><span>sample.html</span></a></li>
+<li><a href="2/2-2/style.css"><span>style.css</span></a></li>
+</ul>
+
+
+</ul>
+<h2><span>Chapter 3</span>ブログ・ニュース系サイトのコンテンツページ</h2>
+<ul>
+
+
+<li><a href="3/3-1/sample.html"><span class="num">3-1</span><span class="title">レイアウトの基本構造を作る</span></a></li><li><a href="3/3-2/sample.html"><span class="num">3-2</span><span class="title">ボックスの中にコンテンツを入れる</span></a></li><li><a href="3/3-3/sample.html"><span class="num">3-3</span><span class="title">レイアウトの調整を行う</span></a></li><li><span class="num">3-4</span><span class="title">レスポンシブWebデザインの調整を行う</span></li><li><ul>
+<li><a href="3/3-4-1/sample.html"><span class="num">3-4-1 </span><span class="title">調整に必要な@mediaの設定を追加する</span></a></li>
+<li><a href="3/3-4-2/sample.html"><span class="num">3-4-2 </span><span class="title">ナビゲーションメニューをコンパクトにする</span></a></li>
+<li><a href="3/3-4-3/sample.html"><span class="num">3-4-3 </span><span class="title">サイト名と記事のタイトルをコンパクトにする</span></a></li>
+<li><a href="3/3-4-4/sample.html"><span class="num">3-4-4 </span><span class="title">サブメニューを２段組みにする</span></a></li>
+<li><a href="3/3-4-5/sample.html"><span class="num">3-4-5 </span><span class="title">レイアウト全体の横幅を固定する</span></a></li>
+</ul></li><li><span class="num">3-5</span><span class="title">パーツの追加と修正</span></li><li><ul>
+<li><a href="3/3-5-1/sample.html"><span class="num">3-5-1 </span><span class="title">Webフォントによるサイト名の表示</span></a></li>
+<li><a href="3/3-5-2/sample.html"><span class="num">3-5-2 </span><span class="title">記事の投稿日にアイコンを付けて表示する</span></a></li>
+<li><a href="3/3-5-3/sample.html"><span class="num">3-5-3 </span><span class="title">記事の分類をラベルの形で表示する</span></a></li>
+<li><a href="3/3-5-4/sample.html"><span class="num">3-5-4 </span><span class="title">記事に小見出しを追加する</span></a></li>
+<li><a href="3/3-5-5/sample.html"><span class="num">3-5-5 </span><span class="title">リストマーク付きのメニューにする</span></a></li>
+<li><a href="3/3-5-6/sample.html"><span class="num">3-5-6 </span><span class="title">サムネイル画像付きのメニューにする</span></a></li>
+<li><a href="3/3-5-7/sample.html"><span class="num">3-5-7 </span><span class="title">サムネイル画像にテキストを重ねたメニューにする</span></a></li>
+<li><a href="3/3-5-8/sample.html"><span class="num">3-5-8 </span><span class="title">フラットなSNSのシェアボタンを追加する</span></a></li>
+<li><a href="3/3-5-8/sample-share.html"><span class="num">COLUMN</span><span class="title">シェアボタンの設定</span></a></li>
+<li><a href="3/3-5-9/sample.html"><span class="num">3-5-9 </span><span class="title">関連記事メニューを追加する</span></a></li>
+</ul>
+</li>
+<li><a href="3/3-6/sample.html"><span class="num">3-6</span><span class="title">ナビゲーションバーとフッターを横幅いっぱいに表示する</span></a></li>
+
+
+</ul>
+<h2><span>Chapter 4</span>ブログ・ニュース系サイトのトップページ</h2>
+<ul>
+
+<li><a href="4/4-1/top.html"><span class="num">4-1</span><span class="title">トップページの作成</span></a></li><li><span class="num">4-2</span><span class="title">パーツの追加と修正</span></li><li><ul>
+<li><a href="4/4-2-1/top.html"><span class="num">4-2-1 </span><span class="title">ページネーションを追加する</span></a></li>
+<li><a href="4/4-2-2/top.html"><span class="num">4-2-2 </span><span class="title">円形のバッジを追加する</span></a></li>
+<li><a href="4/p196/top.html"><span class="num">COLUMN</span><span class="title">クラス名の変更やマークアップの調整</span></a></li>
+</ul>
+
+
+</ul>
+<h2><span>Chapter 5</span>ビジネスサイト風のトップページ</h2>
+<ul>
+
+
+<li><a href="5/5-1/sample.html"><span class="num">5-1</span><span class="title">レイアウトの基本構造を作る</span></a></li><li><a href="5/5-2/sample.html"><span class="num">5-2</span><span class="title">ボックスの中にコンテンツを入れる</span></a></li><li><a href="5/5-3/sample.html"><span class="num">5-3</span><span class="title">レイアウトの調整を行う</span></a></li><li><ul>
+<li><a href="5/p219/sample.html"><span class="num">COLUMN</span><span class="title">各ボックスに背景色を付けたデザイン</span></a></li>
+</ul></li><li><span class="num">5-4</span><span class="title">レスポンシブWebデザインの調整を行う</span></li><li><ul>
+<li><a href="5/5-4-1/sample.html"><span class="num">5-4-1 </span><span class="title">調整に必要な@mediaの設定を追加する</span></a></li>
+<li><a href="5/5-4-2/sample.html"><span class="num">5-4-2 </span><span class="title">ナビゲーションメニューをコンパクトにする</span></a></li>
+<li><a href="5/5-4-3/sample.html"><span class="num">5-4-3 </span><span class="title">日付の下にテキストが入り込まないようにする</span></a></li>
+<li><a href="5/5-4-4/sample.html"><span class="num">5-4-4 </span><span class="title">レイアウト全体の横幅を固定する</span></a></li>
+<li><a href="5/p231/sample.html"><span class="num">COLUMN</span><span class="title">大きい画面でもヘッダー画像を横幅いっぱいに表示する場合</span></a></li>
+</ul></li><li><span class="num">5-5</span><span class="title">パーツの追加と修正</span></li><li><ul>
+<li><a href="5/5-5-1/sample.html"><span class="num">5-5-1 </span><span class="title">サイト名を画像で表示する</span></a></li>
+<li><a href="5/5-5-2/sample.html"><span class="num">5-5-2 </span><span class="title">サイト名の画像を高解像度化する</span></a></li>
+<li><a href="5/5-5-3/sample.html"><span class="num">5-5-3 </span><span class="title">パーツを罫線で囲んだデザインにする</span></a></li>
+<li><a href="5/5-5-4/sample.html"><span class="num">5-5-4 </span><span class="title">SNSメニューを追加する</span></a></li>
+<li><a href="5/5-5-5/sample.html"><span class="num">5-5-5 </span><span class="title">吹き出しの形で補足説明を追加する</span></a></li>
+<li><a href="5/5-5-6/sample.html"><span class="num">5-5-6 </span><span class="title">コンテンツの概要を追加する</span></a></li>
+<li><a href="5/p263/sample.html"><span class="num">COLUMN</span><span class="title">paddingを使った概要の間隔の調整</span></a></li>
+<li><a href="5/5-5-7/sample.html"><span class="num">5-5-7 </span><span class="title">ヘッダー画像にキャッチコピーを重ねる</span></a></li>
+</ul></li><li><a href="5/5-6/sample.html"><span class="num">5-6</span><span class="title">ナビゲーションメニューをトグル型にする</span></a></li><li><ul>
+<li><a href="5/p282/sample.html"><span class="num">COLUMN</span><span class="title">クラス名の変更やマークアップの調整</span></a></li>
+</ul>
+
+
+
+</ul>
+<h2><span>Chapter 6</span>ビジネスサイト風のコンテンツページ</h2>
+<ul>
+
+
+<li><a href="6/6-1/contents.html"><span class="num">6-1</span><span class="title">コンテンツページの作成</span></a></li><li><span class="num">6-2</span><span class="title">パーツの追加と修正</span></li><li><ul>
+<li><a href="6/6-2-1/contents.html"><span class="num">6-2-1 </span><span class="title">記事のデザインを調整する</span></a></li>
+<li><a href="6/6-2-2/contents.html"><span class="num">6-2-2 </span><span class="title">パンくずリストを追加する</span></a></li>
+<li><a href="6/6-2-3/contents.html"><span class="num">6-2-3 </span><span class="title">メニューを罫線で囲んだデザインにする</span></a></li>
+<li><a href="6/p311/contents.html"><span class="num">COLUMN</span><span class="title">マルチカラムの機能を利用した段組み</span></a></li>
+</ul>
+
+
+
+</ul>
+<h2><span>APPENDIX</span>Internet Explorer 8に対応する</h2>
+<ul><li>
+<ul class="appendix">
+<li><a href="3/3-6/sample-ie8.html"><span>Chapter 3のサンプル</span></a></li>
+<li><a href="4/4-2-2/top-ie8.html"><span>Chapter 4のサンプル</span></a></li>
+<li><a href="5/5-6/sample-ie8.html"><span>Chapter 5のサンプル</span></a></li>
+<li><a href="6/6-2-3/contents-ie8.html"><span>Chapter 6のサンプル</span></a></li>
+</ul>
+</li></ul>
+
+
+<div class="copyright">
+<p>Copyright &copy; エビスコム ／ ソシム</p>
+</div>
+
+</div>
+

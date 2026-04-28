@@ -1,0 +1,117 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace MUltiRowDemo
+{
+    public partial class 項目チェック : Form
+    {
+        public 項目チェック()
+        {
+            InitializeComponent();
+            string T1 = this.textBox1.Text;
+            string T2 = this.textBox2.Text ;
+            string T3 = this.textBox3.Text ;
+            string T4 = this.textBox4.Text ;
+            string T5 = this.textBox5.Text;
+        }
+        //   項目チェック checkItem = new 項目チェック();
+
+
+        private void initText() 
+        {
+            this.textBox1.Text = null;
+            this.textBox2.Text = null;
+            this.textBox3.Text = null;
+            this.textBox4.Text = null;
+            this.textBox5.Text = null;
+        }
+
+        private bool checkItem_A() 
+        {
+            int temp;
+            if (this.textBox2.Text!="" && this.textBox3.Text != "")
+            {
+                if (int.TryParse(this.textBox3.Text,out temp))
+                {
+                    if (temp>0)
+                    {
+                        return false;
+                    }
+                    return true;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkItem_B() 
+        {
+            if (this.textBox4.Text != ""  )
+            {
+                if (Convert.ToInt32(this.textBox4.Text) < 0) 
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+        private bool checkItem_C()
+        {
+            if (this.textBox5.Text != "")
+            {
+                if (Convert.ToInt32(this.textBox5.Text) < 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            bool a = checkItem_A();
+            bool b = checkItem_B();
+            bool c = checkItem_C();
+            bool s = this.textBox1.Text == "" ? true : false;
+            if ( (a || b || c) | (s))
+            {
+                MessageBox.Show("必须");
+            }
+            else
+            {
+                MessageBox.Show("OK");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            initText();
+        }
+    }
+}

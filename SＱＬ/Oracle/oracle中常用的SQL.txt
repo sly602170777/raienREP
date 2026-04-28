@@ -1,0 +1,216 @@
+20:17 2021/04/24
+--Oracle中的instr()函数 详解及应用  
+
+select instr('helloworld','l',2,2) from dual;  
+--返回结果：4    也就是说：在"helloworld"的第2(e)号位置开始，查找第二次出现的“l”的位置
+
+格式一：instr( string1, string2 )    /   instr(源字符串, 目标字符串)
+select * from aaa  where instr(film_text,"ZO"); 
+--返回结果：4    也就是说：在"字段"film_text" 中 含有""ZO"的数据
+
+
+
+ SELECT * FROM aaa  WHERE LENGTH(film_text) > LENGTH(rtrim(film_text))
+ --末尾带有空格的字段直接检索出来
+ 
+ 
+ 
+ --RONUMで連番を取得！Oracleで連番を取得する方法
+ --レコードの取得順に ROWNUM擬似列に連番が振られています
+SELECT  ROWNUM , Name, Age  FROM users
+
+
+--ROWNUMで2レコード目だけを抽出する場合は
+
+SELECT *
+FROM (
+  SELECT ROWNUM AS num
+       , users.* 
+  FROM users
+)
+WHERE num = 2
+
+
+--查询正序的第一条和倒序的第一条
+
+select * from(
+       select t.name,
+              t.sex,
+              t.time,
+              row_number() over(order by t.time) rowss1,
+              row_number() over(order by t.time desc) rowss2 from TABLE1 t)
+	where rowss1='1' or rowss2='1';
+	
+	
+-- MySQL 升序排序后查询字段的第一条数据
+SELECT  aaa.* FROM aaa order by submitted_user_id  desc limit 1	
+
+--Oracle 查询出来的数据取第一条
+select * from (select * from <table> order by <key>) where rownum=1;
+
+select * from (select * from <table> order by <key> desc) where rownum=1;
+
+20:38 2021/04/24
+--MYSQL  自動採番　　テーブル構造を確認する
+desc aaa or  DESCRIBE aaa
+
+.LOG  ORACLEのシーケンス（順序）の現在値または次に採番される値の確認方法
+
+.20:31 2021/04/24  静的データディクショナリビューを参照---查看静态数据字典视图
+
+SELECT SEQUENCE_NAME,LAST_NUMBER FROM USER_SEQUENCES;
+ 
+SEQUENCE_NAME  LAST_NUMBER
+-------------- -----------
+TEST_SEQ1                1
+
+
+20:21 2021/04/24
+
+ORACLEのシーケンス（順序） LAST_NUMBER項目を参照
+SELECT SEQUENCE_NAME,LAST_NUMBER FROM USER_SEQUENCES;
+ 
+SEQUENCE_NAME  LAST_NUMBER
+-------------- -----------
+TEST_SEQ1                1
+ 
+
+--「順番にやって」　シーケンスは現在値の設定してから、現在値の取得できるようになった
+SELECT test_seq1.NEXTVAL a FROM DUAL;
+    A
+-----
+    1
+
+
+--シーケンス名.CURRVAL 現在値の取得
+
+ 
+SELECT test_seq1.CURRVAL a FROM DUAL;
+    A
+-----
+    1
+
+
+------------------------------------------- order by
+21:16 2021/04/26
+	ASC - 昇順（省略時）
+	DESC - 降順（逆順）
+
+ ''''' MySQL Limit 
+ SELECT  aaa.* FROM aaa order by submitted_user_id asc limit 1
+ 
+ SELECT record_id.NEXTVAL FROM aaa;
+ ''' ORacle Rownum
+ select
+    TBL.*
+from
+    ( 
+        select
+           *
+        from
+            T_SAMPLE 
+        order by
+            SEQ_ID desc
+    ) TBL 
+where
+    rownum = 1
+
+
+---------------------逆引き SQL 関数 （数値、文字列関数）
+*****************
+https://www.shift-the-oracle.com/sql/functions/function-base-reference-1.html
+*****************
+
+文字列の編集・変換に関する関数
+Question 文字列を文字単位に置換するには	translate ( e, f, t )
+Question 文字列を単語レベルで置換するには	replace ( s1, s2, r )
+Question 文末の空白を取り除くには	rtrim ( e, s )
+Question 文字列の長さを一定に揃えるには	rpad ( s1, n, s2)
+Question 英文字の全てを小文字（大文字）に変換するには	lower ( s )
+Question NULL を別の値に置換するには	nvl ( e1, e2 )
+Question文字列同士を結合するには	concat ( s1, s2 )
+ 
+日本語に関する文字列関数
+Question SJIS、 EUC、UNICODE などに文字コード変換するには	convert ( e, d, s )
+Question 辞書順、五十音順に並び替えるには	[ order by ] nlssort ( e , s )
+Question 半角カナを全角かなに変換するには	to_full_kana ( s, t ) 
+Question 全角空白と半角スペースを取り除くには	trim_multi ( s, r ) 
+ 
+正規表現に関する文字列関数 Oracle 10g Oracle 11g
+Question正規表現でマッチするか調べるには	regexp_like ( s, p )
+Question正規表現でマッチする文字の位置を調べるには	regexp_instr ( s, p )
+Question正規表現でマッチする文字を切り出すには	regexp_substr ( s, p )
+Question正規表現でマッチする文字を置換するには	regexp_replace ( s, p )
+Question正規表現でマッチする文字の検知回数を調べるには Oracle 11g	regexp_count ( s, p )
+ 
+文字列の取得に関する関数
+Question 文字からコードポイントを求めるには	ascii ( n )
+Question文字コードから文字を取得するには	chr ( s )
+Question 部分文字列の位置を求めるには	instr ( s1, s2, p, o )
+Question 部分文字列を切り出すには	substr ( s1, p, l )
+Question 文字列の長さを求めるには	length ( s )
+Question システムで一意なバイト文字列を生成するには	sys_guid
+ 
+数値に関する関数
+Question 小数点を切り捨てるには	trunc ( m, n )
+Question 小数点の四捨五入をするには	round ( m, n )
+Question ある数値以上で最小の整数を求めるには	ceil ( n )
+Question 小数点の切り上げをするには	roundup ( m, n ) 
+Question 絶対値を求めるには	abs ( n )
+Question 最大値を求めるには	greatest ( m, n, ... )
+Question 正の値か負の値かを調べるには	sign ( n )
+Question 累乗、べき乗を求めるには	power ( m, n )
+Question 平方根を求めるには	sqrt ( n )
+Question 数値を文字列に変換して整形するには	to_char ( n, f, s )
+Question 文字列を ORACLE 独自のハッシュ値に変換するには	ora_hash ( e, b, s )
+Question 文字列を標準化されているハッシュ値に変換するには	standard_hash ( e , s )
+Question 16進数から10進数を求めるには	hextodec ( h ) 
+Question 数値文字列の先頭の 0 を取り除くには	ltrim ( s, '0' )
+Question ビット列から数値を求めるには	bin_to_num ( 1, 0, 1, ... )
+Question 数値同士のビット演算処理を行なうには	bitand ( m, n )
+Question JAN コードのチェックデジットを計算するには	cd_mod10_weight3( c ) 
+Question 割り算の余りを求めるには	mod ( m, n )
+Question 非数値を 0 に置換するには	nanvl ( m, n )
+Question 三角関数、逆三角関数、双曲線関数を計算するには	sin ( θ )
+Question 指数関数、自然対数を計算するには	exp ( n )
+
+
+
+
+--------------------------------------------------------------------------------------------
+
+22:57 2021/04/28   日期的筛选
+
+-- 受付日が2/4のデータを取得したい
+SELECT *
+FROM   test_table
+WHERE  receptiondate = TO_DATE('20170204','YYYYMMDD')
+
+--to_char(ADATE,'yyyy/mm/dd hh24:mi:ss') AS ADATE
+
+
+--SYSDATEで1日後と1日前を取得する
+
+--2020/06/15 22:19:13のとき
+-- 1日後
+SELECT sysdate + 1 FROM dual; -- 2020/06/16 22:19:13
+
+--date型の項目をselectする
+
+SQL> select to_char(sysdate, 'yyyy/mm/dd hh24:mi:ss') from dual;
+SQL> select  TO_DATE('15-07-10 00:00:00', 'YY-MM-DD HH24:MI:SS')
+SQL> select TO_DATE('2020/10/08 17:49:00', 'YYYY/MM/DD HH24:MI:SS') from DUAL;
+
+
+select sysdate,to_char(sysdate,’yyyy-mm-dd hh24:mi:ss’) from dual     //mi是分钟--HH24 小时，按24小时计  
+select sysdate,to_char(sysdate,’yyyy-mm-dd hh:mi:ss’) from dual   
+select sysdate,to_char(sysdate,’yyyy-ddd hh:mi:ss’) from dual   
+select sysdate,to_char(sysdate,’yyyy-mm iw-d hh:mi:ss’) from dual  
+
+select to_char(sysdate,'yyyy-MM-dd HH24:mm:ss') from dual;   /mm会显示月份
+
+
+
+Insert into dataTest values(to_date('2017-01-01 11:11:11','yyyy-mm-dd hh24:mi:ss'),to_date('2018-02-02 11:11:11','yyyy-mm-dd hh24:mi:ss'));
+
+SQL> insert into t01 values(1, to_date('2020-08-25 01:00:00','yyyy-mm-dd hh24:mi:ss'));1 row created.

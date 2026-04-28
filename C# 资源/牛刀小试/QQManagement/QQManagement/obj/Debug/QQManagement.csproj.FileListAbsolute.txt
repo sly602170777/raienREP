@@ -1,0 +1,14 @@
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\obj\Debug\QQManagement.csproj.CoreCompileInputs.cache
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\bin\Debug\QQManagement.exe.config
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\bin\Debug\QQManagement.exe
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\bin\Debug\QQManagement.pdb
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\obj\Debug\QQManagement.exe
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\obj\Debug\QQManagement.pdb
+C:\E\C#\C#_Test\经典100\QQManagement\QQManagement\obj\Debug\QQManagement.csproj.AssemblyReference.cache
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\bin\Debug\QQManagement.exe.config
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\bin\Debug\QQManagement.exe
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\bin\Debug\QQManagement.pdb
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\obj\Debug\QQManagement.csproj.AssemblyReference.cache
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\obj\Debug\QQManagement.csproj.CoreCompileInputs.cache
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\obj\Debug\QQManagement.exe
+C:\F\raienREP\C# 资源\牛刀小试\QQManagement\QQManagement\obj\Debug\QQManagement.pdb

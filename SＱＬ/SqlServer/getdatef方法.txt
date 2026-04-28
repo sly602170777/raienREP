@@ -1,0 +1,33 @@
+select top 1  iif( 
+                ( 
+                    123 in (select ID  from Family2 )
+                ) 
+                ,Family2.birthday
+                , GETDATE()
+            ) as [aa] from Family2
+
+
+
+
+--------------------------------
+
+select
+ --    count(Family2.ID) AS cnt
+--     , Family2.birthday 
+--  --   ,Family2.key1
+     DATEDIFF( 
+        dd
+        , CONVERT(date , [AAA].[CreateDate])
+        , ( 
+            iif( 
+                ( 
+                    1283 in (select ID as [key1] from Family2 )
+                ) 
+                ,Family2.birthday
+                , GETDATE()
+            )
+        ) 
+    ) as [dd]
+from
+    Family2 ,[AAA]
+GROUP  by Family2.ID ,Family2.birthday,[dd]

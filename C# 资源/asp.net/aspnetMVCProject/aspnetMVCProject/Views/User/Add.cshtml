@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+<div>
+    <form method="post" action="/User/AddUser">
+        <table>
+            <tr>
+                <td>
+                    ユーザID
+                </td>
+                <td>
+                    <input type="text" name="UserId" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    ユーザ名
+                </td>
+                <td>
+                    <input type="text" name="UserName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    年齢
+                </td>
+                <td>
+                    <input type="text" name="Age" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="登録" />
+                </td>
+
+        </table>
+
+    </form>
+</div>
+

@@ -1,0 +1,34 @@
+ajisai01.png
+Chapter1 Visual C#2019の基礎
+Chapter10 データベース操作の極意
+Chapter11 エラー処理の極意
+Chapter12 デバッグの極意
+Chapter13 グラフィックの極意
+Chapter14 WPFの極意
+Chapter15 ネットワークの極意
+Chapter16 ASP.NETの極意
+Chapter17 アプリケーション実行の極意
+Chapter18 Excelの極意
+Chapter2 プロジェクト作成の極意
+Chapter3 ユーザーインターフェイスの極意
+Chapter4 基本プログラミングの極意
+Chapter5 非同期処理の極意
+Chapter6 リフレクションの極意
+Chapter7 文字列操作の極意
+Chapter8 ファイル、フォルダー操作の極意
+Chapter9 コモンダイアログの極意
+data
+Debug.txt
+DebugAuto.txt
+info.rtf
+move
+newfolder
+onomichi01.bmp
+readme.txt
+sample.txt
+sample_copy.txt
+sample_create.txt
+sample_output.txt
+sample_utf8.txt
+查询文件夹名称.bat
+查询文件夹名称.txt

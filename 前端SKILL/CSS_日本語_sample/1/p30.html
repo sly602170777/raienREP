@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>ページタイトル</title>
+<link rel="stylesheet" href="grid-guide.css">
+<style>
+
+/* BOX A */
+.boxA	{border: solid 8px #00a0e9;
+	background-color: #a0e0fe;
+	color: #00a0e9}
+
+.boxA:after	{content: "これはBOX Aの中に表示確認のために挿入したテキストです。";
+	display: block;
+	clear: both}
+
+
+/* BOX2とBOX3を横に並べる */
+.box2	{float: left}
+
+.box3	{float: left}
+
+
+</style>
+</head>
+<body>
+
+
+<div class="box1">
+BOX1
+</div>
+
+<div class="boxA">
+<div class="box2">
+BOX2
+</div>
+
+<div class="box3">
+BOX3
+</div>
+</div>
+
+<div class="box4">
+BOX4
+</div>
+
+
+</body>
+</html>

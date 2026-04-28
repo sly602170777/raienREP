@@ -1,0 +1,13 @@
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\bin\Debug\CalcDemn.exe.config
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\bin\Debug\CalcDemn.exe
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\bin\Debug\CalcDemn.pdb
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\obj\Debug\CalculateDemo.csprojAssemblyReference.cache
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\obj\Debug\CalcDemn.exe
+D:\Data Code Userd\代码备份【2019-12-12】\反射_CalculateDemo\CalcDemn\obj\Debug\CalcDemn.pdb
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\bin\Debug\CalcDemn.exe.config
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\bin\Debug\CalcDemn.exe
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\bin\Debug\CalcDemn.pdb
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\obj\Debug\CalculateDemo.csprojAssemblyReference.cache
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\obj\Debug\CalculateDemo.csproj.CoreCompileInputs.cache
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\obj\Debug\CalcDemn.exe
+D:\C#\C#_Test\CalculateDemo-master\CalcDemn\obj\Debug\CalcDemn.pdb

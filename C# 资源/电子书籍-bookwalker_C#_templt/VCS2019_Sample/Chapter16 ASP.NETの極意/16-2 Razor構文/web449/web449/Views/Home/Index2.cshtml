@@ -1,0 +1,17 @@
+﻿@using web449.Models
+@{
+    ViewData["Title"] = "Index2";
+    // 新しいモデルを生成
+    var m = new MyModel()
+    {
+        ID = 100,
+        Title = "逆引き大全C#2019",
+        Price = 2000,
+    };
+}
+
+<h1>View 内でモデルを生成する</h1>
+<div>ID : @m.ID </div>
+<div>Title : @m.Title </div>
+<div>Price : @m.Price </div>
+

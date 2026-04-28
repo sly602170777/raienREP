@@ -1,0 +1,314 @@
+@charset "UTF-8";
+
+body	{font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif}
+
+
+/* サイト名 */
+.site h1 a	{color: #83a4a8;
+	text-decoration: none}
+
+.site h1	{margin: 0;
+	font-size: 30px;
+	font-family: 'Paytone One', sans-serif;
+	font-weight: normal}
+
+
+/* ナビゲーション */
+.menu ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+.menu li a	{display: block;
+	padding: 15px;
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none}
+
+.menu li a:hover	{background-color: #75dbe7}
+
+.menu ul:after	{content: "";
+	display: block;
+	clear: both}
+
+.menu li	{float: left;
+	width: auto}
+
+
+/* 記事 */
+.kiji h1	{margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 36px}
+
+.kiji p	{margin-top: 0;
+	margin-bottom: 20px}
+
+.kiji img	{max-width: 100%;
+	height: auto}
+
+
+/* 記事の小見出し */
+.kiji h2	{margin-top: 40px;
+	padding-left: 10px;
+	border-left: solid 10px #7cbac1;
+	font-weight: normal}
+
+
+/* 記事の投稿日 */
+.kijiinfo	{margin-top: -10px;
+	margin-bottom: 20px}
+
+.kijiinfo i	{margin-right: 5px;
+	color: #aaaaaa;
+	font-size: 20px}
+
+
+/* 記事の分類 */
+.kijicat	{margin-bottom: 25px}
+
+.kijicat ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+.kijicat li a	{display: block;
+	margin-right: 5px;
+	padding: 3px 5px;
+	border-radius: 2px;
+	background-color: #75dbe7;
+	color: #ffffff;
+	font-size: 12px;
+	text-decoration: none}
+
+.kijicat li a:hover	{background-color: #94ecf6}
+
+.kijicat ul:after	{content: "";
+	display: block;
+	clear: both}
+
+.kijicat li	{float: left;
+	width: auto}
+
+
+
+/* サイドメニュー */
+.sidemenu	{margin-bottom: 30px}
+
+.sidemenu ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+.sidemenu li a	{display: block;
+	padding: 5px;
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none}
+
+.sidemenu li a:hover	{background-color: #eeeeee}
+
+.sidemenu h1	{margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: dotted 2px #dddddd;
+	color: #666666;
+	font-size: 18px}
+
+.sidemenu i	{margin-right: 5px;
+	color: #888888}
+
+
+/* おすすめ記事メニュー */
+.osusume	{margin-bottom: 30px}
+
+.osusume ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+.osusume li a	{display: block;
+	margin-bottom: 10px;
+	padding: 0;
+	color: #000000;
+	font-size: 14px;
+	text-decoration: none}
+
+.osusume li a:hover	{background-color: #eeeeee;
+	opacity: 0.8}
+
+.osusume h1	{margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: dotted 2px #dddddd;
+	color: #666666;
+	font-size: 18px}
+
+.osusume img	{width: 100%;
+	height: auto;
+	border: none;
+	vertical-align: bottom}
+
+.osusume .text	{padding: 5px 10px;
+	background-color: rgba(0,0,0,0.5);
+	color: #ffffff}
+
+/* おすすめ記事メニューのテキストを重ねる設定 */
+.osusume a	{position: relative}
+
+.osusume .text	{position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box}
+
+
+/* 人気の記事メニュー */
+.ninki ul	{margin: 0;
+	padding: 0;
+	list-style: none}
+
+.ninki li a	{display: block;
+	padding: 5px;
+	border-bottom: dotted 1px #dddddd;
+	color: #2288bb;
+	font-size: 14px;
+	text-decoration: none}
+
+.ninki li a:hover	{background-color: #eeeeee}
+
+.ninki li a img	{border: none}
+
+.ninki h1	{margin-top: 0;
+	margin-bottom: 10px;
+	border-bottom: dotted 2px #dddddd;
+	color: #666666;
+	font-size: 18px}
+
+.ninki a:after	{content: "";
+	display: block;
+	clear: both}
+
+.ninki img	{float: left;
+	width: 60px}
+
+.ninki .text	{float: none;
+	width: auto;
+	margin-left: 60px;
+	padding-left: 15px}
+
+.ninki span	{display: block;
+	color: #666666;
+	font-size: 12px}
+
+
+/* コピーライト */
+.copyright p	{margin: 0;
+	color: #666666;
+	font-size: 14px}
+
+
+/* BOX2をバーの形にする */
+.box2	{background-color: #7cbac1}
+
+
+/* BOX5の上に区切り線を入れる */
+.box5	{border-top: solid 1px #dddddd}
+
+
+/* ボックスの上下の間隔 */
+.box1	{padding-top: 8px;
+	padding-bottom: 8px}
+
+.box3	{padding-top: 40px;
+	padding-bottom: 30px}
+
+.box4	{padding-top: 40px;
+	padding-bottom: 30px}
+
+.box5	{padding-top: 15px;
+	padding-bottom: 15px}
+
+
+
+/* ########### 599px以下 ########### */
+@media (max-width: 599px) {
+
+/* ナビゲーション */
+.menu li a	{padding: 10px 3px;
+	font-size: 11px}
+
+/* サイト名と記事のタイトル */
+.site h1	{font-size: 20px}
+
+.kiji h1	{font-size: 26px}
+
+/* ボックスの上下の間隔 */
+.box1	{padding-top: 4px;
+	padding-bottom: 4px}
+
+.box3	{padding-top: 25px}
+
+}
+
+
+
+/* ########### 600px以上～767px以下 ########### */
+@media (min-width: 600px) and (max-width: 767px) {
+
+/* BOX4-1とBOX4-2を横に並べる設定 */
+.box4:after	{content: "";
+	display: block;
+	clear: both}
+
+.box4-1	{float: left;
+	width: 50%}
+
+.box4-2	{float: left;
+	width: 50%}
+
+/* BOX4-1とBOX4-2の左右の間隔 */
+.box4-1	{padding-right: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box}
+
+.box4-2	{padding-left: 20px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box}
+
+}
+
+
+
+
+/* ########### 768px以上 ########### */
+@media (min-width: 768px) {
+
+/* BOX3とBOX4を横に並べる設定 */
+.boxA:after	{content: "";
+	display: block;
+	clear: both}
+
+.box3	{float: left;
+	width: 70%}
+
+.box4	{float: left;
+	width: 30%}
+
+/* BOX3とBOX4の左右の間隔 */
+.box3	{padding-right: 50px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box}
+
+}
+
+
+
+/* ########### 1040px以上 ########### */
+@media (min-width: 1040px) {
+
+/* 全体の横幅を固定 */
+.box1, .box2, .boxA, .box5
+	{width: 1000px;
+	margin-left: auto;
+	margin-right: auto}
+
+}
