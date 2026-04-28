@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\aspcoremvc_projetct\\userinfoprojectmvc\\userinfoprojectmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|solutionrelative:userinfoprojectmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\aspcoremvc_projetct\\userinfoprojectmvc\\userinfoprojectmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|solutionrelative:userinfoprojectmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\aspcoremvc_projetct\\userinfoprojectmvc\\userinfoprojectmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|solutionrelative:userinfoprojectmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|d:\\workspace\\github\\c# \u8D44\u6E90\\asp.net\\aspcoremvc_projetct\\userinfoprojectmvc\\userinfoprojectmvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B22AA3FE-B790-4D8F-A9E4-9345D3F1B714}|userInfoProjectMVC\\userInfoProjectMVC.csproj|solutionrelative:userinfoprojectmvc\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Program.cs",
+              "RelativeDocumentMoniker": "userInfoProjectMVC\\Program.cs",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Program.cs",
+              "RelativeToolTip": "userInfoProjectMVC\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:05:50.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "userInfoProjectMVC\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Properties\\launchSettings.json",
+              "RelativeToolTip": "userInfoProjectMVC\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-25T04:05:14.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "userInfoProjectMVC\\appsettings.json",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\appsettings.json",
+              "RelativeToolTip": "userInfoProjectMVC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-25T04:05:10.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "userInfoProjectMVC\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspCoreMVC_Projetct\\userInfoProjectMVC\\userInfoProjectMVC\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "userInfoProjectMVC\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T04:03:56.262Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

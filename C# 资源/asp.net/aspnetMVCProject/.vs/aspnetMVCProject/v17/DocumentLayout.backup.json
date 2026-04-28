@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,10 +38,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
@@ -52,7 +48,7 @@
               "RelativeDocumentMoniker": "aspnetMVCProject\\Controllers\\User\\UserController.cs",
               "ToolTip": "D:\\WorkSpace\\GitHub\\C# \u8D44\u6E90\\asp.net\\aspnetMVCProject\\aspnetMVCProject\\Controllers\\User\\UserController.cs",
               "RelativeToolTip": "aspnetMVCProject\\Controllers\\User\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwBIAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-08T04:16:03.04Z",
               "EditorCaption": ""
@@ -67,7 +63,8 @@
               "RelativeToolTip": "aspnetMVCProject\\logs\\testTool.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T03:39:28.222Z"
+              "WhenOpened": "2025-03-08T03:39:28.222Z",
+              "EditorCaption": ""
             }
           ]
         }
