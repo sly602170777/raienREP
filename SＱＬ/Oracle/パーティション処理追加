@@ -1,0 +1,548 @@
+修正版：C#+Oracle 多表 日時分区 批量清理バッチ（直接運用可）
+
+核心改修点
+
+✅  複数テーブル対応（任意追加可）
+✅  共通日時分区ルール統一適用
+✅  テーブル別処理ログ詳細化
+✅  個別テーブルエラー非影響他テーブル（続行処理）
+
+事前前提（同前）
+
+• Oracle分区タイプ：範囲パーティション（日付/年月基準）
+
+• 分区命名規則：P+年月（例P202401，必須統一，SQLで日付抽出可能）
+
+• 権限：ALTER TABLE + DROP TABLESPACE 権限
+
+• 環境：.NET6+、Oracle.ManagedDataAccess.Core（NuGetインストール）
+一、 修正後C#完全コード（多表対応版）
+using Oracle.ManagedDataAccess.Client;
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace OracleMultiTablePartitionClean
+{
+    class Program
+    {
+        // 1. DB接続情報（日本環境用、自身の情報に置き換え）
+        private const string DB_CONN_STR = "Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=DBサーバIP)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=ORCL)));User Id=ユーザ名;Password=パスワード;";
+        // 2. 共通設定：データ保留月数（全テーブル共通/個別設定可）
+        private const int RETAIN_MONTHS = 18;
+        // 3. 対象テーブルリスト【追加・削除自由】（表名 + 分区キーカラム名）
+        private static readonly List<(string TableName, string DatePartitionCol)> TargetTables = new()
+        {
+            ("T_SALES", "SALES_DATE"),    // 売上表：分区キー=売上日
+            ("T_ORDER", "ORDER_DATE"),    // 受注表：分区キー=受注日
+            ("T_LOG_ACCESS", "LOG_DATE")  // アクセスログ表：分区キー=ログ日
+        };
+        // ログ保存パス
+        private static readonly string LOG_PATH = $"MultiTable_PartClean_{DateTime.Now:yyyyMMdd}.log";
+
+        static void Main(string[] args)
+        {
+            WriteLog("===== 【多表】パーティション削除バッチ 開始 =====");
+            try
+            {
+                using (var conn = new OracleConnection(DB_CONN_STR))
+                {
+                    conn.Open();
+                    WriteLog("✅ DB接続成功");
+
+                    // 4. 対象テーブルをループ処理（1テーブルエラーでも他続行）
+                    foreach (var (tableName, dateCol) in TargetTables)
+                    {
+                        WriteLog($"【対象テーブル】{tableName}（分区キー：{dateCol}）処理開始");
+                        try
+                        {
+                            // ステップ1：当該テーブルの不要分区を取得
+                            var expiredPartitions = GetExpiredPartitions(conn, tableName, dateCol);
+                            if (expiredPartitions.Count == 0)
+                            {
+                                WriteLog($"⚠️  {tableName} 削除対象分区なし");
+                                continue;
+                            }
+
+                            // ステップ2：不要分区を批量DROP（高速削除）
+                            foreach (var partName in expiredPartitions)
+                            {
+                                DropPartition(conn, tableName, partName);
+                                WriteLog($"✅ {tableName} - 分区削除成功：{partName}");
+                            }
+                            WriteLog($"✅ {tableName} 処理完了\n");
+                        }
+                        catch (Exception ex)
+                        {
+                            WriteLog($"❌ {tableName} 処理失敗：{ex.Message}\n");
+                            continue; // 他テーブル処理を続行
+                        }
+                    }
+                }
+                WriteLog("===== 【多表】パーティション削除バッチ 正常終了 =====");
+            }
+            catch (Exception ex)
+            {
+                WriteLog($"===== バッチ全体致命的エラー：{ex.Message} =====");
+                throw;
+            }
+        }
+
+        /// <summary>保留期間超過の分区名を取得（多表対応版）</summary>
+        private static List<string> GetExpiredPartitions(OracleConnection conn, string tableName, string dateCol)
+        {
+            var partitions = new List<string>();
+            // 分区名(P202401)から年月抽出 → 保留期間判定
+            var sql = $@"
+                SELECT PARTITION_NAME
+                FROM USER_TAB_PARTITIONS
+                WHERE TABLE_NAME = UPPER('{tableName}')
+                  AND TO_DATE(SUBSTR(PARTITION_NAME, 2, 6), 'YYYYMM') < ADD_MONTHS(SYSDATE, -{RETAIN_MONTHS})
+                ORDER BY PARTITION_NAME";
+            using (var cmd = new OracleCommand(sql, conn))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read()) partitions.Add(reader.GetString(0));
+            }
+            return partitions;
+        }
+
+        /// <summary>分区削除（ALTER TABLE DROP PARTITION：高速・推奨）</summary>
+        private static void DropPartition(OracleConnection conn, string tableName, string partName)
+        {
+            // オプション：PURGEで即時解放（空き領域を直ちに戻す、推奨）
+            var sql = $@"ALTER TABLE {tableName} DROP PARTITION {partName} PURGE";
+            using (var cmd = new OracleCommand(sql, conn))
+            {
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        /// <summary>共通ログ出力（コンソール+ファイル両方）</summary>
+        private static void WriteLog(string message)
+        {
+            var logLine = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} | {message}";
+            Console.WriteLine(logLine);
+            File.AppendAllText(LOG_PATH, logLine + Environment.NewLine);
+        }
+    }
+}
+二、 運用必須設定（修正箇所）
+
+1. 対象テーブル追加・削除方法
+
+TargetTables リストに (表名, 日時分区キー) 形式で追加即可
+// 追加例：在庫履歴表（分区キー=更新日）
+("T_STOCK_HIST", "UPDATE_DATE")
+2. 個別テーブル保留期間を変更したい場合
+
+リストを (表名, 分区キー, 保留月数) に改修即可，コード1箇所修正
+// 改修後リスト例（売上18ヶ月、ログ6ヶ月保留）
+private static readonly List<(string TableName, string DatePartitionCol, int RetainMonths)> TargetTables = new()
+{
+    ("T_SALES", "SALES_DATE", 18),
+    ("T_LOG_ACCESS", "LOG_DATE", 6)
+};
+// 対応してGetExpiredPartitionsの引数にretainMonthsを追加即可
+三、 キー注意点（多表処理特有）
+
+1. 分区命名規則必須統一：P+6桁年月（P202401），SQLのSUBSTR(PARTITION_NAME,2,6) で年月抽出するため
+
+2. テーブル別分区キー：日時カラム（DATE型）であることを確認（TIMESTAMP型の場合、SQLのTO_DATEを調整）
+
+3. 排他ロック：深夜バッチ実行推奨，DROP PARTITIONは短時間排他，多表処理時順番に実行されるためロック競合低減
+
+4. 事前検証：本番前に開発環境で SELECT PARTITION_NAME FROM USER_TAB_PARTITIONS WHERE TABLE_NAME='表名' で分区一覧を確認
+
+5. バックアップ：初回実行前に、対象分区を EXCHANGE PARTITION でバックアップ（重要データ必須）
+四、 対応Oracle分区表作成例（多表用）
+
+各テーブルが日時範囲分区であることを確認，作成SQL例
+-- 1. 受注表（T_ORDER：受注日で按月分区）
+CREATE TABLE T_ORDER (
+  ORDER_ID NUMBER PRIMARY KEY,
+  ORDER_DATE DATE NOT NULL,
+  CUST_ID NUMBER,
+  ORDER_AMOUNT NUMBER
+)
+PARTITION BY RANGE (ORDER_DATE)
+INTERVAL (NUMTOYMINTERVAL(1, 'MONTH'))
+(PARTITION P202401 VALUES LESS THAN (TO_DATE('2024-02-01','YYYY-MM-DD')));
+
+-- 2. アクセスログ表（T_LOG_ACCESS：ログ日で按月分区）
+CREATE TABLE T_LOG_ACCESS (
+  LOG_ID NUMBER PRIMARY KEY,
+  LOG_DATE DATE NOT NULL,
+  USER_ID NUMBER,
+  ACCESS_URL VARCHAR2(255)
+)
+PARTITION BY RANGE (LOG_DATE)
+INTERVAL (NUMTOYMINTERVAL(1, 'MONTH'))
+(PARTITION P202401 VALUES LESS THAN (TO_DATE('2024-02-01','YYYY-MM-DD')));
+要不要我帮你追加分区削除前の確認SQLスクリプト，実行前に対象分区を一覧出力して誤削除を防ぐ？
+
+
+既存Oracleテーブル 分区化実装SQL（3方式、直接実行可）
+
+既存テーブルは直接分区追加不可，3つの実装方式を用途別整理，日時カラム（DATE型）を基準とし、前回の多表清理に完全対応
+
+事前共通条件
+
+✅  対象カラム：日時型（DATE/TIMESTAMP，例SALES_DATE）、非NULL制約必須
+✅  分区規則：推奨按月分区（データ削除に最適，命名P+年月：P202601）
+✅  権限：CREATE TABLE + ALTER TABLE + INSERT/SELECT 権限
+✅  事前準備：全量バックアップ（EXP/EXPDP推奨，重要）
+方式1：CTAS（CREATE TABLE AS SELECT）最簡単・推奨（小中量データ）
+
+特徴：1SQLで新分区表作成+データコピー，手順少，ダウンタイム短
+
+実行SQL（日時按月分区，既存表T_SALESを分区化）
+-- 1. 既存表をコピーして分区表作成（核心SQL）
+CREATE TABLE T_SALES_NEW -- 新分区表名
+PARTITION BY RANGE (SALES_DATE) -- 分区キー：既存の日時カラム
+INTERVAL (NUMTOYMINTERVAL(1, 'MONTH')) -- 自動按月生成分区（必須）
+(
+  -- 既存表のカラム・制約を完全継承（PRIMARY KEY/INDEXは別途再作成）
+  PARTITION P202401 VALUES LESS THAN (TO_DATE('2024-02-01', 'YYYY-MM-DD')) -- 初期分区
+)
+AS SELECT * FROM T_SALES; -- 既存データ全量コピー
+
+-- 2. 制約・インデックス再作成（例：プライマリキー）
+ALTER TABLE T_SALES_NEW ADD PRIMARY KEY (SALES_ID);
+-- 分区インデックス（推奨，性能向上）
+CREATE INDEX IDX_SALES_DATE_NEW ON T_SALES_NEW(SALES_DATE) LOCAL;
+
+-- 3. 旧表名変更（リネームで切り替え，安全）
+ALTER TABLE T_SALES RENAME TO T_SALES_OLD;
+ALTER TABLE T_SALES_NEW RENAME TO T_SALES;
+
+-- 4. 確認（分区作成成功か確認）
+SELECT PARTITION_NAME, HIGH_VALUE FROM USER_TAB_PARTITIONS WHERE TABLE_NAME='T_SALES';
+
+-- 5. 検証後旧表削除（確認OK後実行）
+-- DROP TABLE T_SALES_OLD PURGE;
+方式2：EXCHANGE PARTITION ダウンタイム極小（大量データ/本番推奨）
+
+特徴：データ移動せずメタデータ交換，秒級切り替え，超大表（千万行+）向け
+
+実行SQL（既存表T_ORDERを分区化，日時カラムORDER_DATE）
+-- 1. 空の分区表を作成（旧表とカラム・型・制約完全一致）
+CREATE TABLE T_ORDER_NEW
+PARTITION BY RANGE (ORDER_DATE)
+INTERVAL (NUMTOYMINTERVAL(1, 'MONTH'))
+(
+  PARTITION P202401 VALUES LESS THAN (TO_DATE('2024-02-01', 'YYYY-MM-DD'))
+)
+AS SELECT * FROM T_ORDER WHERE 1=0; -- 空表作成（WHERE 1=0が关键）
+
+-- 2. 制約・インデックス作成（旧表と一致させる）
+ALTER TABLE T_ORDER_NEW ADD PRIMARY KEY (ORDER_ID);
+CREATE INDEX IDX_ORDER_DATE_NEW ON T_ORDER_NEW(ORDER_DATE) LOCAL;
+
+-- 3. 旧表 ↔ 新分区表 メタデータ交換（データ移動なし，高速）
+ALTER TABLE T_ORDER_NEW 
+EXCHANGE PARTITION P202401 
+WITH TABLE T_ORDER 
+WITH VALIDATION; -- データ整合性チェック（推奨）
+
+-- 4. 表名切り替え
+ALTER TABLE T_ORDER RENAME TO T_ORDER_OLD;
+ALTER TABLE T_ORDER_NEW RENAME TO T_ORDER;
+
+-- 5. 分区整理（自動分区を有効化，過去データを分区分割）
+-- 例：2023年データを別分区に分割
+ALTER TABLE T_ORDER 
+SPLIT PARTITION P202401 AT (TO_DATE('2024-01-01', 'YYYY-MM-DD'))
+INTO (PARTITION P202312, PARTITION P202401);
+方式3：DBMS_REDEFINITION オンライン実行（稼働中表/ゼロダウンタイム）
+
+特徴：表稼働中にバックグラウンドで分区化，本番重要表（24h稼働）向け，手順稍複雑
+
+実行SQL（既存表T_LOG_ACCESSを分区化，カラムLOG_DATE）
+-- 1. 権限付与（実行ユーザに必要）
+GRANT EXECUTE ON DBMS_REDEFINITION TO ユーザ名;
+GRANT CREATE ANY TABLE TO ユーザ名;
+
+-- 2. 空の分区表（テンポラリ）作成
+CREATE TABLE T_LOG_ACCESS_TMP
+PARTITION BY RANGE (LOG_DATE)
+INTERVAL (NUMTOYMINTERVAL(1, 'MONTH'))
+(
+  PARTITION P202401 VALUES LESS THAN (TO_DATE('2024-02-01', 'YYYY-MM-DD'))
+)
+AS SELECT * FROM T_LOG_ACCESS WHERE 1=0;
+
+-- 3. オンライン再定義開始
+BEGIN
+  DBMS_REDEFINITION.START_REDEF_TABLE(
+    UNAME => USER, -- ユーザ名
+    ORIG_TABLE => 'T_LOG_ACCESS', -- 既存旧表
+    INT_TABLE => 'T_LOG_ACCESS_TMP' -- 空分区表（テンポ）
+  );
+END;
+/
+
+-- 4. 依存オブジェクト（インデックス/制約）コピー
+DECLARE
+  error_count NUMBER := 0;
+BEGIN
+  DBMS_REDEFINITION.COPY_TABLE_DEPENDENTS(
+    UNAME => USER,
+    ORIG_TABLE => 'T_LOG_ACCESS',
+    INT_TABLE => 'T_LOG_ACCESS_TMP',
+    NUM_ERRORS => error_count
+  );
+END;
+/
+
+-- 5. 再定義完了（ゼロダウンタイム）
+BEGIN
+  DBMS_REDEFINITION.FINISH_REDEF_TABLE(
+    UNAME => USER,
+    ORIG_TABLE => 'T_LOG_ACCESS',
+    INT_TABLE => 'T_LOG_ACCESS_TMP'
+  );
+END;
+/
+
+-- 6. テンポ表削除（完了後）
+DROP TABLE T_LOG_ACCESS_TMP PURGE;
+关键補足（実行必須確認）
+
+1. 分区命名：INTERVAL句で自動生成される分区名が不規則な場合，手動リネーム
+-- 分区名をP+年月に修正（例：SYS_P123 → P202311）
+ALTER TABLE T_SALES RENAME PARTITION SYS_P123 TO P202311;
+2. 索引推奨：分区表にはLOCAL索引を作成（分区削除時に索引も自動削除，性能高）
+
+3. 大量データ：方式2/3を選択，CTASはログ膨張するため注意
+
+4. 日時型対応：TIMESTAMP型の場合，HIGH_VALUEを以下に修正
+PARTITION P202401 VALUES LESS THAN (TO_TIMESTAMP('2024-02-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'))
+要不要我帮你生成対象テーブルの分区化事前確認SQL，既存表のカラム型/制約/データ分布を一括確認する？
+
+
+
+以下是対象テーブル分区化事前確認SQLセット（直接実行可），カラム型・制約・データ分布・分区キー適正を一括チェックできます。
+1. 基本情報：テーブル・カラム型・NULL可否
+-- 対象テーブルのカラム情報（型・NULL・コメント）
+SELECT
+  COLUMN_NAME,
+  DATA_TYPE,
+  DATA_LENGTH,
+  DATA_PRECISION,
+  DATA_SCALE,
+  NULLABLE,
+  COMMENTS
+FROM
+  USER_TAB_COLUMNS
+  LEFT JOIN USER_COL_COMMENTS USING (TABLE_NAME, COLUMN_NAME)
+WHERE
+  TABLE_NAME = UPPER('&対象テーブル名')
+ORDER BY
+  COLUMN_ID;
+確認ポイント
+
+• 分区キー（日時カラム）が DATE/TIMESTAMP 型か
+
+• 分区キーに NOT NULL 制約があるか（必須）
+
+• 主キー・索引に使うカラムの型が一致しているか
+2. 制約確認：PK・UK・FK・NOT NULL・CHECK
+-- 対象テーブルの制約一覧
+SELECT
+  CONSTRAINT_NAME,
+  CONSTRAINT_TYPE,
+  SEARCH_CONDITION,
+  R_CONSTRAINT_NAME AS REF_CONSTRAINT,
+  STATUS
+FROM
+  USER_CONSTRAINTS
+WHERE
+  TABLE_NAME = UPPER('&対象テーブル名')
+ORDER BY
+  CONSTRAINT_TYPE, CONSTRAINT_NAME;
+
+-- 制約に紐づくカラム一覧
+SELECT
+  c.CONSTRAINT_NAME,
+  c.CONSTRAINT_TYPE,
+  cc.COLUMN_NAME,
+  cc.POSITION
+FROM
+  USER_CONSTRAINTS c
+  JOIN USER_CONS_COLUMNS cc USING (TABLE_NAME, CONSTRAINT_NAME)
+WHERE
+  c.TABLE_NAME = UPPER('&対象テーブル名')
+ORDER BY
+  c.CONSTRAINT_TYPE, c.CONSTRAINT_NAME, cc.POSITION;
+確認ポイント
+
+• 主キー（P）・一意制約（U）が存在するか → 分区化後に再作成必要
+
+• 外部キー（R）がある場合 → 分区化時に無効化/再作成が必要
+
+• CHECK制約（C）が分区キーに影響しないか
+3. 索引確認：種別・カラム・分区化後の再作成方針
+-- 対象テーブルの索引一覧
+SELECT
+  INDEX_NAME,
+  INDEX_TYPE,
+  UNIQUENESS,
+  STATUS,
+  TABLESPACE_NAME
+FROM
+  USER_INDEXES
+WHERE
+  TABLE_NAME = UPPER('&対象テーブル名')
+ORDER BY
+  INDEX_NAME;
+
+-- 索引に含まれるカラム
+SELECT
+  i.INDEX_NAME,
+  ic.COLUMN_NAME,
+  ic.COLUMN_POSITION,
+  i.UNIQUENESS
+FROM
+  USER_INDEXES i
+  JOIN USER_IND_COLUMNS ic USING (TABLE_NAME, INDEX_NAME)
+WHERE
+  i.TABLE_NAME = UPPER('&対象テーブル名')
+ORDER BY
+  i.INDEX_NAME, ic.COLUMN_POSITION;
+確認ポイント
+
+• 分区化後は LOCAL索引 を推奨（分区削除時に索引も自動削除）
+
+• グローバル索引（GLOBAL）は分区DROP時にUNUSABLEになるため、再作成orLOCAL化を検討
+4. データ分布確認：日時カラムの範囲・件数・偏り
+-- 分区キー（日時カラム）の最小・最大・件数
+SELECT
+  MIN(&日時カラム名) AS MIN_DATE,
+  MAX(&日時カラム名) AS MAX_DATE,
+  COUNT(*) AS TOTAL_ROWS
+FROM
+  &対象テーブル名;
+
+-- 年月別件数（按月分区の適正を判断）
+SELECT
+  TO_CHAR(&日時カラム名, 'YYYY-MM') AS YYYYMM,
+  COUNT(*) AS ROW_COUNT,
+  ROUND(COUNT(*) / (SELECT COUNT(*) FROM &対象テーブル名) * 100, 2) AS RATIO_PERCENT
+FROM
+  &対象テーブル名
+GROUP BY
+  TO_CHAR(&日時カラム名, 'YYYY-MM')
+ORDER BY
+  YYYYMM;
+
+-- NULL件数（分区キーはNOT NULL必須）
+SELECT
+  COUNT(*) AS NULL_COUNT
+FROM
+  &対象テーブル名
+WHERE
+  &日時カラム名 IS NULL;
+確認ポイント
+
+• 日時範囲が広すぎる → 初期分区を適切に設定
+
+• 特定年月にデータが集中 → 分区サイズが偏る可能性あり
+
+• NULL件数 > 0 → 分区化前にNOT NULL制約追加またはデータ修正必須
+5. サイズ・セグメント情報：分区化後の領域見積もり
+-- テーブル・索引のサイズ（MB）
+SELECT
+  SEGMENT_NAME,
+  SEGMENT_TYPE,
+  ROUND(BYTES / 1024 / 1024, 2) AS SIZE_MB
+FROM
+  USER_SEGMENTS
+WHERE
+  SEGMENT_NAME IN (
+    UPPER('&対象テーブル名'),
+    (SELECT INDEX_NAME FROM USER_INDEXES WHERE TABLE_NAME = UPPER('&対象テーブル名'))
+  )
+ORDER BY
+  SEGMENT_TYPE, SEGMENT_NAME;
+確認ポイント
+
+• テーブルサイズが大きい場合 → CTASよりEXCHANGE PARTITION or DBMS_REDEFINITIONを選択
+
+• 索引サイズが大きい → 再作成時間・領域を見積もり
+6. 分区化適正判定まとめクエリ（一括実行用）
+-- 分区化事前判定サマリー
+WITH
+TAB_INFO AS (
+  SELECT TABLE_NAME, NUM_ROWS, BLOCKS
+  FROM USER_TABLES
+  WHERE TABLE_NAME = UPPER('&対象テーブル名')
+),
+COL_INFO AS (
+  SELECT COLUMN_NAME, DATA_TYPE, NULLABLE
+  FROM USER_TAB_COLUMNS
+  WHERE TABLE_NAME = UPPER('&対象テーブル名') AND COLUMN_NAME = UPPER('&日時カラム名')
+),
+DATE_RANGE AS (
+  SELECT MIN(&日時カラム名) MIN_DATE, MAX(&日時カラム名) MAX_DATE, COUNT(*) TOTAL_ROWS
+  FROM &対象テーブル名
+),
+NULL_CNT AS (
+  SELECT COUNT(*) NULL_CNT FROM &対象テーブル名 WHERE &日時カラム名 IS NULL
+),
+CONSTRAINT_INFO AS (
+  SELECT COUNT(*) PK_CNT
+  FROM USER_CONSTRAINTS
+  WHERE TABLE_NAME = UPPER('&対象テーブル名') AND CONSTRAINT_TYPE = 'P'
+)
+SELECT
+  t.TABLE_NAME,
+  t.NUM_ROWS,
+  c.COLUMN_NAME AS PARTITION_COL,
+  c.DATA_TYPE,
+  c.NULLABLE,
+  d.MIN_DATE,
+  d.MAX_DATE,
+  d.TOTAL_ROWS,
+  n.NULL_CNT,
+  p.PK_CNT,
+  -- 判定フラグ
+  CASE WHEN c.DATA_TYPE IN ('DATE', 'TIMESTAMP', 'TIMESTAMP(6)') THEN 'OK' ELSE 'NG' END AS DATE_TYPE_OK,
+  CASE WHEN c.NULLABLE = 'N' AND n.NULL_CNT = 0 THEN 'OK' ELSE 'NG' END AS NOT_NULL_OK,
+  CASE WHEN p.PK_CNT > 0 THEN 'OK' ELSE '要確認（PKなし）' END AS PK_OK
+FROM
+  TAB_INFO t,
+  COL_INFO c,
+  DATE_RANGE d,
+  NULL_CNT n,
+  CONSTRAINT_INFO p;
+使い方＆実行順序
+
+1. 置換変数を入力
+
+◦ &対象テーブル名：例 T_SALES
+
+◦ &日時カラム名：例 SALES_DATE
+
+2. 推奨実行順
+
+1. 基本情報（1）→ 分区キー型・NULL確認
+
+2. 制約（2）・索引（3）→ 再作成方針決定
+
+3. データ分布（4）→ 按月分区の適正・NULLチェック
+
+4. サイズ（5）→ 方式選択（CTAS/EXCHANGE/REDEFINITION）
+
+5. 判定サマリー（6）→ 最終確認
+分区化前に必ずクリアすべき項目
+
+• 分区キーが DATE/TIMESTAMP 型であること
+
+• 分区キーに NOT NULL 制約があり、NULLデータがないこと
+
+• 主キーが存在すること（分区表にPK推奨）
+
+• データ範囲に応じた初期分区を設定できること
+
+必要であれば、特定テーブルの実行結果を貼ってもらえれば、分区化方式（CTAS/EXCHANGE/REDEFINITION）と具体的なSQLを提案します。
