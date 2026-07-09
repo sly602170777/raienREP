@@ -1,0 +1,9 @@
+file_name,page,metric,category,severity,count,total,ratio,score,message,suggestion
+sample.drawio.xml,ALL,total_nodes,node,INFO,100,100,1.0,100,节点总数统计,无需处理
+sample.drawio.xml,ALL,total_edges,edge,INFO,80,80,1.0,100,连线总数统计,无需处理
+sample.drawio.xml,ALL,unknown_node_count,node,WARNING,12,100,0.12,88,存在未识别节点,建议补充 KEY: / VALUE: / API: / SCREEN: 等前缀
+sample.drawio.xml,ALL,missing_edge_label_count,edge,WARNING,20,80,0.25,75,部分连线缺少 label,建议为关键连线补充 HAS / CALLS / RETURNS / CONTAINS 等关系名
+sample.drawio.xml,ALL,invalid_edge_count,edge,ERROR,2,80,0.025,60,存在 source 或 target 不存在的连线,建议检查 draw.io 中是否有断开的连接器
+sample.drawio.xml,ALL,isolated_node_count,node,WARNING,8,100,0.08,92,存在孤立节点,建议确认这些节点是否为备注或是否漏连
+sample.drawio.xml,ALL,duplicate_edge_count,edge,WARNING,3,80,0.0375,96,存在重复连线,建议确认是否需要删除或补充不同 relation
+sample.drawio.xml,Page_1,page_quality_score,page,INFO,0,0,0,86,Page_1 图质量基本可用,建议优先处理 UNKNOWN 节点和缺少 label 的连线
